@@ -1,1 +1,3 @@
 ./dist/*
+./.idea
+./typo_pypi/__pycache__/*
