@@ -12,7 +12,7 @@ with open("./../top-pypi-packages-30-days.json", "r") as file:
         list.append(obj)
 
 
-#print(list[0].__dict__)
+print(list[0].__dict__)
 #print(list[0].get_check())
 
 
