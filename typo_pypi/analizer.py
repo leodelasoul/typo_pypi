@@ -1,21 +1,17 @@
 import json
-from typo_pypi.Package import Package
+from typo_pypi.package import Package
 
-list = []
-
-
-
-with open("./../top-pypi-packages-30-days.json", "r") as file:
-    data = json.load(file)
-    for p in  data["rows"]:
-        obj = Package(p["download_count"],p["project"])
-        list.append(obj)
+from typo_pypi.algos import Algos
 
 
-print(list[0].__dict__)
-#print(list[0].get_check())
+class Analizer:
+    package_list = list()
+    with open("./../top-pypi-packages-30-days.json", "r") as file:
+        data = json.load(file)
+        for p in data["rows"]:
+            obj = Package(p["project"], p["download_count"])
+            package_list.append(obj)
 
-
-
+    print(Algos.hamming_distance("abc", "yxz"))
 
 

@@ -1,12 +1,11 @@
 class Package:
-
-
     checked = False
     validated = False
 
-    def __init__(self, downloads, project):
+    def __init__(self, project, downloads):
         self.project = project
         self.downloads = downloads
+
 
     def get_check(self):
         return self.checked
@@ -19,3 +18,5 @@ class Package:
 
     def set_validate(self, validated):
         self.validated = validated
+
+
