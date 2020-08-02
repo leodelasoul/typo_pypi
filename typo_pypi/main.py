@@ -22,7 +22,7 @@ if __name__ == '__main__':
     x.start()
     y.start()
 
-    print("lol")
+    print("threads started")
 
     x.join()
     y.join()
