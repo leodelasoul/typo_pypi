@@ -1,4 +1,4 @@
-class Package:
+class Packages(list):
 
 
     checked = False
@@ -19,3 +19,6 @@ class Package:
 
     def set_validate(self, validated):
         self.validated = validated
+
+    def __getitem__(self, idx):
+        return list.__getitem__(self, idx)

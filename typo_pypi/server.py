@@ -21,9 +21,18 @@ def query_pypi_index():
 
 
 
-query_pypi_index()
+#query_pypi_index()
+
+test = Analizer.package_list[1].typos
+print(Analizer.package_list[1].project)
+
+for i in test:
+    x = requests.get("https://pypi.org/project/" + i)
+    if x.status_code == 200:
+        print(i)
+
 
 
 #x = requests.get("https://pypi.org/pypi/trafaretconfig/json")
-                  #https://pypi.org/pypi/trafaretconfig/json
+
 #print(x.json()["info"]['author_email'])

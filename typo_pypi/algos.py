@@ -45,7 +45,8 @@ class Algos:
             results.add(Algos.delete(s, i))
             for j, _ in enumerate(s):
                 # if len(s) == j:
-                results.add(Algos.insert(s, char, j))
-                results.add(Algos.replace(s, i, j))
+                if not s == j:
+                    results.add(Algos.insert(s, char, j))
+                    results.add(Algos.replace(s, i, j))
 
         return results
