@@ -32,3 +32,11 @@ https://pypi.org/project/certifi
 https://pypi.org/project/cri
 https://pypi.org/project/ssr
 https://pypi.org/project/s3transfer
+https://pypi.org/project/sss
+https://pypi.org/project/setuptools
+https://pypi.org/project/sos
+https://pypi.org/project/setools
+https://pypi.org/project/sls
+https://pypi.org/project/sts
+https://pypi.org/project/stools
+https://pypi.org/project/sps
