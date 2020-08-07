@@ -6,18 +6,21 @@ with open('blacklist.json') as f:
     blacklist = json.load(f)
 
 
-def to_json_file(package, typo):
+def query_pypi_index():
     data = dict()
     typos = list()
 
-    info = typo.json()["info"]
-    typos.append(info)
-    data[package] = typos
-    return data
+    def to_json_file(package, typo):
+        nonlocal data
+        nonlocal typos
 
-def query_pypi_index():
-    for i,p in enumerate(Analizer.package_list):
-        if i == 1:   #for dev purpose only
+        info = typo.json()["info"]
+        typos.append(info)
+        data[package] = typos
+        return data
+
+    for i, p in enumerate(Analizer.package_list):
+        if i == 3:  # for dev purpose only
             break
         for t in p.typos:
             x = requests.get("https://pypi.org/pypi/" + t + "/json")
@@ -25,6 +28,7 @@ def query_pypi_index():
                 p.set_check(True)
                 print(("https://pypi.org/project/" + t))
                 data = to_json_file(p.project, x)
+                pass
             else:
                 p.set_check(False)
 
@@ -32,9 +36,7 @@ def query_pypi_index():
         json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
 
 
-
 query_pypi_index()
-
 
 # x = requests.get("https://pypi.org/pypi/trafaretconfig/json")
 # https://pypi.org/pypi/trafaretconfig/json
