@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7088c5d-cda2-4d7b-82eb-c91069fa1e87" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typo_pypi/algos.py" beforeDir="false" afterPath="$PROJECT_DIR$/typo_pypi/algos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typo_pypi/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/typo_pypi/results.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typo_pypi/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/typo_pypi/server.py" afterDir="false" />
-    </list>
+    <list default="true" id="e7088c5d-cda2-4d7b-82eb-c91069fa1e87" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +43,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sync" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="f1277d98-3566-40d8-acdc-c9da97029947" />
@@ -114,11 +114,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
       </list>
@@ -168,22 +170,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596451387459" />
-    <state width="1323" height="156" key="GridCell.Tab.0.bottom" timestamp="1596797533436">
+    <state width="1323" height="100" key="GridCell.Tab.0.bottom" timestamp="1596798999579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="156" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596797533436" />
-    <state width="1323" height="156" key="GridCell.Tab.0.center" timestamp="1596797533436">
+    <state width="1323" height="100" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596798999579" />
+    <state width="1323" height="100" key="GridCell.Tab.0.center" timestamp="1596798999579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="156" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596797533436" />
-    <state width="1323" height="156" key="GridCell.Tab.0.left" timestamp="1596797533436">
+    <state width="1323" height="100" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596798999579" />
+    <state width="1323" height="100" key="GridCell.Tab.0.left" timestamp="1596798999579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="156" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596797533436" />
-    <state width="1323" height="156" key="GridCell.Tab.0.right" timestamp="1596797533436">
+    <state width="1323" height="100" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596798999579" />
+    <state width="1323" height="100" key="GridCell.Tab.0.right" timestamp="1596798999579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="156" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596797533436" />
+    <state width="1323" height="100" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596798999579" />
     <state width="1323" height="156" key="GridCell.Tab.1.bottom" timestamp="1596797533436">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
