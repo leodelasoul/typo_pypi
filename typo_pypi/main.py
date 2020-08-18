@@ -9,7 +9,8 @@ def execute_analizer():
     time.sleep(2)
 
 def execute_server():
-    Server()
+    server = Server()
+    #server.query_pypi_index()
     time.sleep(2)
 
 def execute_validater():

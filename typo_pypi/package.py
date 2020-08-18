@@ -1,13 +1,22 @@
-class Packages(list):
-
-
+class Package:
     checked = False
     validated = False
 
-    def __init__(self, downloads, project):
+    def __init__(self, project, downloads, typos, start=0):
+        self.num = start
         self.project = project
         self.downloads = downloads
+        self.typos = typos
 
+    '''
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        num = self.num
+        self.num += 1
+        return num
+'''
     def get_check(self):
         return self.checked
 
@@ -19,6 +28,3 @@ class Packages(list):
 
     def set_validate(self, validated):
         self.validated = validated
-
-    def __getitem__(self, idx):
-        return list.__getitem__(self, idx)
