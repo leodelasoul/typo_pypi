@@ -14,5 +14,3 @@ class Analizer:
 
 
     print(Algos.hamming_distance("abc", "yxz"))
-
-
