@@ -4,6 +4,11 @@ from typo_pypi.package import Package
 from typo_pypi.algos import Algos
 
 
+'''
+use to generate lists for different indices
+
+'''
+
 class Analizer:
     package_list = list()
     with open("./../top-pypi-packages-30-days.json", "r") as file:

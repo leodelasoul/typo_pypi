@@ -2,22 +2,23 @@
 TODO scrape Packages for their setup.py content, or download them and read their lines.
 TODO I need to find out there patterns, how one steals either keys, mines bitcoins or uses us as a bot for their net
 
-use yara for
-download paackages and vlaidate them simutaniusly
 '''
 
 import json
-#import yara
+import yara
 
 class Validater:
+
+    def __init__(self):
+        pass
+
     with open('results.json', encoding="utf-8") as f:
         packages_to_validate = json.load(f)
 
-    def check_sig_discription(self,data):
+    def check_sig_discription(self, data):
         check = False
-        #rules = yara.compile("./yara/pypi")
-        #match = rules.match('some file/setup.py')
-        match = False
+        rules = yara.compile("./yara/pypi.yara")
+        match = rules.match(data=data)
 
         if match:
             check = True
@@ -33,3 +34,5 @@ class Validater:
         rules.match(package_source)
 
         return
+
+

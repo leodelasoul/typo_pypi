@@ -4,13 +4,18 @@ import threading
 from typo_pypi.validater import Validater
 from typo_pypi.analizer import Analizer
 from typo_pypi.server import Server
-def execute_analizer():
+'''
+entry point of experiment
+'''
+
+
+def execute_analizer(): #expandable for other indices
     Analizer()
     time.sleep(2)
 
 def execute_server():
     server = Server()
-    #server.query_pypi_index()
+    server.query_pypi_index()
     time.sleep(2)
 
 def execute_validater():
