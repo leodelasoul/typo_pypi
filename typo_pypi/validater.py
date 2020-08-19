@@ -7,7 +7,7 @@ download paackages and vlaidate them simutaniusly
 '''
 
 import json
-import yara
+#import yara
 
 class Validater:
     with open('results.json', encoding="utf-8") as f:
@@ -15,8 +15,10 @@ class Validater:
 
     def check_sig_discription(self,data):
         check = False
-        rules = yara.compile("./yara/pypi")
-        match = rules.match('some file/setup.py')
+        #rules = yara.compile("./yara/pypi")
+        #match = rules.match('some file/setup.py')
+        match = False
+
         if match:
             check = True
         return check
@@ -24,8 +26,8 @@ class Validater:
     def validate_package(self):
         # prüfe inhalt des downloads mittels yara
         rules = yara.compile(filepaths={
-            'crypto': './yara/crypto.yara',
-            'fragus': './yara/fragus.yara'
+            'Big_Numbers0': './yara/crypto.yara',
+            'fragus_htm': './yara/fragus.yara'
         })
         package_source = open("some file within dir structure")
         rules.match(package_source)
