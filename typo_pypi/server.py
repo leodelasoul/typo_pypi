@@ -1,6 +1,12 @@
 import requests
 from typo_pypi.analizer import Analizer
 import json
+from typo_pypi.validater import Validater
+
+'''
+manages all http requests that are needed for  this project
+
+'''
 
 
 class Server:
@@ -10,6 +16,7 @@ class Server:
     def query_pypi_index(self):
         data = dict()
         typos = list()
+        validater = Validater()
 
         def to_json_file(package, typo):
             nonlocal data
@@ -29,12 +36,24 @@ class Server:
                     p.set_check(True)
                     print(("https://pypi.org/project/" + t))
                     data = to_json_file(p.project, x)
+                    if validater.check_sig_discription(x.json()):  #insert a check to download the package
+                        # download the sourcecode if its suspicious
+                        url = "https://pypi.org/project/" + t + "/#"  #PROBLEM: find exact namespace
+                        data = requests.get(url,stream=True)
+                        with open('pws.tar.gz', 'wb') as fp:
+                            for chunk in data.iter_content():
+                                if chunk:
+                                    fp.write(chunk)
+                                    fp.flush()
                     pass
                 else:
                     p.set_check(False)
 
         with open("results.json", "a", encoding='utf-8') as f:
             json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
+
+
+
 
     # query_pypi_index()
 
