@@ -2,7 +2,7 @@ import requests
 from typo_pypi.analizer import Analizer
 import json
 from typo_pypi.validater import Validater
-
+import tempfile
 '''
 manages all http requests that are needed for  this project
 
@@ -10,6 +10,11 @@ manages all http requests that are needed for  this project
 
 
 class Server:
+
+    def __init__(self,tmp_dir):
+        self.tmp_dir = tmp_dir
+
+
     with open('blacklist.json') as f:
         blacklist = json.load(f)
 
@@ -36,7 +41,11 @@ class Server:
                     p.set_check(True)
                     print(("https://pypi.org/project/" + t))
                     data = to_json_file(p.project, x)
-                    if validater.check_sig_discription(x.json()["info"]):  # insert a check to download the package
+                    #tmp_file = tempfile.gettempdir() + "/typo_pypi/" + t + ".txt"
+                    tmp_file = self.tmp_dir + "/" + t + ".json"
+                    with open(tmp_file,"w+") as f:
+                        json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
+                    if validater.check_sig_discription(tmp_file):
                         # download the sourcecode if its suspicious
                         url = "https://pypi.org/project/" + t + "/#"  # PROBLEM: find exact namespace
                         data = requests.get(url, stream=True)

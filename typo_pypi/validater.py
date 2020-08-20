@@ -18,7 +18,7 @@ class Validater:
     def check_sig_discription(self, data):
         check = False
         rules = yara.compile("./yara/pypi.yara")
-        match = rules.match(data=data)
+        match = rules.match(data)
 
         if match:
             check = True
