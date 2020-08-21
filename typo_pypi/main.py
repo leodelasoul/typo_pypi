@@ -1,7 +1,6 @@
 import time
 import threading
 
-import requests
 
 from typo_pypi.validater import Validater
 from typo_pypi.analizer import Analizer

@@ -36,7 +36,7 @@ class Server:
             return data
 
         for i, p in enumerate(Analizer.package_list):
-            if i == 3:  # for dev purpose only
+            if i == 30:  # for dev purpose only
                 break
             idx = 0
             for t in p.typos:
@@ -52,7 +52,7 @@ class Server:
                     if validater.check_sig_discription(tmp_file):
                         tar_file = self.download_package(x, t)
                         setup_file = validater.extract_setup_file(tar_file)
-                        validater.validate_package(setup_file)
+                        #validater.validate_package(setup_file)
                     idx = idx + 1
                     pass
                 else:
@@ -62,16 +62,21 @@ class Server:
             json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
 
     def download_package(self, x, typo_name):
-        key = list(x.json()["releases"].keys())[0]
-        url = x.json()["releases"][key][0]["url"]
-        data = requests.get(url, stream=True)
-        out_file = typo_name + '.tar.gz'
-        with open(out_file, 'wb') as fp:
-            for chunk in data.iter_content():
-                if chunk:
-                    fp.write(chunk)
-                    fp.flush()
-        return out_file
+        try:
+            key = list(x.json()["releases"].keys())[0]
+            url = x.json()["releases"][key][0]["url"]
+        except IndexError as e:
+            print(e)
+            return None
+        else:
+            data = requests.get(url, stream=True)
+            out_file = self.tmp_dir + "/" + typo_name + "/" + typo_name + '.tar.gz'
+            with open(out_file, 'wb') as fp:
+                for chunk in data.iter_content():
+                    if chunk:
+                        fp.write(chunk)
+                        fp.flush()
+            return out_file
 
 
 

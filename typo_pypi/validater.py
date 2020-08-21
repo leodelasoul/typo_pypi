@@ -7,7 +7,8 @@ TODO I need to find out there patterns, how one steals either keys, mines bitcoi
 import json
 import yara
 import tarfile
-import glob
+import os
+import re
 
 class Validater:
 
@@ -32,11 +33,21 @@ class Validater:
             'Big_Numbers0': './yara/crypto.yara',
             'fragus_htm': './yara/fragus.yara'
         })
-        package_source = open(setup_file)
-        rules.match(package_source)
-        return
+        try:
+            package_source = open(setup_file)
+        except Exception:
+            return
+        else:
+            rules.match(package_source)
+
 
     def extract_setup_file(self, downloaded_file):
+        print(downloaded_file)
+        try:
+            dest = re.match(r".*\\([^\\]+)/",downloaded_file)
+        except TypeError as e:
+            return
+
         try:
             t = tarfile.open(downloaded_file, 'r')
         except tarfile.ReadError as e:
@@ -44,4 +55,4 @@ class Validater:
         else:
             for member in t.getmembers():
                 if "setup.py" in member.name:
-                    t.extract(member,)
+                    t.extract(member,dest[0])
