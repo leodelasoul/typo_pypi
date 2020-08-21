@@ -1,5 +1,8 @@
 import time
 import threading
+
+import requests
+
 from typo_pypi.validater import Validater
 from typo_pypi.analizer import Analizer
 from typo_pypi.server import Server
@@ -24,7 +27,7 @@ def execute_server(arg):
 
 
 def execute_validater():
-    Validater()
+    validater = Validater()
     time.sleep(2)
 
 

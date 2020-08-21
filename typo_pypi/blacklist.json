@@ -1,6 +1,9 @@
 {
   "authors" : [
     "l.ricker93@web.de",
+    "rickerle@gmail.com"
+  ],
+  "ignore" : [
     "william.bengtson@gmail.com"
   ]
 }
