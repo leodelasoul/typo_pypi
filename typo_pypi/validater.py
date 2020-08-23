@@ -1,5 +1,4 @@
 '''
-TODO scrape Packages for their setup.py content, or download them and read their lines.
 TODO I need to find out there patterns, how one steals either keys, mines bitcoins or uses us as a bot for their net
 
 '''
@@ -9,6 +8,7 @@ import yara
 import tarfile
 import os
 import re
+
 
 class Validater:
 
@@ -27,7 +27,7 @@ class Validater:
             check = True
         return check
 
-    def validate_package(self,setup_file):
+    def validate_package(self, setup_file):
         # prüfe inhalt des downloads mittels yara
         rules = yara.compile(filepaths={
             'Big_Numbers0': './yara/crypto.yara',
@@ -40,11 +40,11 @@ class Validater:
         else:
             rules.match(package_source)
 
-
     def extract_setup_file(self, downloaded_file):
         print(downloaded_file)
         try:
-            dest = re.match(r".*\\([^\\]+)/",downloaded_file)
+            dest = re.match(r".*\\([^\\]+)/", downloaded_file)
+            dest1 = re.match(r".*/([^//]+)/", downloaded_file)
         except TypeError as e:
             return
 
@@ -55,4 +55,8 @@ class Validater:
         else:
             for member in t.getmembers():
                 if "setup.py" in member.name:
-                    t.extract(member,dest[0])
+                    if os.name == "posix":
+                        t.extract(member, dest1[0])
+
+                    elif os.name == "nt":
+                        t.extract(member, dest[0])
