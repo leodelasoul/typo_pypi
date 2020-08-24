@@ -1,4 +1,7 @@
+import threading
+
 import requests
+from collections import defaultdict
 from typo_pypi.analizer import Analizer
 import json
 from typo_pypi.validater import Validater
@@ -12,33 +15,34 @@ manages all http requests that are needed for  this project
 '''
 
 
-class Server:
+class Server(threading.Thread):
 
     def __init__(self, tmp_dir):
+        super().__init__()
         self.tmp_dir = tmp_dir  # store tmp data
 
     with open('blacklist.json') as f:
         blacklist = json.load(f)
 
+    def run(self):
+        self.query_pypi_index()
+
     def query_pypi_index(self):
-        data = dict()
+        data = defaultdict(list)
         typos = list()
         validater = Validater()
 
         def to_json_file(package, typo, idx):
             nonlocal data
             nonlocal typos
-
             info = typo.json()["info"]
             typos.append(info)
-
-            data[package] = typos[idx]
+            data[package].append(typos[idx])
             return data
-
+        idx = 0
         for i, p in enumerate(Analizer.package_list):
-            if i == 30:  # for dev purpose only
+            if i == 10:  # for dev purpose only
                 break
-            idx = 0
             for t in p.typos:
                 x = requests.get("https://pypi.org/pypi/" + t + "/json")
                 if x.status_code == 200 and x.json()["info"]['author_email'] not in Server.blacklist['authors']:
@@ -54,7 +58,6 @@ class Server:
                         setup_file = validater.extract_setup_file(tar_file)
                         #validater.validate_package(setup_file)
                     idx = idx + 1
-                    pass
                 else:
                     p.set_check(False)
 
@@ -77,9 +80,6 @@ class Server:
                         fp.write(chunk)
                         fp.flush()
             return out_file
-
-
-
 
     # y = requests.get("https://pypi.org/pypi/trafaretconfig/json")
     # x = list(y.json()["releases"][x][0]["url"]n()["releases"].keys())[0]

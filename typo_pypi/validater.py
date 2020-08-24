@@ -4,19 +4,28 @@ TODO I need to find out there patterns, how one steals either keys, mines bitcoi
 '''
 
 import json
+import threading
+
 import yara
 import tarfile
 import os
 import re
 
-
-class Validater:
+class Validater(threading.Thread):
 
     def __init__(self):
-        pass
+        super().__init__()
 
     with open('results.json', encoding="utf-8") as f:
         packages_to_validate = json.load(f)
+
+    def run(self):
+        self.test()
+        #incluse here the check disript
+        #include here the setup.py check
+
+    def test(self):
+        print("validater executes stuff now!")
 
     def check_sig_discription(self, data):
         check = False
