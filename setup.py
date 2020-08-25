@@ -13,16 +13,16 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = 'typo_pypi'
-DESCRIPTION = 'experimental approch for a empirical study for my thesis'
+DESCRIPTION = 'experimental approach for an empirical study for my thesis'
 URL = 'https://github.com/leodelasoul/typo_pypi'
 EMAIL = 'l.ricker93@web.de'
 AUTHOR = 'Leonid Ricker'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.0'
+VERSION = '0.1.3'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    # 'requests', 'maya', 'records',
+    'requests',
 ]
 
 # What packages are optional?
@@ -105,7 +105,7 @@ setup(
     url=URL,
     #packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
-    py_modules=['typo_pypi'],
+    packages=['typo_pypi'],
 
     # entry_points={
     #     'console_scripts': ['mycli=mymodule:cli'],

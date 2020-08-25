@@ -1,0 +1,3 @@
+include typo_pypi/*.txt
+include typo_pypi/*.json
+include typo_pypi/yara/*.yara

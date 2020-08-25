@@ -16,7 +16,7 @@ class Validater(threading.Thread):
     def __init__(self):
         super().__init__()
 
-    with open('results.json', encoding="utf-8") as f:
+    with open('results1.json', encoding="utf-8") as f:
         packages_to_validate = json.load(f)
 
     def run(self):
