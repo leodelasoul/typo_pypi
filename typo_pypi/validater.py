@@ -12,12 +12,11 @@ import os
 import re
 
 class Validater(threading.Thread):
+    current_dir = os.path.dirname(__file__)
+
 
     def __init__(self):
         super().__init__()
-
-    with open('results1.json', encoding="utf-8") as f:
-        packages_to_validate = json.load(f)
 
     def run(self):
         self.test()
@@ -29,7 +28,7 @@ class Validater(threading.Thread):
 
     def check_sig_discription(self, data):
         check = False
-        rules = yara.compile("./yara/pypi.yara")
+        rules = yara.compile(self.current_dir + "/yara/pypi.yara")
         match = rules.match(data)
         if match:
             print("hit")

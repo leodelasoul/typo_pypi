@@ -21,7 +21,7 @@ class Server(threading.Thread):
         super().__init__()
         self.tmp_dir = tmp_dir  # store tmp data
 
-    with open('blacklist.json') as f:
+    with open(os.path.dirname(__file__) + "/blacklist.json") as f:
         blacklist = json.load(f)
 
     def run(self):

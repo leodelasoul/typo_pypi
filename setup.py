@@ -18,7 +18,7 @@ URL = 'https://github.com/leodelasoul/typo_pypi'
 EMAIL = 'l.ricker93@web.de'
 AUTHOR = 'Leonid Ricker'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.3'
+VERSION = '0.1.5'
 
 # What packages are required for this module to be executed?
 REQUIRED = [

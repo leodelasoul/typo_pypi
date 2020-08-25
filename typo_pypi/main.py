@@ -12,7 +12,7 @@ import errno
 entry point of experiment
 '''
 
-if __name__ == '__main__':
+def main():
     try:
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
@@ -40,3 +40,8 @@ if __name__ == '__main__':
         except OSError as exc:
             if exc.errno != errno.ENOENT:
                 raise  # re-raise exception
+
+
+
+if __name__ == '__main__':
+    main()
