@@ -14,8 +14,23 @@ class Algos:
         return n
 
     @staticmethod
-    def levenshtein(a, b):
-        pass
+    def hamming_threshold(s, a):
+        if Algos.hamming_distance(s, a) < 3:
+            return True
+        else:
+            return False
+
+    @staticmethod
+    def word_dist(a, b):
+        tmp = a
+        tmp1 = b
+        if len(a) > len(b):
+            pass
+        else:
+            b = tmp
+            a = tmp1
+        n = len(list(a)) - len(list(b))
+        return n
 
     @staticmethod
     def insert(s, c, i):
@@ -41,12 +56,16 @@ class Algos:
     @staticmethod
     def generate_typo(s):
         results = set()
+
         for i, char in enumerate(s):
-            results.add(Algos.delete(s, i))
+            result0 = Algos.delete(s, i)
+            if Algos.word_dist(s, result0) < 3:
+                results.add(result0)
             for j, _ in enumerate(s):
-                # if len(s) == j:
-                if len(s) == j:
-                    results.add(Algos.insert(s, char, j))
-                    results.add(Algos.replace(s, i, j))
+                result1 = Algos.insert(s, char, j)
+                result2 = Algos.replace(s, i, j)
+                if result1 != s and result2 != s and Algos.word_dist(result1, s) < 3 and Algos.word_dist(result2, s) < 3:
+                    results.add(result1)
+                    results.add(result2)
 
         return results

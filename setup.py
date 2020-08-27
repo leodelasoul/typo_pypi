@@ -18,11 +18,11 @@ URL = 'https://github.com/leodelasoul/typo_pypi'
 EMAIL = 'l.ricker93@web.de'
 AUTHOR = 'Leonid Ricker'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.5'
+VERSION = '0.1.6'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'requests',
+    'requests', 'yara-python', "treelib"
 ]
 
 # What packages are optional?
