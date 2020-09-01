@@ -2,8 +2,7 @@ class Package:
     checked = False
     validated = False
 
-    def __init__(self, project, downloads, typos, start=0):
-        self.num = start
+    def __init__(self, project, downloads, typos):
         self.project = project
         self.downloads = downloads
         self.typos = typos

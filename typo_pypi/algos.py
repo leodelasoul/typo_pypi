@@ -14,11 +14,8 @@ class Algos:
         return n
 
     @staticmethod
-    def hamming_threshold(s, a):
-        if Algos.hamming_distance(s, a) < 3:
-            return True
-        else:
-            return False
+    def levenshtein(s, a):
+       pass
 
     @staticmethod
     def word_dist(a, b):

@@ -1,6 +1,6 @@
 ### typo_pypi, experimental methods 
+![UML](typo_pypi.png)  
 
-*insert a UML diagram for all classes*  
 analizer: forms list from  package managers  
 validater: checks typos for any squats or malicious code
 server: handles http stuff  

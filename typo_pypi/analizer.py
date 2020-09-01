@@ -36,9 +36,9 @@ class Analizer(threading.Thread):
                     self.package_tree.create_node(t, t, parent=p.__dict__["project"])
 
                 except DuplicatedNodeIdError as e:
-                    print(e)
+                    pass
                 else:
-                    self.package_tree.create_node(t + "*", t + "*", parent=p.__dict__["project"])
+                    continue
             i = i + 1
 
 # print(Algos.hamming_distance("abc", "yxz"))

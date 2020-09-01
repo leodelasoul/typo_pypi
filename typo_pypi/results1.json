@@ -75,12 +75,10 @@
             "version": "0.6.0",
             "yanked": false,
             "yanked_reason": null
-         }
-      ],
-      "python-dateutil": [
+         },
          {
-            "author": "The Guardians",
-            "author_email": "william.bengtson@gmail.com",
+            "author": "Jerome Kieffer",
+            "author_email": "jerome.kieffer@esrf.fr",
             "bugtrack_url": null,
             "classifiers": [],
             "description": "",
@@ -92,206 +90,31 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "",
-            "keywords": "testing,logging,example",
+            "home_page": "https://github.com/kif/ssx",
+            "keywords": "",
             "license": "",
             "maintainer": "",
             "maintainer_email": "",
-            "name": "pythondateutil",
-            "package_url": "https://pypi.org/project/pythondateutil/",
+            "name": "ssx",
+            "package_url": "https://pypi.org/project/ssx/",
             "platform": "",
-            "project_url": "https://pypi.org/project/pythondateutil/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/pythondateutil/0.1.1/",
+            "project_url": "https://pypi.org/project/ssx/",
+            "project_urls": {
+               "Homepage": "https://github.com/kif/ssx"
+            },
+            "release_url": "https://pypi.org/project/ssx/0.0.1/",
             "requires_dist": null,
             "requires_python": "",
-            "summary": "A package to prevent exploit",
-            "version": "0.1.1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ],
-      "idna": [
-         {
-            "author": "leesoar",
-            "author_email": "secure@tom.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python :: 3.5",
-               "Programming Language :: Python :: 3.6",
-               "Programming Language :: Python :: 3.7",
-               "Programming Language :: Python :: Implementation :: CPython",
-               "Programming Language :: Python :: Implementation :: PyPy"
-            ],
-            "description": "\nDevelop soon\n\n\n",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://leesoar.com",
-            "keywords": "",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "ida",
-            "package_url": "https://pypi.org/project/ida/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/ida/",
-            "project_urls": {
-               "Homepage": "https://leesoar.com"
-            },
-            "release_url": "https://pypi.org/project/ida/0.0.1/",
-            "requires_dist": null,
-            "requires_python": ">=3.3.0",
-            "summary": "Develop soon",
+            "summary": "Synchrotron serial crystallography tools",
             "version": "0.0.1",
             "yanked": false,
             "yanked_reason": null
-         },
-         {
-            "author": "Xavier Bruhiere",
-            "author_email": "xavier.bruhiere@gmail.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 2 - Pre-Alpha",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: Apache Software License",
-               "Natural Language :: English",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2.7",
-               "Topic :: Software Development",
-               "Topic :: System :: Shells"
-            ],
-            "description": "python library DNA\n==================\n\n[![Coverage Status](https://coveralls.io/repos/hivetech/dna/badge.png)](https://coveralls.io/r/hivetech/dna)\n\n> Generic python utilities\n\nInstallation\n------------\n\n```console\npip install dna\n```\n\nExample\n-----\n\n```python\nimport dna.utils as utils\nimport dna.logger as logger\n\nlog_setup = logger.setup(level='info', filename='app.log')\nlog = logger.logger(__name__)\nwith log_setup.applicationbound():\n\n    log.info('hello', where='world')\n\n    useless_id = utils.generate_unique_id()\n    useless_name = utils.generate_random_name()\n\n    if utils.docker_check() and utils.is_running('ipyhon'):\n\n        print utils.Version('0.4.1')\n\n        module = utils.dynamic_import('dna.settings', 'LOG')\n        print utils.emphasis(module, align=False)\n\n        print utils.self_ip()\n```",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/hivetech/dna",
-            "keywords": null,
-            "license": "Apache 2.0",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "dna",
-            "package_url": "https://pypi.org/project/dna/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/dna/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/hivetech/dna"
-            },
-            "release_url": "https://pypi.org/project/dna/0.0.7/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Generic python utilities",
-            "version": "0.0.7",
-            "yanked": false,
-            "yanked_reason": null
          }
       ],
-      "pip": [
+      "requests": [
          {
-            "author": "Christopher Brown",
-            "author_email": "io@henrian.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 2 - Pre-Alpha",
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.6",
-               "Programming Language :: Python :: 2.7",
-               "Topic :: Software Development :: Libraries :: Python Modules",
-               "Topic :: System :: Archiving :: Packaging",
-               "Topic :: System :: Filesystems"
-            ],
-            "description": "Python (package) installation\n-----------------------------\n\nGetting started from `PyPI <https://pypi.python.org/pypi/pi/>`__:\n\n::\n\n    easy_install pi\n\n`Whence easy\\_install? <#setuptools>`__\n\nCommands\n--------\n\n-  Uninstall package named \"pip\":\n\n   ::\n\n       pi uninstall pip\n\n-  Install package named \"filesequence\":\n\n   ::\n\n       pi install filesequence\n\n-  List paths that Python searches for imported modules:\n\n   ::\n\n       pi paths\n\n-  List installed packages:\n\n   ::\n\n       pi list\n\nTesting\n-------\n\nContinuous integration:\n\n|Travis CI Build Status|\n\nOr run tests locally:\n\n::\n\n    nosetests --with-doctest\n\nRelated\n~~~~~~~\n\n-  http://guide.python-distribute.org/creation.html\n-  `distribute/pkg\\_resources\n   docs <http://pythonhosted.org/distribute/pkg_resources.html>`__\n-  standard library\n   ```site`` <http://docs.python.org/2/library/site.html>`__\n-  standard library `environment\n   variables <http://docs.python.org/2/using/cmdline.html#environment-variables>`__\n\nSetuptools\n~~~~~~~~~~\n\n``pi`` does not yet completely replace\n`setuptools <https://pypi.python.org/pypi/setuptools>`__. You may need\nto install it first:\n\n+----------+-----------------------------------------+\n| Distro   | Package manager command                 |\n+==========+=========================================+\n| Ubuntu   | ``apt-get install python-setuptools``   |\n+----------+-----------------------------------------+\n| Mac      | built-in                                |\n+----------+-----------------------------------------+\n| Arch     | ``pacman -S python-setuptools``         |\n+----------+-----------------------------------------+\n| CentOS   | ``yum install python-setuptools``       |\n+----------+-----------------------------------------+\n\nLicense\n-------\n\nCopyright (c) 2013 Christopher Brown. `MIT\nLicensed <https://raw.github.com/chbrown/pi/master/LICENSE>`__.\n\n.. |Travis CI Build Status| image:: https://travis-ci.org/chbrown/pi.png?branch=master\n   :target: https://travis-ci.org/chbrown/pi",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/chbrown/pi",
-            "keywords": null,
-            "license": "Copyright (c) 2013 Christopher Brown\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "pi",
-            "package_url": "https://pypi.org/project/pi/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/pi/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/chbrown/pi"
-            },
-            "release_url": "https://pypi.org/project/pi/0.1.2/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Simpler python package installation",
-            "version": "0.1.2",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Vitalii Vanovschi",
-            "author_email": "support@parallelpython.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 5 - Production/Stable",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: BSD License",
-               "Natural Language :: English",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python",
-               "Topic :: Software Development",
-               "Topic :: System :: Distributed Computing"
-            ],
-            "description": "Parallel Python module (PP) provides an easy and efficient way to create parallel-enabled applications for SMP computers and clusters. PP module features cross-platform portability and dynamic load balancing. Thus application written with PP will parallelize efficiently even on heterogeneous and multi-platform clusters (including clusters running other application with variable CPU loads). Visit http://www.parallelpython.com for further information.",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "http://www.parallelpython.com/downloads/pp/pp-1.6.5.zip",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "http://www.parallelpython.com",
-            "keywords": null,
-            "license": "BSD-like",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "pp",
-            "package_url": "https://pypi.org/project/pp/",
-            "platform": "Windows,Linux,Unix",
-            "project_url": "https://pypi.org/project/pp/",
-            "project_urls": {
-               "Download": "http://www.parallelpython.com/downloads/pp/pp-1.6.5.zip",
-               "Homepage": "http://www.parallelpython.com"
-            },
-            "release_url": "https://pypi.org/project/pp/1.6.5/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Parallel and distributed programming for Python",
-            "version": "1.6.5",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "",
-            "author_email": "",
+            "author": "Jan Češpivo (COEX)",
+            "author_email": "support@coex.cz",
             "bugtrack_url": null,
             "classifiers": [],
             "description": "",
@@ -303,101 +126,23 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "",
+            "home_page": "https://github.com/COEXCZ/rerequests",
             "keywords": "",
-            "license": "",
+            "license": "Apache License 2.0",
             "maintainer": "",
             "maintainer_email": "",
-            "name": "ip",
-            "package_url": "https://pypi.org/project/ip/",
+            "name": "rerequests",
+            "package_url": "https://pypi.org/project/rerequests/",
             "platform": "",
-            "project_url": "https://pypi.org/project/ip/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/ip/0.0.1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "",
-            "version": "0.0.1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
-}{
-   "rows": {
-      "six": [
-         {
-            "author": "chrysn",
-            "author_email": "chrysn@fsfe.org",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Education",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: GNU General Public License (GPL)"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "GPL",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "si",
-            "package_url": "https://pypi.org/project/si/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/si/",
+            "project_url": "https://pypi.org/project/rerequests/",
             "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
+               "Homepage": "https://github.com/COEXCZ/rerequests"
             },
-            "release_url": "https://pypi.org/project/si/0.1.1-1/",
+            "release_url": "https://pypi.org/project/rerequests/1.0.0b0/",
             "requires_dist": null,
-            "requires_python": null,
-            "summary": "Module to represent SI units",
-            "version": "0.1.1-1",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Gabriel Alves",
-            "author_email": "gabriel.alves@pickcells.bio",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "# sx\n#### Framework to manage gRPC-based microservices application",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/itsmealves/sx",
-            "keywords": "sx microservices rpc grpc Framework",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sx",
-            "package_url": "https://pypi.org/project/sx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sx/",
-            "project_urls": {
-               "Download": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-               "Homepage": "https://github.com/itsmealves/sx"
-            },
-            "release_url": "https://pypi.org/project/sx/0.6.0/",
-            "requires_dist": null,
-            "requires_python": ">=3.5",
-            "summary": "Framework to manage gRPC-based microservices application",
-            "version": "0.6.0",
+            "requires_python": "",
+            "summary": "Wrapper around requests library with automatic retry ability",
+            "version": "1.0.0b0",
             "yanked": false,
             "yanked_reason": null
          }
@@ -526,211 +271,8 @@
       ],
       "pip": [
          {
-            "author": "Christopher Brown",
-            "author_email": "io@henrian.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 2 - Pre-Alpha",
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.6",
-               "Programming Language :: Python :: 2.7",
-               "Topic :: Software Development :: Libraries :: Python Modules",
-               "Topic :: System :: Archiving :: Packaging",
-               "Topic :: System :: Filesystems"
-            ],
-            "description": "Python (package) installation\n-----------------------------\n\nGetting started from `PyPI <https://pypi.python.org/pypi/pi/>`__:\n\n::\n\n    easy_install pi\n\n`Whence easy\\_install? <#setuptools>`__\n\nCommands\n--------\n\n-  Uninstall package named \"pip\":\n\n   ::\n\n       pi uninstall pip\n\n-  Install package named \"filesequence\":\n\n   ::\n\n       pi install filesequence\n\n-  List paths that Python searches for imported modules:\n\n   ::\n\n       pi paths\n\n-  List installed packages:\n\n   ::\n\n       pi list\n\nTesting\n-------\n\nContinuous integration:\n\n|Travis CI Build Status|\n\nOr run tests locally:\n\n::\n\n    nosetests --with-doctest\n\nRelated\n~~~~~~~\n\n-  http://guide.python-distribute.org/creation.html\n-  `distribute/pkg\\_resources\n   docs <http://pythonhosted.org/distribute/pkg_resources.html>`__\n-  standard library\n   ```site`` <http://docs.python.org/2/library/site.html>`__\n-  standard library `environment\n   variables <http://docs.python.org/2/using/cmdline.html#environment-variables>`__\n\nSetuptools\n~~~~~~~~~~\n\n``pi`` does not yet completely replace\n`setuptools <https://pypi.python.org/pypi/setuptools>`__. You may need\nto install it first:\n\n+----------+-----------------------------------------+\n| Distro   | Package manager command                 |\n+==========+=========================================+\n| Ubuntu   | ``apt-get install python-setuptools``   |\n+----------+-----------------------------------------+\n| Mac      | built-in                                |\n+----------+-----------------------------------------+\n| Arch     | ``pacman -S python-setuptools``         |\n+----------+-----------------------------------------+\n| CentOS   | ``yum install python-setuptools``       |\n+----------+-----------------------------------------+\n\nLicense\n-------\n\nCopyright (c) 2013 Christopher Brown. `MIT\nLicensed <https://raw.github.com/chbrown/pi/master/LICENSE>`__.\n\n.. |Travis CI Build Status| image:: https://travis-ci.org/chbrown/pi.png?branch=master\n   :target: https://travis-ci.org/chbrown/pi",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/chbrown/pi",
-            "keywords": null,
-            "license": "Copyright (c) 2013 Christopher Brown\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "pi",
-            "package_url": "https://pypi.org/project/pi/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/pi/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/chbrown/pi"
-            },
-            "release_url": "https://pypi.org/project/pi/0.1.2/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Simpler python package installation",
-            "version": "0.1.2",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "",
-            "author_email": "",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "ip",
-            "package_url": "https://pypi.org/project/ip/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/ip/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/ip/0.0.1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "",
-            "version": "0.0.1",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Vitalii Vanovschi",
-            "author_email": "support@parallelpython.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 5 - Production/Stable",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: BSD License",
-               "Natural Language :: English",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python",
-               "Topic :: Software Development",
-               "Topic :: System :: Distributed Computing"
-            ],
-            "description": "Parallel Python module (PP) provides an easy and efficient way to create parallel-enabled applications for SMP computers and clusters. PP module features cross-platform portability and dynamic load balancing. Thus application written with PP will parallelize efficiently even on heterogeneous and multi-platform clusters (including clusters running other application with variable CPU loads). Visit http://www.parallelpython.com for further information.",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "http://www.parallelpython.com/downloads/pp/pp-1.6.5.zip",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "http://www.parallelpython.com",
-            "keywords": null,
-            "license": "BSD-like",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "pp",
-            "package_url": "https://pypi.org/project/pp/",
-            "platform": "Windows,Linux,Unix",
-            "project_url": "https://pypi.org/project/pp/",
-            "project_urls": {
-               "Download": "http://www.parallelpython.com/downloads/pp/pp-1.6.5.zip",
-               "Homepage": "http://www.parallelpython.com"
-            },
-            "release_url": "https://pypi.org/project/pp/1.6.5/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Parallel and distributed programming for Python",
-            "version": "1.6.5",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
-}{
-   "rows": {
-      "six": [
-         {
-            "author": "Gabriel Alves",
-            "author_email": "gabriel.alves@pickcells.bio",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "# sx\n#### Framework to manage gRPC-based microservices application",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/itsmealves/sx",
-            "keywords": "sx microservices rpc grpc Framework",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sx",
-            "package_url": "https://pypi.org/project/sx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sx/",
-            "project_urls": {
-               "Download": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-               "Homepage": "https://github.com/itsmealves/sx"
-            },
-            "release_url": "https://pypi.org/project/sx/0.6.0/",
-            "requires_dist": null,
-            "requires_python": ">=3.5",
-            "summary": "Framework to manage gRPC-based microservices application",
-            "version": "0.6.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "chrysn",
-            "author_email": "chrysn@fsfe.org",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Education",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: GNU General Public License (GPL)"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "GPL",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "si",
-            "package_url": "https://pypi.org/project/si/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/si/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/si/0.1.1-1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Module to represent SI units",
-            "version": "0.1.1-1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ],
-      "python-dateutil": [
-         {
-            "author": "The Guardians",
-            "author_email": "william.bengtson@gmail.com",
+            "author": "jeremaihloo",
+            "author_email": "jeremaihloo1024@gmail.com",
             "bugtrack_url": null,
             "classifiers": [],
             "description": "",
@@ -742,85 +284,35 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "",
-            "keywords": "testing,logging,example",
+            "home_page": "https://github.com/jeremaihloo/ppi",
+            "keywords": "",
             "license": "",
             "maintainer": "",
             "maintainer_email": "",
-            "name": "pythondateutil",
-            "package_url": "https://pypi.org/project/pythondateutil/",
+            "name": "ppi",
+            "package_url": "https://pypi.org/project/ppi/",
             "platform": "",
-            "project_url": "https://pypi.org/project/pythondateutil/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/pythondateutil/0.1.1/",
+            "project_url": "https://pypi.org/project/ppi/",
+            "project_urls": {
+               "Bug Reports": "https://github.com/jeremaihloo/ppi/issues",
+               "Homepage": "https://github.com/jeremaihloo/ppi",
+               "Source": "https://github.com/jeremaihloo/ppi"
+            },
+            "release_url": "https://pypi.org/project/ppi/0.0.4/",
             "requires_dist": null,
             "requires_python": "",
-            "summary": "A package to prevent exploit",
-            "version": "0.1.1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ],
-      "idna": [
-         {
-            "author": "Xavier Bruhiere",
-            "author_email": "xavier.bruhiere@gmail.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 2 - Pre-Alpha",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: Apache Software License",
-               "Natural Language :: English",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2.7",
-               "Topic :: Software Development",
-               "Topic :: System :: Shells"
-            ],
-            "description": "python library DNA\n==================\n\n[![Coverage Status](https://coveralls.io/repos/hivetech/dna/badge.png)](https://coveralls.io/r/hivetech/dna)\n\n> Generic python utilities\n\nInstallation\n------------\n\n```console\npip install dna\n```\n\nExample\n-----\n\n```python\nimport dna.utils as utils\nimport dna.logger as logger\n\nlog_setup = logger.setup(level='info', filename='app.log')\nlog = logger.logger(__name__)\nwith log_setup.applicationbound():\n\n    log.info('hello', where='world')\n\n    useless_id = utils.generate_unique_id()\n    useless_name = utils.generate_random_name()\n\n    if utils.docker_check() and utils.is_running('ipyhon'):\n\n        print utils.Version('0.4.1')\n\n        module = utils.dynamic_import('dna.settings', 'LOG')\n        print utils.emphasis(module, align=False)\n\n        print utils.self_ip()\n```",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/hivetech/dna",
-            "keywords": null,
-            "license": "Apache 2.0",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "dna",
-            "package_url": "https://pypi.org/project/dna/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/dna/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/hivetech/dna"
-            },
-            "release_url": "https://pypi.org/project/dna/0.0.7/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Generic python utilities",
-            "version": "0.0.7",
+            "summary": "A command line tool help you to publish your python project on github and pypi",
+            "version": "0.0.4",
             "yanked": false,
             "yanked_reason": null
          },
          {
-            "author": "leesoar",
-            "author_email": "secure@tom.com",
+            "author": "",
+            "author_email": "",
             "bugtrack_url": null,
-            "classifiers": [
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python :: 3.5",
-               "Programming Language :: Python :: 3.6",
-               "Programming Language :: Python :: 3.7",
-               "Programming Language :: Python :: Implementation :: CPython",
-               "Programming Language :: Python :: Implementation :: PyPy"
-            ],
-            "description": "\nDevelop soon\n\n\n",
-            "description_content_type": "text/markdown",
+            "classifiers": [],
+            "description": "",
+            "description_content_type": null,
             "docs_url": null,
             "download_url": "",
             "downloads": {
@@ -828,70 +320,21 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "https://leesoar.com",
+            "home_page": "",
             "keywords": "",
-            "license": "MIT",
+            "license": "",
             "maintainer": "",
             "maintainer_email": "",
-            "name": "ida",
-            "package_url": "https://pypi.org/project/ida/",
+            "name": "ip",
+            "package_url": "https://pypi.org/project/ip/",
             "platform": "",
-            "project_url": "https://pypi.org/project/ida/",
-            "project_urls": {
-               "Homepage": "https://leesoar.com"
-            },
-            "release_url": "https://pypi.org/project/ida/0.0.1/",
-            "requires_dist": null,
-            "requires_python": ">=3.3.0",
-            "summary": "Develop soon",
-            "version": "0.0.1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ],
-      "pip": [
-         {
-            "author": "Christopher Brown",
-            "author_email": "io@henrian.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 2 - Pre-Alpha",
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.6",
-               "Programming Language :: Python :: 2.7",
-               "Topic :: Software Development :: Libraries :: Python Modules",
-               "Topic :: System :: Archiving :: Packaging",
-               "Topic :: System :: Filesystems"
-            ],
-            "description": "Python (package) installation\n-----------------------------\n\nGetting started from `PyPI <https://pypi.python.org/pypi/pi/>`__:\n\n::\n\n    easy_install pi\n\n`Whence easy\\_install? <#setuptools>`__\n\nCommands\n--------\n\n-  Uninstall package named \"pip\":\n\n   ::\n\n       pi uninstall pip\n\n-  Install package named \"filesequence\":\n\n   ::\n\n       pi install filesequence\n\n-  List paths that Python searches for imported modules:\n\n   ::\n\n       pi paths\n\n-  List installed packages:\n\n   ::\n\n       pi list\n\nTesting\n-------\n\nContinuous integration:\n\n|Travis CI Build Status|\n\nOr run tests locally:\n\n::\n\n    nosetests --with-doctest\n\nRelated\n~~~~~~~\n\n-  http://guide.python-distribute.org/creation.html\n-  `distribute/pkg\\_resources\n   docs <http://pythonhosted.org/distribute/pkg_resources.html>`__\n-  standard library\n   ```site`` <http://docs.python.org/2/library/site.html>`__\n-  standard library `environment\n   variables <http://docs.python.org/2/using/cmdline.html#environment-variables>`__\n\nSetuptools\n~~~~~~~~~~\n\n``pi`` does not yet completely replace\n`setuptools <https://pypi.python.org/pypi/setuptools>`__. You may need\nto install it first:\n\n+----------+-----------------------------------------+\n| Distro   | Package manager command                 |\n+==========+=========================================+\n| Ubuntu   | ``apt-get install python-setuptools``   |\n+----------+-----------------------------------------+\n| Mac      | built-in                                |\n+----------+-----------------------------------------+\n| Arch     | ``pacman -S python-setuptools``         |\n+----------+-----------------------------------------+\n| CentOS   | ``yum install python-setuptools``       |\n+----------+-----------------------------------------+\n\nLicense\n-------\n\nCopyright (c) 2013 Christopher Brown. `MIT\nLicensed <https://raw.github.com/chbrown/pi/master/LICENSE>`__.\n\n.. |Travis CI Build Status| image:: https://travis-ci.org/chbrown/pi.png?branch=master\n   :target: https://travis-ci.org/chbrown/pi",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/chbrown/pi",
-            "keywords": null,
-            "license": "Copyright (c) 2013 Christopher Brown\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "pi",
-            "package_url": "https://pypi.org/project/pi/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/pi/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/chbrown/pi"
-            },
-            "release_url": "https://pypi.org/project/pi/0.1.2/",
+            "project_url": "https://pypi.org/project/ip/",
+            "project_urls": null,
+            "release_url": "https://pypi.org/project/ip/0.0.1/",
             "requires_dist": null,
             "requires_python": null,
-            "summary": "Simpler python package installation",
-            "version": "0.1.2",
+            "summary": "",
+            "version": "0.0.1",
             "yanked": false,
             "yanked_reason": null
          },
@@ -940,12 +383,57 @@
             "yanked_reason": null
          },
          {
-            "author": "",
-            "author_email": "",
+            "author": "Christopher Brown",
+            "author_email": "io@henrian.com",
+            "bugtrack_url": null,
+            "classifiers": [
+               "Development Status :: 2 - Pre-Alpha",
+               "License :: OSI Approved :: MIT License",
+               "Programming Language :: Python",
+               "Programming Language :: Python :: 2",
+               "Programming Language :: Python :: 2.6",
+               "Programming Language :: Python :: 2.7",
+               "Topic :: Software Development :: Libraries :: Python Modules",
+               "Topic :: System :: Archiving :: Packaging",
+               "Topic :: System :: Filesystems"
+            ],
+            "description": "Python (package) installation\n-----------------------------\n\nGetting started from `PyPI <https://pypi.python.org/pypi/pi/>`__:\n\n::\n\n    easy_install pi\n\n`Whence easy\\_install? <#setuptools>`__\n\nCommands\n--------\n\n-  Uninstall package named \"pip\":\n\n   ::\n\n       pi uninstall pip\n\n-  Install package named \"filesequence\":\n\n   ::\n\n       pi install filesequence\n\n-  List paths that Python searches for imported modules:\n\n   ::\n\n       pi paths\n\n-  List installed packages:\n\n   ::\n\n       pi list\n\nTesting\n-------\n\nContinuous integration:\n\n|Travis CI Build Status|\n\nOr run tests locally:\n\n::\n\n    nosetests --with-doctest\n\nRelated\n~~~~~~~\n\n-  http://guide.python-distribute.org/creation.html\n-  `distribute/pkg\\_resources\n   docs <http://pythonhosted.org/distribute/pkg_resources.html>`__\n-  standard library\n   ```site`` <http://docs.python.org/2/library/site.html>`__\n-  standard library `environment\n   variables <http://docs.python.org/2/using/cmdline.html#environment-variables>`__\n\nSetuptools\n~~~~~~~~~~\n\n``pi`` does not yet completely replace\n`setuptools <https://pypi.python.org/pypi/setuptools>`__. You may need\nto install it first:\n\n+----------+-----------------------------------------+\n| Distro   | Package manager command                 |\n+==========+=========================================+\n| Ubuntu   | ``apt-get install python-setuptools``   |\n+----------+-----------------------------------------+\n| Mac      | built-in                                |\n+----------+-----------------------------------------+\n| Arch     | ``pacman -S python-setuptools``         |\n+----------+-----------------------------------------+\n| CentOS   | ``yum install python-setuptools``       |\n+----------+-----------------------------------------+\n\nLicense\n-------\n\nCopyright (c) 2013 Christopher Brown. `MIT\nLicensed <https://raw.github.com/chbrown/pi/master/LICENSE>`__.\n\n.. |Travis CI Build Status| image:: https://travis-ci.org/chbrown/pi.png?branch=master\n   :target: https://travis-ci.org/chbrown/pi",
+            "description_content_type": null,
+            "docs_url": null,
+            "download_url": "UNKNOWN",
+            "downloads": {
+               "last_day": -1,
+               "last_month": -1,
+               "last_week": -1
+            },
+            "home_page": "https://github.com/chbrown/pi",
+            "keywords": null,
+            "license": "Copyright (c) 2013 Christopher Brown\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
+            "maintainer": null,
+            "maintainer_email": null,
+            "name": "pi",
+            "package_url": "https://pypi.org/project/pi/",
+            "platform": "UNKNOWN",
+            "project_url": "https://pypi.org/project/pi/",
+            "project_urls": {
+               "Download": "UNKNOWN",
+               "Homepage": "https://github.com/chbrown/pi"
+            },
+            "release_url": "https://pypi.org/project/pi/0.1.2/",
+            "requires_dist": null,
+            "requires_python": null,
+            "summary": "Simpler python package installation",
+            "version": "0.1.2",
+            "yanked": false,
+            "yanked_reason": null
+         },
+         {
+            "author": "Andrew Rabert",
+            "author_email": "ar@nullsum.net",
             "bugtrack_url": null,
             "classifiers": [],
             "description": "",
-            "description_content_type": null,
+            "description_content_type": "",
             "docs_url": null,
             "download_url": "",
             "downloads": {
@@ -953,21 +441,25 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "",
+            "home_page": "https://github.com/nvllsvm/pipns",
             "keywords": "",
-            "license": "",
+            "license": "MIT",
             "maintainer": "",
             "maintainer_email": "",
-            "name": "ip",
-            "package_url": "https://pypi.org/project/ip/",
+            "name": "pipip",
+            "package_url": "https://pypi.org/project/pipip/",
             "platform": "",
-            "project_url": "https://pypi.org/project/ip/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/ip/0.0.1/",
-            "requires_dist": null,
-            "requires_python": null,
+            "project_url": "https://pypi.org/project/pipip/",
+            "project_urls": {
+               "Homepage": "https://github.com/nvllsvm/pipns"
+            },
+            "release_url": "https://pypi.org/project/pipip/0.0.10/",
+            "requires_dist": [
+               "pipenv"
+            ],
+            "requires_python": ">=3.7",
             "summary": "",
-            "version": "0.0.1",
+            "version": "0.0.10",
             "yanked": false,
             "yanked_reason": null
          }
