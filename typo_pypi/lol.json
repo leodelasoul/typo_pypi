@@ -1,0 +1,15 @@
+{
+"last_update": "2020-07-01 14:30:22",
+"query": {
+"bytes_billed": 89509593088,
+"bytes_processed": 89509344325,
+"cached": false,
+"estimated_cost": "0.41"
+},
+"rows": [
+{
+"download_count": 110838096,
+"project": "six"
+} ]
+
+  }

@@ -5,33 +5,37 @@ TODO I need to find out there patterns, how one steals either keys, mines bitcoi
 
 import json
 import threading
-
+from typo_pypi.server import Server
 import yara
 import tarfile
 import os
 import re
+from typo_pypi import config
 
-tmp_file = ""
+
 class Validater(threading.Thread):
     current_dir = os.path.dirname(__file__)
 
     def __init__(self, name,condition):
+
         super().__init__(name=name)
         self.condition = condition
 
     def run(self):
-        global tmp_file
-        self.condition.acquire()
         self.test()
+        i = 0
+        while config.run:
 
-        if tmp_file != "":
-            self.check_sig_discription(tmp_file)
-            self.condition.notify_all()
-        else:
-            self.condition.wait()
-        self.condition.release()
-        # incluse here the check disript
-        # include here the setup.py check
+            self.condition.acquire()
+            if config.tmp_file != "":
+                self.check_sig_discription(config.tmp_file)
+                self.condition.notify_all()
+            else:
+                self.condition.wait()
+            self.condition.release()
+            i = i + 1
+            # incluse here the check disript
+            # include here the setup.py check
 
     def test(self):
         print("validater executes stuff now!")

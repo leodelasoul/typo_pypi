@@ -13,17 +13,16 @@ import errno
 '''
 entry point of experiment
 '''
+c = threading.Condition()
 
 
 def main():
-    c = threading.Condition()
-
     try:
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
         analizer = Analizer()
-        server = Server("serverthread", tmp_dir,c)
-        validater = Validater("validaterthread",c)
+        server = Server("serverthread", tmp_dir, c)
+        validater = Validater("validaterthread", c)
 
         analizer.start()
         time.sleep(2)
@@ -31,7 +30,7 @@ def main():
         threads.append(server)
         validater.start()
         threads.append(validater)
-        #time.sleep()
+        time.sleep(2)
         server.start()
 
         print("threads started")

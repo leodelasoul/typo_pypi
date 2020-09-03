@@ -4,16 +4,17 @@ import requests
 from collections import defaultdict
 from typo_pypi.analizer import Analizer
 import json
-from typo_pypi.validater import Validater
+#from typo_pypi.validater import Validater
 import os
+from typo_pypi import config
 
 '''
 manages all http requests that are needed for  this project
 
 '''
 
-
 class Server(threading.Thread):
+
 
     def __init__(self, name, tmp_dir,condition):
         super().__init__(name=name)
@@ -28,7 +29,6 @@ class Server(threading.Thread):
         pass
 
     def query_pypi_index(self):
-        global tmp_file
         data = defaultdict(list)
         typos = list()
 
@@ -51,10 +51,12 @@ class Server(threading.Thread):
                 if x.status_code == 200 and x.json()["info"]['author_email'] not in Server.blacklist['authors']:
                     self.condition.acquire()
                     p.set_check(True)
+
                     print(("https://pypi.org/project/" + t))
                     data = to_json_file(p.project, x, idx)
                     os.mkdir(self.tmp_dir + "/" + t)
                     tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
+                    config.tmp_file = tmp_file
                     self.condition.notify_all()
                     with open(tmp_file, "w+", encoding="utf-8") as f:
                         json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
@@ -64,11 +66,11 @@ class Server(threading.Thread):
                     # setup_file = validater.extract_setup_file(tar_file)
                     # validater.validate_package(setup_file)
                     idx = idx + 1
-                    self.condition.release()
                     # global_count = global_count + 1
+                    self.condition.release()
+
                 else:
                     p.set_check(False)
-
         with open("results1.json", "a", encoding='utf-8') as f:
             json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
 
