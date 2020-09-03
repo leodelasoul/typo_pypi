@@ -11,17 +11,27 @@ import tarfile
 import os
 import re
 
+tmp_file = ""
 class Validater(threading.Thread):
     current_dir = os.path.dirname(__file__)
 
-
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name,condition):
+        super().__init__(name=name)
+        self.condition = condition
 
     def run(self):
+        global tmp_file
+        self.condition.acquire()
         self.test()
-        #incluse here the check disript
-        #include here the setup.py check
+
+        if tmp_file != "":
+            self.check_sig_discription(tmp_file)
+            self.condition.notify_all()
+        else:
+            self.condition.wait()
+        self.condition.release()
+        # incluse here the check disript
+        # include here the setup.py check
 
     def test(self):
         print("validater executes stuff now!")
@@ -46,7 +56,11 @@ class Validater(threading.Thread):
         except Exception:
             return
         else:
-            rules.match(package_source)
+            match = rules.match(package_source)
+            if match:
+                print("hit")
+            else:
+                print("nothing")
 
     def extract_setup_file(self, downloaded_file):
         print(downloaded_file)

@@ -14,10 +14,6 @@ class Algos:
         return n
 
     @staticmethod
-    def levenshtein(s, a):
-       pass
-
-    @staticmethod
     def word_dist(a, b):
         tmp = a
         tmp1 = b
@@ -28,6 +24,29 @@ class Algos:
             a = tmp1
         n = len(list(a)) - len(list(b))
         return n
+
+    @staticmethod
+    def levenshtein(a, b):
+        if not (len(a) > 0 and len(b) > 0):
+            msg = "|a| > |b| > 0"
+            raise ValueError(msg)
+        D = []
+        for i in range(len(a)):
+            D.append([])
+            for j in range(len(b)):
+                D[i].append(0)
+        for i in range(len(a)):
+            D[i][0] = i
+        for j in range(len(b)):
+            D[0][j] = j
+
+        for i in range(len(a)):
+            for j in range(len(b)):
+                cost = [1, 0][a[i] == b[j]]
+                D[i][j] = min(D[i - 1][j] + 1, D[i][j - 1] + 1, D[i - 1][j - 1] + cost)
+        #print(pprint.pprint(D))
+
+        return D[-1][-1]
 
     @staticmethod
     def insert(s, c, i):
@@ -61,7 +80,8 @@ class Algos:
             for j, _ in enumerate(s):
                 result1 = Algos.insert(s, char, j)
                 result2 = Algos.replace(s, i, j)
-                if result1 != s and result2 != s and Algos.word_dist(result1, s) < 3 and Algos.word_dist(result2, s) < 3:
+                if result1 != s and result2 != s and Algos.word_dist(result1, s) < 3 and Algos.word_dist(result2,
+                                                                                                         s) < 3:
                     results.add(result1)
                     results.add(result2)
 

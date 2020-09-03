@@ -22,19 +22,20 @@ class Analizer(threading.Thread):
         self.package_tree.create_node("Packages", "packages")
 
     def run(self):
-        with open(self.current_dir + "/top-pypi-packages-30-days.json", "r") as file:
+        with open(self.current_dir + "./lol.json", "r") as file:
             data = json.load(file)
             for p in data["rows"]:
                 typos = Algos.generate_typo(p["project"])
                 obj = Package(p["project"], p["download_count"], typos)
                 self.package_list.append(obj)
+                return
                 self.package_tree.create_node(p["project"], p["project"], parent="packages")
+
         i = 0
         for p in self.package_list:
             for t in self.package_list[i].__dict__["typos"]:
                 try:
                     self.package_tree.create_node(t, t, parent=p.__dict__["project"])
-
                 except DuplicatedNodeIdError as e:
                     pass
                 else:

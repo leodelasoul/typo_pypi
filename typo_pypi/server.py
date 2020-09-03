@@ -7,8 +7,6 @@ import json
 from typo_pypi.validater import Validater
 import os
 
-
-
 '''
 manages all http requests that are needed for  this project
 
@@ -17,9 +15,10 @@ manages all http requests that are needed for  this project
 
 class Server(threading.Thread):
 
-    def __init__(self, tmp_dir):
-        super().__init__()
+    def __init__(self, name, tmp_dir,condition):
+        super().__init__(name=name)
         self.tmp_dir = tmp_dir  # store tmp data
+        self.condition = condition
 
     with open(os.path.dirname(__file__) + "/blacklist.json") as f:
         blacklist = json.load(f)
@@ -29,9 +28,11 @@ class Server(threading.Thread):
         pass
 
     def query_pypi_index(self):
+        global tmp_file
         data = defaultdict(list)
         typos = list()
-        validater = Validater()
+
+        # validater = Validater(condition)
 
         def to_json_file(package, typo, idx):
             nonlocal data
@@ -40,25 +41,31 @@ class Server(threading.Thread):
             typos.append(info)
             data[package].append(typos[idx])
             return data
+
         idx = 0
         for i, p in enumerate(Analizer.package_list):
-            if i == 10:  # for dev purpose only
+            if i == 1:  # for dev purpose only
                 break
             for t in p.typos:
                 x = requests.get("https://pypi.org/pypi/" + t + "/json")
                 if x.status_code == 200 and x.json()["info"]['author_email'] not in Server.blacklist['authors']:
+                    self.condition.acquire()
                     p.set_check(True)
                     print(("https://pypi.org/project/" + t))
                     data = to_json_file(p.project, x, idx)
                     os.mkdir(self.tmp_dir + "/" + t)
                     tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
+                    self.condition.notify_all()
                     with open(tmp_file, "w+", encoding="utf-8") as f:
                         json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
-                    if validater.check_sig_discription(tmp_file):
-                        tar_file = self.download_package(x, t)
-                        setup_file = validater.extract_setup_file(tar_file)
-                        #validater.validate_package(setup_file)
+
+                    # if validater.check_sig_discription(tmp_file):
+                    #    tar_file = self.download_package(x, t)
+                    # setup_file = validater.extract_setup_file(tar_file)
+                    # validater.validate_package(setup_file)
                     idx = idx + 1
+                    self.condition.release()
+                    # global_count = global_count + 1
                 else:
                     p.set_check(False)
 
