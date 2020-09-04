@@ -5,9 +5,7 @@ TODO I need to find out there patterns, how one steals either keys, mines bitcoi
 
 import json
 import threading
-from typo_pypi.server import Server
 import yara
-import tarfile
 import os
 import re
 from typo_pypi import config
@@ -16,41 +14,35 @@ from typo_pypi import config
 class Validater(threading.Thread):
     current_dir = os.path.dirname(__file__)
 
-    def __init__(self, name,condition):
+    def __init__(self, name, condition):
 
         super().__init__(name=name)
         self.condition = condition
 
     def run(self):
-        self.test()
-        i = 0
         while config.run:
-
             self.condition.acquire()
             if config.tmp_file != "":
-                self.check_sig_discription(config.tmp_file)
+                config.current_package_valid = self.check_sig_discription(config.tmp_file)
+                self.condition.notify_all()
+            elif config.setup_file != "":
+                self.validate_package(config.setup_file)
                 self.condition.notify_all()
             else:
                 self.condition.wait()
             self.condition.release()
-            i = i + 1
-            # incluse here the check disript
-            # include here the setup.py check
-
-    def test(self):
-        print("validater executes stuff now!")
 
     def check_sig_discription(self, data):
-        check = False
         rules = yara.compile(self.current_dir + "/yara/pypi.yara")
         match = rules.match(data)
         if match:
-            print("hit")
             check = True
+        else:
+            check = False
         return check
 
     def validate_package(self, setup_file):
-        # prüfe inhalt des downloads mittels yara
+        # check content of file
         rules = yara.compile(filepaths={
             'Big_Numbers0': './yara/crypto.yara',
             'fragus_htm': './yara/fragus.yara'
@@ -66,23 +58,3 @@ class Validater(threading.Thread):
             else:
                 print("nothing")
 
-    def extract_setup_file(self, downloaded_file):
-        print(downloaded_file)
-        try:
-            dest = re.match(r".*\\([^\\]+)/", downloaded_file)
-            dest1 = re.match(r".*/([^//]+)/", downloaded_file)
-        except TypeError as e:
-            return
-
-        try:
-            t = tarfile.open(downloaded_file, 'r')
-        except tarfile.ReadError as e:
-            print(e)
-        else:
-            for member in t.getmembers():
-                if "setup.py" in member.name:
-                    if os.name == "posix":
-                        t.extract(member, dest1[0])
-
-                    elif os.name == "nt":
-                        t.extract(member, dest[0])

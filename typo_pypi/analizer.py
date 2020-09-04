@@ -28,7 +28,6 @@ class Analizer(threading.Thread):
                 typos = Algos.generate_typo(p["project"])
                 obj = Package(p["project"], p["download_count"], typos)
                 self.package_list.append(obj)
-                return
                 self.package_tree.create_node(p["project"], p["project"], parent="packages")
 
         i = 0
