@@ -45,7 +45,7 @@ class Server(threading.Thread):
 
         idx = 0
         for i, p in enumerate(Analizer.package_list):
-            if i == 1:  # for dev purpose only
+            if i == 10:  # for dev purpose only
                 break
             for t in p.typos:
                 x = requests.get("https://pypi.org/pypi/" + t + "/json")
@@ -60,6 +60,7 @@ class Server(threading.Thread):
                     self.condition.notify_all()
                     with open(tmp_file, "w+", encoding="utf-8") as f:
                         json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
+                    self.condition.wait() # validater needs to check sig first
                     if config.current_package_valid:
                         self.condition.wait()
                         tar_file = self.download_package(x, t)
@@ -69,6 +70,7 @@ class Server(threading.Thread):
                     self.condition.release()
                 else:
                     p.set_check(False)
+                    print(t)
         config.run = False
         with open("results1.json", "a", encoding='utf-8') as f:
             json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
@@ -107,9 +109,12 @@ class Server(threading.Thread):
                 if "setup.py" in member.name:
                     if os.name == "posix":
                         t.extract(member, dest1[0])
+                        return dest1[0]
 
                     elif os.name == "nt":
                         t.extract(member, dest[0])
+                        return dest[0]
+
 
 
     # y = requests.get("https://pypi.org/pypi/trafaretconfig/json")
