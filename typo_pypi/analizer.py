@@ -17,8 +17,8 @@ class Analizer(threading.Thread):
     current_dir = os.path.dirname(__file__)
     package_tree = Tree()
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name):
+        super().__init__(name=name)
         self.package_tree.create_node("Packages", "packages")
 
     def run(self):

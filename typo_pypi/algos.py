@@ -1,8 +1,10 @@
 import pprint
-
+import random
 
 class Algos:
-
+    all_inserts = set()
+    all_replace = set()
+    THRESHOLD = 1
     @staticmethod
     def hamming_distance(a, b):
         if not len(a) == len(b):
@@ -44,7 +46,7 @@ class Algos:
             for j in range(len(b)):
                 cost = [1, 0][a[i] == b[j]]
                 D[i][j] = min(D[i - 1][j] + 1, D[i][j - 1] + 1, D[i - 1][j - 1] + cost)
-        #print(pprint.pprint(D))
+        # print(pprint.pprint(D))
 
         return D[-1][-1]
 
@@ -52,7 +54,34 @@ class Algos:
     def insert(s, c, i):
         assert len(s) > 0 and len(c) == 1 \
                and i in range(0, len(s) + 1)
-        return s[:1] + c + s[i:]
+
+        result0 = Algos.fat_finger(c) + s[i:] # fatfinger
+        result1 = c + s[i:] # simple charrepetition
+        if Algos.levenshtein(result0,s) < Algos.THRESHOLD:
+            Algos.all_inserts.add(result0)
+        if Algos.levenshtein(result1,s) < Algos.THRESHOLD and result1 != s: #avoid false positives
+            Algos.all_inserts.add(result1)
+            print(result1)
+        return Algos.all_inserts
+
+    @staticmethod
+    def fat_finger(c):
+        qwertz = {
+            '1': '2q', '2': '3wq1', '3': '4ew2', '4': '5re3', '5': '6tr4', '6': '7zt5', '7': '8uz6', '8': '9iu7',
+            '9': '0oi8', '0': 'po9',
+            'q': '12wa', 'w': '3esaq2', 'e': '4rdsw3', 'r': '5tfde4', 't': '6zgfr5', 'z': '7uhgt6', 'u': '8ijhz7',
+            'i': '9okju8', 'o': '0plki9', 'p': 'lo0',
+            'a': 'qwsy', 's': 'edxyaw', 'd': 'rfcxse', 'f': 'tgvcdr', 'g': 'zhbvft', 'h': 'ujnbgz', 'j': 'ikmnhu',
+            'k': 'olmji', 'l': 'kop',
+            'y': 'asx', 'x': 'ysdc', 'c': 'xdfv', 'v': 'cfgb', 'b': 'vghn', 'n': 'bhjm', 'm': 'njk'
+        }
+        qwerty = {  # TODO insert qwerty layout
+
+        }
+        if c in qwertz:
+            one_char = qwertz[c]
+            one_char = list(one_char)
+            return one_char[random.randrange(0, len(one_char) - 1)]
 
     @staticmethod
     def replace(s, i, j):
@@ -62,27 +91,26 @@ class Algos:
         tmp = l[i]
         l[i] = l[j]
         l[j] = tmp
-        return ''.join(l)
+        result0 = ''.join(l)
+        if Algos.levenshtein(result0,s) < Algos.THRESHOLD:
+            Algos.all_replace.add(result0)
+        return Algos.all_replace
 
     @staticmethod
     def delete(s, i):
         assert (len(s) > 0 and i in range(0, len(s)))
-        return s[:i] + s[i + 1:]
+        result = s[:i] + s[i + 1:]
+        return result
 
     @staticmethod
     def generate_typo(s):
         results = set()
-
         for i, char in enumerate(s):
-            result0 = Algos.delete(s, i)
-            if Algos.word_dist(s, result0) < 3:
-                results.add(result0)
+            delete_result = Algos.delete(s, i)
+            if Algos.levenshtein(s, delete_result) < 2:
+                results.add(delete_result)
             for j, _ in enumerate(s):
-                result1 = Algos.insert(s, char, j)
-                result2 = Algos.replace(s, i, j)
-                if result1 != s and result2 != s and Algos.word_dist(result1, s) < 3 and Algos.word_dist(result2,
-                                                                                                         s) < 3:
-                    results.add(result1)
-                    results.add(result2)
+                results.update(Algos.insert(s, char, j))
+                #results.update(Algos.replace(s, i, j))
 
         return results

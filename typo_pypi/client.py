@@ -14,7 +14,7 @@ manages all http requests that are needed for  this project
 
 '''
 
-class Server(threading.Thread):
+class Client(threading.Thread):
 
 
     def __init__(self, name, tmp_dir,condition):
@@ -49,7 +49,7 @@ class Server(threading.Thread):
                 break
             for t in p.typos:
                 x = requests.get("https://pypi.org/pypi/" + t + "/json")
-                if x.status_code == 200 and x.json()["info"]['author_email'] not in Server.blacklist['authors']:
+                if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors']:
                     self.condition.acquire()
                     p.set_check(True)
                     print(("https://pypi.org/project/" + t))

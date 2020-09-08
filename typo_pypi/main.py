@@ -3,7 +3,7 @@ import threading
 
 from typo_pypi.validater import Validater
 from typo_pypi.analizer import Analizer
-from typo_pypi.server import Server
+from typo_pypi.client import Client
 from typo_pypi.algos import Algos
 import threading
 import tempfile
@@ -20,18 +20,18 @@ def main():
     try:
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
-        analizer = Analizer()
-        server = Server("serverthread", tmp_dir, c)
+        analizer = Analizer("analizerthread")
+        client = Client("serverthread", tmp_dir, c)
         validater = Validater("validaterthread", c)
 
         analizer.start()
         time.sleep(2)
         threads.append(analizer)
-        threads.append(server)
+        threads.append(client)
         validater.start()
         threads.append(validater)
         time.sleep(2)
-        server.start()
+        client.start()
 
         print("threads started")
         # class methods should execute
