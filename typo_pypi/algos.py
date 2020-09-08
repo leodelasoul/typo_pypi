@@ -4,6 +4,8 @@ import random
 class Algos:
     all_inserts = set()
     all_replace = set()
+    all_removes = set()
+
     THRESHOLD = 1
     @staticmethod
     def hamming_distance(a, b):
@@ -46,7 +48,6 @@ class Algos:
             for j in range(len(b)):
                 cost = [1, 0][a[i] == b[j]]
                 D[i][j] = min(D[i - 1][j] + 1, D[i][j - 1] + 1, D[i - 1][j - 1] + cost)
-        # print(pprint.pprint(D))
 
         return D[-1][-1]
 
@@ -57,11 +58,10 @@ class Algos:
 
         result0 = Algos.fat_finger(c) + s[i:] # fatfinger
         result1 = c + s[i:] # simple charrepetition
-        if Algos.levenshtein(result0,s) < Algos.THRESHOLD:
+        if Algos.levenshtein(result0,s) < Algos.THRESHOLD and result1 != s:
             Algos.all_inserts.add(result0)
         if Algos.levenshtein(result1,s) < Algos.THRESHOLD and result1 != s: #avoid false positives
             Algos.all_inserts.add(result1)
-            print(result1)
         return Algos.all_inserts
 
     @staticmethod
@@ -97,18 +97,24 @@ class Algos:
         return Algos.all_replace
 
     @staticmethod
-    def delete(s, i):
+    def delete(s,c, i):
         assert (len(s) > 0 and i in range(0, len(s)))
-        result = s[:i] + s[i + 1:]
-        return result
+        result0 = s[:i] + s[i + 1:] #remove one char from string for each i
+        if Algos.levenshtein(result0,s) < Algos.THRESHOLD:
+            Algos.all_removes.add(result0)
+        return Algos.all_removes
+
+    @staticmethod
+    def remove_hyphen(s,i):
+        return s[:i] + s[i:]
 
     @staticmethod
     def generate_typo(s):
         results = set()
         for i, char in enumerate(s):
-            delete_result = Algos.delete(s, i)
-            if Algos.levenshtein(s, delete_result) < 2:
-                results.add(delete_result)
+            #results.update(Algos.delete(s, char, i))
+            if char == "-" or "/":
+                results.update(Algos.remove_hyphen(s,i)) #should resolve in levdistance 1
             for j, _ in enumerate(s):
                 results.update(Algos.insert(s, char, j))
                 #results.update(Algos.replace(s, i, j))

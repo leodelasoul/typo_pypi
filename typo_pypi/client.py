@@ -45,7 +45,7 @@ class Client(threading.Thread):
 
         idx = 0
         for i, p in enumerate(Analizer.package_list):
-            if i == 10:  # for dev purpose only
+            if i == 1:  # for dev purpose only
                 break
             for t in p.typos:
                 x = requests.get("https://pypi.org/pypi/" + t + "/json")
