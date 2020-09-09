@@ -45,8 +45,8 @@ class Client(threading.Thread):
 
         idx = 0
         for i, p in enumerate(Analizer.package_list):
-          #  if i == 2:  # for dev purpose only, adjust exactly as the amount of test packages
-          #      break
+            if i == 20:  # for dev purpose only
+                break
             for t in p.typos:
                 x = requests.get("https://pypi.org/pypi/" + t + "/json")
                 if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors']:

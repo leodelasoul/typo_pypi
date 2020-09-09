@@ -1,10 +1,10 @@
 import pprint
 import random
 
+
 class Algos:
-
-
     THRESHOLD = 1
+
     @staticmethod
     def hamming_distance(a, b):
         if not len(a) == len(b):
@@ -55,11 +55,11 @@ class Algos:
         assert len(s) > 0 and len(c) == 1 \
                and i in range(0, len(s) + 1)
 
-        result0 = s[:i] + Algos.fat_finger(c) + s[i:] # fatfinger
-        result1 = s[:i] + c + s[i:] # simple charrepetition
-        if Algos.levenshtein(result0,s) <= Algos.THRESHOLD:
+        result0 = s[:i] + Algos.fat_finger(c) + s[i:]  # fatfinger
+        result1 = s[:i] + c + s[i:]  # simple charrepetition
+        if Algos.levenshtein(result0, s) <= Algos.THRESHOLD:
             all_inserts.add(result0)
-        if Algos.levenshtein(result1,s) <= Algos.THRESHOLD: #avoid false positives
+        if Algos.levenshtein(result1, s) <= Algos.THRESHOLD:  # avoid false positives
             all_inserts.add(result1)
 
         return all_inserts
@@ -86,39 +86,99 @@ class Algos:
             return ""
 
     @staticmethod
-    def replace(s, i, j):
+    def replace(s, i, j,c):
         all_replace = set()
         assert (len(s) > 0 and j in range(0, len(s))
                 and i in range(0, len(s)))
         l = list(s)
+        result1 = Algos.homoglyph(s, i, j, c)
         tmp = l[i]
         l[i] = l[j]
         l[j] = tmp
         result0 = ''.join(l)
-        if Algos.levenshtein(result0,s) < Algos.THRESHOLD:
+
+        if Algos.levenshtein(result0, s) <= 2 and result0 != s:  # 2 threshold -> could resolve in more false positives
             all_replace.add(result0)
+        if s not in result1:
+            all_replace.add(result1)
         return all_replace
+
+    @staticmethod
+    def homoglyph(s,i,j,c):
+        s = list(s)
+        glyph_map = {'1': "１",
+                     '2': "２",
+                     '3': "３",
+                     '4': "４",
+                     '5': "５",
+                     '6': "６",
+                     '7': ["𐒇", "７"],
+                     '8': ["Ց", "&", "８"],
+                     '9': ["９"],
+                     '0': ["Ο", "ο", "О", "о", "Օ", "𐒆", "Ｏ", "ｏ", "Ο", "ο", "О", "о", "Օ", "𐒆", "Ｏ", "ｏ"],
+                     'a': ["à", "á", "â", "ã", "ä", "å", "а", "ɑ", "α", "а", "ａ"],
+                     'A': ["À", "Á", "Â", "Ã", "Ä", "Å", "Ꭺ", "Ａ"],
+                     'b': ["d", "lb", "ib", "ʙ", "Ь", "ｂ", "ß"],
+                     'B': ["ß", "Β", "β", "В", "Ь", "Ᏼ", "ᛒ", "Ｂ"],
+                     'c': ["ϲ", "с", "ⅽ"],
+                     'C': ["Ϲ", "С", "с", "Ꮯ", "Ⅽ", "ⅽ", "𐒨", "Ｃ"],
+                     'd': ["b", "cl", "dl", "di", "ԁ", "ժ", "ⅾ", "ｄ"],
+                     'e': ["é", "ê", "ë", "ē", "ĕ", "ė", "ｅ", "е"],
+                     'f': ["Ϝ", "Ｆ", "ｆ"],
+                     'g': ["q", "ɢ", "ɡ", "Ԍ", "Ԍ", "ｇ"],
+                     'h': ["lh", "ih", "һ", "ｈ"],
+                     'i': ["1", "l", "Ꭵ", "ⅰ", "ｉ"],
+                     'j': ["ј", "ｊ"],
+                     'k': ["ik", "lk", "lc", "κ", "ｋ"],
+                     'l': ["1", "i", "ⅼ", "ｌ", "ӏ"],
+                     'm': ["n", "nn", "rn", "rr", "ⅿ", "ｍ"],
+                     'n': ["m", "r", "ｎ"],
+                     'o': ["0", "Ο", "ο", "О", "о", "Օ", "𐒆", "Ｏ", "ｏ", "Ο", "ο", "О", "о", "Օ", "𐒆", "Ｏ", "ｏ"],
+                     'p': ["ρ", "р", "ｐ", "р"],
+                     'q': ["g", "ｑ"],
+                     'r': ["ｒ", "ʀ"],
+                     's': ["ｓ", "Ꮪ", "Ｓ"],
+                     't': ["ｔ", "τ"],
+                     'u': ["ｕ", "υ", "Ս", "Ｕ", "μ"],
+                     'v': ["ｖ", "ѵ", "ⅴ"],
+                     'w': ["vv", "ѡ", "ｗ"],
+                     'x': ["ⅹ", "ｘ"],
+                     'y': ["ʏ", "γ", "у", "Ү", "ｙ"],
+                     'z': ["ｚ"],
+                     }
+        if c in glyph_map:
+            #for symbol in glyph_map[c]:
+            #    l[i] = symbol
+            #    homo_glyph = ''.join(l)
+            #    homo_glyphs.add(homo_glyph)
+            s[j] = glyph_map[c][0]  #otherwise the variation of typos would not be considered useful
+            homo_glyph = ''.join(s)
+            return homo_glyph
+        else:
+            return ""
+
+
 
     @staticmethod
     def delete(s, i):
         all_removes = set()
         assert (len(s) > 0 and i in range(0, len(s)))
-        result0 = s[:i] + s[i + 1:] #remove one char from string for each i
+        result0 = s[:i] + s[i + 1:]  # remove one char from string for each i
         all_removes.add(result0)
         return all_removes
 
     @staticmethod
-    def remove_hyphen(s,i):
-        return Algos.delete(s,i)
+    def remove_hyphen(s, i):
+        return Algos.delete(s, i)
 
     @staticmethod
     def generate_typo(s):
         results = set()
         for i, char in enumerate(s):
-            results.update(Algos.delete(s,i))
+            results.update(Algos.delete(s, i))
             if char == "-" or char == "/":
-                results.update(Algos.remove_hyphen(s,i)) #should resolve in levdistance 1
+                results.update(Algos.remove_hyphen(s, i))  # should resolve in levdistance 1
             for j, _ in enumerate(s):
                 results.update(Algos.insert(s, _, j))
-                results.update(Algos.replace(s, i, j))
+                results.update(Algos.replace(s, i, j,_))
         return results

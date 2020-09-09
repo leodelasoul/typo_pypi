@@ -22,7 +22,7 @@ class Analizer(threading.Thread):
         self.package_tree.create_node("Packages", "packages")
 
     def run(self):
-        with open(self.current_dir + "/lol.json", "r") as file:
+        with open(self.current_dir + "/top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
             for p in data["rows"]:
                 typos = Algos.generate_typo(p["project"])
