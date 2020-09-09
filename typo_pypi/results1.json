@@ -1,121 +1,45 @@
 {
-   "rows": {
-      "six": [
-         {
-            "author": "Jerome Kieffer",
-            "author_email": "jerome.kieffer@esrf.fr",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "",
-            "description_content_type": "",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/kif/ssx",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "ssx",
-            "package_url": "https://pypi.org/project/ssx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/ssx/",
-            "project_urls": {
-               "Homepage": "https://github.com/kif/ssx"
-            },
-            "release_url": "https://pypi.org/project/ssx/0.0.1/",
-            "requires_dist": null,
-            "requires_python": "",
-            "summary": "Synchrotron serial crystallography tools",
-            "version": "0.0.1",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Gabriel Alves",
-            "author_email": "gabriel.alves@pickcells.bio",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "# sx\n#### Framework to manage gRPC-based microservices application",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/itsmealves/sx",
-            "keywords": "sx microservices rpc grpc Framework",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sx",
-            "package_url": "https://pypi.org/project/sx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sx/",
-            "project_urls": {
-               "Download": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-               "Homepage": "https://github.com/itsmealves/sx"
-            },
-            "release_url": "https://pypi.org/project/sx/0.6.0/",
-            "requires_dist": null,
-            "requires_python": ">=3.5",
-            "summary": "Framework to manage gRPC-based microservices application",
-            "version": "0.6.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "chrysn",
-            "author_email": "chrysn@fsfe.org",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Education",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: GNU General Public License (GPL)"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "GPL",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "si",
-            "package_url": "https://pypi.org/project/si/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/si/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/si/0.1.1-1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Module to represent SI units",
-            "version": "0.1.1-1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
+   "rows": {}
+}{
+   "rows": {}
 }{
    "rows": {
       "six": [
          {
+            "author": "Seth Michael Larson",
+            "author_email": "sethmichaellarson@gmail.com",
+            "bugtrack_url": null,
+            "classifiers": [],
+            "description": "",
+            "description_content_type": "",
+            "docs_url": null,
+            "download_url": "",
+            "downloads": {
+               "last_day": -1,
+               "last_month": -1,
+               "last_week": -1
+            },
+            "home_page": "https://github.com/sethmlarson/asix",
+            "keywords": "",
+            "license": "",
+            "maintainer": "",
+            "maintainer_email": "",
+            "name": "asix",
+            "package_url": "https://pypi.org/project/asix/",
+            "platform": "",
+            "project_url": "https://pypi.org/project/asix/",
+            "project_urls": {
+               "Homepage": "https://github.com/sethmlarson/asix"
+            },
+            "release_url": "https://pypi.org/project/asix/0/",
+            "requires_dist": null,
+            "requires_python": "",
+            "summary": "Six for async, works well with unasync",
+            "version": "0",
+            "yanked": false,
+            "yanked_reason": null
+         },
+         {
             "author": "chrysn",
             "author_email": "chrysn@fsfe.org",
             "bugtrack_url": null,
@@ -156,11 +80,19 @@
             "yanked_reason": null
          },
          {
-            "author": "Jerome Kieffer",
-            "author_email": "jerome.kieffer@esrf.fr",
+            "author": "Benjamin Peterson",
+            "author_email": "benjamin@python.org",
             "bugtrack_url": null,
-            "classifiers": [],
-            "description": "",
+            "classifiers": [
+               "Development Status :: 5 - Production/Stable",
+               "Intended Audience :: Developers",
+               "License :: OSI Approved :: MIT License",
+               "Programming Language :: Python :: 2",
+               "Programming Language :: Python :: 3",
+               "Topic :: Software Development :: Libraries",
+               "Topic :: Utilities"
+            ],
+            "description": ".. image:: https://img.shields.io/pypi/v/six.svg\n   :target: https://pypi.org/project/six/\n   :alt: six on PyPI\n\n.. image:: https://travis-ci.org/benjaminp/six.svg?branch=master\n   :target: https://travis-ci.org/benjaminp/six\n   :alt: six on TravisCI\n\n.. image:: https://readthedocs.org/projects/six/badge/?version=latest\n   :target: https://six.readthedocs.io/\n   :alt: six's documentation on Read the Docs\n\n.. image:: https://img.shields.io/badge/license-MIT-green.svg\n   :target: https://github.com/benjaminp/six/blob/master/LICENSE\n   :alt: MIT License badge\n\nSix is a Python 2 and 3 compatibility library.  It provides utility functions\nfor smoothing over the differences between the Python versions with the goal of\nwriting Python code that is compatible on both Python versions.  See the\ndocumentation for more information on what is provided.\n\nSix supports Python 2.7 and 3.3+.  It is contained in only one Python\nfile, so it can be easily copied into your project. (The copyright and license\nnotice must be retained.)\n\nOnline documentation is at https://six.readthedocs.io/.\n\nBugs can be reported to https://github.com/benjaminp/six.  The code can also\nbe found there.\n\n\n",
             "description_content_type": "",
             "docs_url": null,
             "download_url": "",
@@ -169,23 +101,23 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "https://github.com/kif/ssx",
+            "home_page": "https://github.com/benjaminp/six",
             "keywords": "",
-            "license": "",
+            "license": "MIT",
             "maintainer": "",
             "maintainer_email": "",
-            "name": "ssx",
-            "package_url": "https://pypi.org/project/ssx/",
+            "name": "six",
+            "package_url": "https://pypi.org/project/six/",
             "platform": "",
-            "project_url": "https://pypi.org/project/ssx/",
+            "project_url": "https://pypi.org/project/six/",
             "project_urls": {
-               "Homepage": "https://github.com/kif/ssx"
+               "Homepage": "https://github.com/benjaminp/six"
             },
-            "release_url": "https://pypi.org/project/ssx/0.0.1/",
+            "release_url": "https://pypi.org/project/six/1.15.0/",
             "requires_dist": null,
-            "requires_python": "",
-            "summary": "Synchrotron serial crystallography tools",
-            "version": "0.0.1",
+            "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*",
+            "summary": "Python 2 and 3 compatibility utilities",
+            "version": "1.15.0",
             "yanked": false,
             "yanked_reason": null
          },
@@ -226,192 +158,6 @@
          }
       ],
       "rsa": [
-         {
-            "author": "Shoumik Palkar",
-            "author_email": "shoumik@cs.stanford.edu",
-            "bugtrack_url": null,
-            "classifiers": [
-               "License :: OSI Approved :: BSD License",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python :: 3"
-            ],
-            "description": "## split annotations\n\nThis package contains the Python implementation of [split annotations](), a system for optimizing applications\nthat combine many data-intensive library functions. See some useful links below.\n\n* [Documentation for this package](https://www.weld.rs/split-annotations/docs/)\n* [GitHub repository](https://www.github.com/weld-project/split-annotations)\n* [SOSP 2019 Paper describing the system](https://shoumik.xyz/static/papers/mozart-sosp19final.pdf)\n\n\n",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://www.github.com/weld-project/split-annotations",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sa",
-            "package_url": "https://pypi.org/project/sa/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sa/",
-            "project_urls": {
-               "Homepage": "https://www.github.com/weld-project/split-annotations"
-            },
-            "release_url": "https://pypi.org/project/sa/0.0.4/",
-            "requires_dist": [
-               "numpy",
-               "pandas",
-               "scipy",
-               "sharedmem"
-            ],
-            "requires_python": ">=3.6",
-            "summary": "Python split annotations package",
-            "version": "0.0.4",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "samqiu",
-            "author_email": "sam@samqiu.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.6",
-               "Programming Language :: Python :: 2.7",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.2",
-               "Programming Language :: Python :: 3.3",
-               "Programming Language :: Python :: 3.4",
-               "Programming Language :: Python :: 3.5",
-               "Topic :: Software Development :: Build Tools"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/samqiu/sra",
-            "keywords": "deploy",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sra",
-            "package_url": "https://pypi.org/project/sra/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/sra/",
-            "project_urls": {
-               "Homepage": "https://github.com/samqiu/sra"
-            },
-            "release_url": "https://pypi.org/project/sra/0.3.4/",
-            "requires_dist": [
-               "requests (==2.9.1)",
-               "tornado (==4.3)",
-               "websocket-client (==0.34.0)"
-            ],
-            "requires_python": "",
-            "summary": "A simple deploy tool",
-            "version": "0.3.4",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Morten Niklas Gjerding",
-            "author_email": "mortengjerding@gmail.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 2 - Pre-Alpha",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-               "Natural Language :: English",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.5",
-               "Programming Language :: Python :: 3.6",
-               "Programming Language :: Python :: 3.7",
-               "Programming Language :: Python :: 3.8"
-            ],
-            "description": "=========================\nAtomic Simulation Recipes\n=========================\n\n\n.. image:: https://img.shields.io/pypi/v/asr.svg\n        :target: https://pypi.python.org/pypi/asr\n\n.. image:: https://img.shields.io/travis/mortengjerding/asr.svg\n        :target: https://travis-ci.org/mortengjerding/asr\n\n.. image:: https://readthedocs.org/projects/asr/badge/?version=latest\n        :target: https://asr.readthedocs.io/en/latest/?badge=latest\n        :alt: Documentation Status\n\n\n.. image:: https://pyup.io/repos/gitlab/mortengjerding/asr/shield.svg\n     :target: https://pyup.io/repos/gitlab/mortengjerding/asr/\n     :alt: Updates\n\n\n\nASE recipes for calculating material properties\n\n\n* Free software: GNU General Public License v3\n* Documentation: https://asr.readthedocs.io.\n* Code: https://gitlab.com/mortengjerding/asr.git\n\nFeatures\n--------\n\n* TODO\n\nCredits\n-------\n\nThis package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.\n\n.. _Cookiecutter: https://gitlab.com/audreyr/cookiecutter\n.. _`audreyr/cookiecutter-pypackage`: https://gitlab.com/audreyr/cookiecutter-pypackage\n\n\n=======\nHistory\n=======\n\n0.1.0 (2020-02-03)\n------------------\n\n* First release on PyPI.\n\n\n",
-            "description_content_type": "",
-            "docs_url": "https://pythonhosted.org/asr/",
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://gitlab.com/mortengjerding/asr",
-            "keywords": "asr",
-            "license": "GNU General Public License v3",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "asr",
-            "package_url": "https://pypi.org/project/asr/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/asr/",
-            "project_urls": {
-               "Homepage": "https://gitlab.com/mortengjerding/asr"
-            },
-            "release_url": "https://pypi.org/project/asr/0.3.2/",
-            "requires_dist": [
-               "Click (>=7.0)",
-               "ase",
-               "matplotlib",
-               "spglib",
-               "plotly",
-               "flask"
-            ],
-            "requires_python": ">=3.5",
-            "summary": "ASE recipes for calculating material properties",
-            "version": "0.3.2",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Techa Gal",
-            "author_email": "Techa.G@mail.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python :: 3.8",
-               "Topic :: Software Development :: Build Tools"
-            ],
-            "description": "",
-            "description_content_type": "",
-            "docs_url": null,
-            "download_url": "https://github.com/techagal/rdb-sample/archive/v_01.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/techagal/rdb-sample",
-            "keywords": "Algo,SS&C Algo,Algo RethinkDB,Algo RAS,RethinkDB",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "ras",
-            "package_url": "https://pypi.org/project/ras/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/ras/",
-            "project_urls": {
-               "Download": "https://github.com/techagal/rdb-sample/archive/v_01.tar.gz",
-               "Homepage": "https://github.com/techagal/rdb-sample"
-            },
-            "release_url": "https://pypi.org/project/ras/0.1/",
-            "requires_dist": null,
-            "requires_python": "",
-            "summary": "Algo standard rethinkdb api wrapper",
-            "version": "0.1",
-            "yanked": false,
-            "yanked_reason": null
-         },
          {
             "author": "Michael Foord",
             "author_email": "",
@@ -490,530 +236,54 @@
             "yanked_reason": null
          },
          {
-            "author": "Rasa Technologies GmbH",
-            "author_email": "hi@rasa.com",
+            "author": "Sybren A. Stuvel",
+            "author_email": "sybren@stuvel.eu",
             "bugtrack_url": null,
             "classifiers": [
-               "Development Status :: 4 - Beta",
+               "Development Status :: 5 - Production/Stable",
                "Intended Audience :: Developers",
+               "Intended Audience :: Education",
+               "Intended Audience :: Information Technology",
                "License :: OSI Approved :: Apache Software License",
+               "Operating System :: OS Independent",
                "Programming Language :: Python",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.6",
-               "Programming Language :: Python :: 3.7",
-               "Topic :: Software Development :: Libraries"
-            ],
-            "description": "# Rasa Open Source\n\n[![Join the chat on Rasa Community Forum](https://img.shields.io/badge/forum-join%20discussions-brightgreen.svg)](https://forum.rasa.com/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n[![PyPI version](https://badge.fury.io/py/rasa.svg)](https://badge.fury.io/py/rasa)\n[![Supported Python Versions](https://img.shields.io/pypi/pyversions/rasa.svg)](https://pypi.python.org/pypi/rasa)\n[![Build Status](https://github.com/RasaHQ/rasa/workflows/Continuous%20Integration/badge.svg)](https://github.com/RasaHQ/rasa/actions)\n[![Coverage Status](https://coveralls.io/repos/github/RasaHQ/rasa/badge.svg?branch=master)](https://coveralls.io/github/RasaHQ/rasa?branch=master)\n[![Documentation Status](https://img.shields.io/badge/docs-stable-brightgreen.svg)](https://rasa.com/docs)\n[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B8141%2Fgit%40github.com%3ARasaHQ%2Frasa.git.svg?type=shield)](https://app.fossa.com/projects/custom%2B8141%2Fgit%40github.com%3ARasaHQ%2Frasa.git?ref=badge_shield)\n[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/orgs/RasaHQ/projects/23)\n\n<img align=\"right\" height=\"244\" src=\"https://www.rasa.com/assets/img/sara/sara-open-source-2.0.png\">\n\nRasa is an open source machine learning framework to automate text-and voice-based conversations. With Rasa, you can build contexual assistants on:\n- Facebook Messenger\n- Slack\n- Google Hangouts\n- Webex Teams\n- Microsoft Bot Framework\n- Rocket.Chat\n- Mattermost\n- Telegram\n- Twilio\n- Your own custom conversational channels\n\nor voice assistants as:\n- Alexa Skills\n- Google Home Actions\n\nRasa helps you build contextual assistants capable of having layered conversations with \nlots of back-and-forth. In order for a human to have a meaningful exchange with a contextual \nassistant, the assistant needs to be able to use context to build on things that were previously \ndiscussed – Rasa enables you to build assistants that can do this in a scalable way.\n\nThere's a lot more background information in this\n[blog post](https://medium.com/rasa-blog/a-new-approach-to-conversational-software-2e64a5d05f2a).\n\n---\n- **What does Rasa do? 🤔**\n  [Check out our Website](https://rasa.com/)\n\n- **I'm new to Rasa 😄**\n  [Get Started with Rasa](https://rasa.com/docs/getting-started/)\n\n- **I'd like to read the detailed docs 🤓**\n  [Read The Docs](https://rasa.com/docs/)\n\n- **I'm ready to install Rasa 🚀**\n  [Installation](https://rasa.com/docs/rasa/user-guide/installation/)\n\n- **I want to learn how to use Rasa 🚀**\n  [Tutorial](https://rasa.com/docs/rasa/user-guide/rasa-tutorial/)\n\n- **I have a question ❓**\n  [Rasa Community Forum](https://forum.rasa.com/)\n\n- **I would like to contribute 🤗**\n  [How to Contribute](#how-to-contribute)\n\n---  \n## Where to get help\n\nThere is extensive documentation in the [Rasa Docs](https://rasa.com/docs/rasa).\nMake sure to select the correct version so you are looking at\nthe docs for the version you installed.\n\nPlease use [Rasa Community Forum](https://forum.rasa.com) for quick answers to\nquestions.\n\n### README Contents:\n- [How to contribute](#how-to-contribute)\n- [Development Internals](#development-internals)\n- [License](#license)\n\n### How to contribute\nWe are very happy to receive and merge your contributions into this repository! \n\nTo contribute via pull request, follow these steps:\n\n1. Create an issue describing the feature you want to work on (or\n   have a look at the [contributor board](https://github.com/orgs/RasaHQ/projects/23))\n2. Write your code, tests and documentation, and format them with ``black``\n3. Create a pull request describing your changes\n\nFor more detailed instructions on how to contribute code, check out these [code contributor guidelines](CONTRIBUTING.md).\n\nYou can find more information about how to contribute to Rasa (in lots of\ndifferent ways!) [on our website.](http://rasa.com/community/contribute).\n\nYour pull request will be reviewed by a maintainer, who will get\nback to you about any necessary changes or questions. You will\nalso be asked to sign a\n[Contributor License Agreement](https://cla-assistant.io/RasaHQ/rasa).\n\n\n## Development Internals\n\n### Installing Poetry\n\nRasa uses Poetry for packaging and dependency management. If you want to build it from source,\nyou have to install Poetry first. This is how it can be done:\n\n```bash\ncurl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python\n```\n\nThere are several other ways to install Poetry. Please, follow \n[the official guide](https://python-poetry.org/docs/#installation) to see all possible options.\n\n### Managing environments\n\nThe official [Poetry guide](https://python-poetry.org/docs/managing-environments/) suggests to use\n[pyenv](https://github.com/pyenv/pyenv) or any other similar tool to easily switch between Python versions. \nThis is how it can be done:\n\n```bash\npyenv install 3.7.6\npyenv local 3.7.6  # Activate Python 3.7.6 for the current project\n```\n\nBy default, Poetry will try to use the currently activated Python version to create the virtual environment \nfor the current project automatically. You can also create and activate a virtual environment manually — in this\ncase, Poetry should pick it up and use it to install the dependencies. For example:\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate\n```\n\nYou can make sure that the environment is picked up by executing \n\n```bash\npoetry env info\n```\n\n### Building from source\n\nTo install dependencies and `rasa` itself in editable mode execute\n\n```bash\nmake install\n```\n\n### Running and changing the documentation\n\nFirst of all, install all the required dependencies:\n\n```bash\nmake install\n```\n\nAfter the installation has finished, you can run and view the documentation\nlocally using:\n\n```bash\nmake livedocs\n```\n\nVisit the local version of the docs at http://localhost:8000 in your browser.\nYou can now change the docs locally and the web page will automatically reload\nand apply your changes.\n\n### Running the Tests\n\nIn order to run the tests, make sure that you have the development requirements installed:\n\n```bash\nexport PIP_USE_PEP517=false\nmake prepare-tests-ubuntu # Only on Ubuntu and Debian based systems\nmake prepare-tests-macos  # Only on macOS\n```\n\nThen, run the tests:\n\n```bash\nmake test\n```\n\nThey can also be run at multiple jobs to save some time:\n\n```bash\nJOBS=[n] make test\n```\n\nWhere `[n]` is the number of jobs desired. If omitted, `[n]` will be automatically chosen by pytest.\n\n### Resolving merge conflicts\n\nPoetry doesn't include any solution that can help to resolve merge conflicts in\nthe lock file `poetry.lock` by default.\nHowever, there is a great tool called [poetry-merge-lock](https://poetry-merge-lock.readthedocs.io/en/latest/).\nHere is how use can install it:\n\n```bash\npip install poetry-merge-lock\n```\n\nJust execute this command to resolve merge conflicts in `poetry.lock` automatically:\n\n```bash\npoetry-merge-lock\n```\n\n### Steps to release a new version\nReleasing a new version is quite simple, as the packages are build and distributed by GitHub Actions.\n\n*Terminology*:\n* patch release (third version part increases): 1.1.2 -> 1.1.3\n* minor release (second version part increases): 1.1.3 -> 1.2.0\n* major release (first version part increases): 1.2.0 -> 2.0.0\n\n*Release steps*:\n1. Make sure all dependencies are up to date (**especially Rasa SDK**)\n    - For Rasa SDK that means first creating a [new Rasa SDK release](https://github.com/RasaHQ/rasa-sdk#steps-to-release-a-new-version) (make sure the version numbers between the new Rasa and Rasa SDK releases match)\n    - Once the tag with the new Rasa SDK release is pushed and the package appears on [pypi](https://pypi.org/project/rasa-sdk/), the dependency in the rasa repository can be resolved (see below).\n2. Switch to the branch you want to cut the release from (`master` in case of a major / minor, the current feature branch for patch releases) \n    - Update the `rasa-sdk` entry in `pyproject.toml` with the new release version and run `poetry update`. This creates a new `poetry.lock` file with all dependencies resolved.\n    - Commit the changes with `git commit -am \"bump rasa-sdk dependency\"` but do not push them. They will be automatically picked up by the following step.\n3. Run `make release`\n4. Create a PR against master or the release branch (e.g. `1.2.x`)\n5. Once your PR is merged, tag a new release (this SHOULD always happen on master or release branches), e.g. using\n    ```bash\n    git tag 1.2.0 -m \"next release\"\n    git push origin 1.2.0\n    ```\n    GitHub will build this tag and push a package to [pypi](https://pypi.python.org/pypi/rasa)\n6. **If this is a minor release**, a new release branch should be created pointing to the same commit as the tag to allow for future patch releases, e.g.\n    ```bash\n    git checkout -b 1.2.x\n    git push origin 1.2.x\n    ```\n\n### Code Style\n\nTo ensure a standardized code style we use the formatter [black](https://github.com/ambv/black).\nTo ensure our type annotations are correct we use the type checker [pytype](https://github.com/google/pytype). \nIf your code is not formatted properly or doesn't type check, GitHub will fail to build.\n\n#### Formatting\n\nIf you want to automatically format your code on every commit, you can use [pre-commit](https://pre-commit.com/).\nJust install it via `pip install pre-commit` and execute `pre-commit install` in the root folder.\nThis will add a hook to the repository, which reformats files on every commit.\n\nIf you want to set it up manually, install black via `poetry install`.\nTo reformat files execute\n```\nmake formatter\n```\n\n#### Type Checking\n\nIf you want to check types on the codebase, install `pytype` using `poetry install`.\nTo check the types execute\n```\nmake types\n```\n\n### Deploying documentation updates\n\nWe use `sphinx-versioning` to build docs for tagged versions and for the master branch.\nThe static site that gets built is pushed to the `docs` branch of this repo, which doesn't contain\nany code, only the site.\n\nWe host the site on netlify. On master branch builds (see `.github/workflows/documentation.yml`), we push the built docs to the `docs`\nbranch. Netlify automatically re-deploys the docs pages whenever there is a change to that branch.\n\n\n## License\nLicensed under the Apache License, Version 2.0.\nCopyright 2020 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt).\n\nA list of the Licenses of the dependencies of the project can be found at\nthe bottom of the\n[Libraries Summary](https://libraries.io/github/RasaHQ/rasa).\n\n",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://rasa.com",
-            "keywords": "nlp,machine-learning,machine-learning-library,bot,bots,botkit,rasa conversational-agents,conversational-ai,chatbot,chatbot-framework,bot-framework",
-            "license": "Apache-2.0",
-            "maintainer": "Tom Bocklisch",
-            "maintainer_email": "tom@rasa.com",
-            "name": "rasa",
-            "package_url": "https://pypi.org/project/rasa/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/rasa/",
-            "project_urls": {
-               "Documentation": "https://rasa.com/docs",
-               "Homepage": "https://rasa.com",
-               "Repository": "https://github.com/rasahq/rasa"
-            },
-            "release_url": "https://pypi.org/project/rasa/1.10.12/",
-            "requires_dist": [
-               "PyJWT (>=1.7,<1.8)",
-               "SQLAlchemy (>=1.3.3,<1.4.0)",
-               "absl-py (>=0.9,<0.10)",
-               "aiohttp (>=3.6,<3.7)",
-               "apscheduler (>=3.6,<3.7)",
-               "async_generator (>=1.10,<1.11)",
-               "attrs (>=19.3,<19.4)",
-               "boto3 (>=1.12,<2.0)",
-               "cloudpickle (>=1.2,<1.4)",
-               "colorclass (>=2.2,<2.3)",
-               "coloredlogs (>=10.0,<11.0)",
-               "colorhash (>=1.0.2,<1.1.0)",
-               "fbmessenger (>=6.0.0,<6.1.0)",
-               "gevent (>=1.4,<1.6)",
-               "github3.py (>=1.3.0,<1.4.0); extra == \"gh-release-notes\"",
-               "jieba (==0.39); extra == \"full\"",
-               "jsonpickle (>=1.3,<1.5)",
-               "jsonschema (>=3.2,<3.3)",
-               "kafka-python (>=1.4,<2.0)",
-               "matplotlib (>=3.1,<3.3)",
-               "mattermostwrapper (>=2.2,<2.3)",
-               "multidict (>=4.6,<5.0)",
-               "networkx (>=2.4.0,<2.5.0)",
-               "numpy (>=1.16,<2.0)",
-               "oauth2client (==4.1.3)",
-               "packaging (>=20.0,<21.0)",
-               "pika (>=1.1.0,<1.2.0)",
-               "prompt-toolkit (>=2.0,<3.0)",
-               "psycopg2-binary (>=2.8.2,<2.9.0)",
-               "pydot (>=1.4,<1.5)",
-               "pykwalify (>=1.7.0,<1.8.0)",
-               "pymongo[tls,srv] (>=3.8.0,<3.9.0)",
-               "pypandoc (>=1.4,<1.5); extra == \"gh-release-notes\"",
-               "python-dateutil (>=2.8,<2.9)",
-               "python-engineio (>=3.11,<3.13)",
-               "python-socketio (>=4.4,<4.6)",
-               "python-telegram-bot (>=11.1,<13.0)",
-               "pytz (>=2019.1,<2020.0)",
-               "questionary (>=1.5.1,<1.6.0)",
-               "rasa-sdk (>=1.10.0,<2.0.0)",
-               "redis (>=3.4,<4.0)",
-               "regex (>=2020.6,<2020.7)",
-               "requests (>=2.23,<3.0)",
-               "rocketchat_API (>=0.6.31,<1.4.0)",
-               "ruamel.yaml (>=0.16,<0.17)",
-               "sanic (>=19.12.2,<20.0.0)",
-               "sanic-cors (>=0.10.0b1,<0.11.0)",
-               "sanic-jwt (>=1.3.2,<1.5.0)",
-               "scikit-learn (>=0.22,<0.23)",
-               "scipy (>=1.4.1,<2.0.0)",
-               "setuptools (>=41.0.0)",
-               "sklearn-crfsuite (>=0.3,<0.4)",
-               "slackclient (>=2.0.0,<3.0.0)",
-               "spacy (>=2.1,<2.2); extra == \"spacy\" or extra == \"full\"",
-               "tensorflow (>=2.1,<2.2)",
-               "tensorflow-addons (>=0.7.1,<0.8.0)",
-               "tensorflow-estimator (==2.1.0)",
-               "tensorflow-probability (>=0.7,<0.10)",
-               "tensorflow_hub (>=0.7,<0.9)",
-               "tensorflow_text (==2.1.0rc0); extra == \"convert\" or extra == \"full\"",
-               "terminaltables (>=3.1.0,<3.2.0)",
-               "tqdm (>=4.31,<4.46)",
-               "transformers (>=2.4,<2.5); extra == \"transformers\" or extra == \"full\"",
-               "twilio (>=6.26,<6.27)",
-               "ujson (>=1.35,<3.0)",
-               "webexteamssdk (>=1.1.1,<1.4.0)"
-            ],
-            "requires_python": ">=3.6,<3.8",
-            "summary": "Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants",
-            "version": "1.10.12",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
-}{
-   "rows": {
-      "six": [
-         {
-            "author": "chrysn",
-            "author_email": "chrysn@fsfe.org",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Education",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: GNU General Public License (GPL)"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "GPL",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "si",
-            "package_url": "https://pypi.org/project/si/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/si/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/si/0.1.1-1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Module to represent SI units",
-            "version": "0.1.1-1",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Jerome Kieffer",
-            "author_email": "jerome.kieffer@esrf.fr",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "",
-            "description_content_type": "",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/kif/ssx",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "ssx",
-            "package_url": "https://pypi.org/project/ssx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/ssx/",
-            "project_urls": {
-               "Homepage": "https://github.com/kif/ssx"
-            },
-            "release_url": "https://pypi.org/project/ssx/0.0.1/",
-            "requires_dist": null,
-            "requires_python": "",
-            "summary": "Synchrotron serial crystallography tools",
-            "version": "0.0.1",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Gabriel Alves",
-            "author_email": "gabriel.alves@pickcells.bio",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "# sx\n#### Framework to manage gRPC-based microservices application",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/itsmealves/sx",
-            "keywords": "sx microservices rpc grpc Framework",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sx",
-            "package_url": "https://pypi.org/project/sx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sx/",
-            "project_urls": {
-               "Download": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-               "Homepage": "https://github.com/itsmealves/sx"
-            },
-            "release_url": "https://pypi.org/project/sx/0.6.0/",
-            "requires_dist": null,
-            "requires_python": ">=3.5",
-            "summary": "Framework to manage gRPC-based microservices application",
-            "version": "0.6.0",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ],
-      "rsa": [
-         {
-            "author": "samqiu",
-            "author_email": "sam@samqiu.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: MIT License",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.6",
-               "Programming Language :: Python :: 2.7",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.2",
-               "Programming Language :: Python :: 3.3",
-               "Programming Language :: Python :: 3.4",
-               "Programming Language :: Python :: 3.5",
-               "Topic :: Software Development :: Build Tools"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/samqiu/sra",
-            "keywords": "deploy",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sra",
-            "package_url": "https://pypi.org/project/sra/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/sra/",
-            "project_urls": {
-               "Homepage": "https://github.com/samqiu/sra"
-            },
-            "release_url": "https://pypi.org/project/sra/0.3.4/",
-            "requires_dist": [
-               "requests (==2.9.1)",
-               "tornado (==4.3)",
-               "websocket-client (==0.34.0)"
-            ],
-            "requires_python": "",
-            "summary": "A simple deploy tool",
-            "version": "0.3.4",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Morten Niklas Gjerding",
-            "author_email": "mortengjerding@gmail.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 2 - Pre-Alpha",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-               "Natural Language :: English",
                "Programming Language :: Python :: 3",
                "Programming Language :: Python :: 3.5",
                "Programming Language :: Python :: 3.6",
                "Programming Language :: Python :: 3.7",
-               "Programming Language :: Python :: 3.8"
-            ],
-            "description": "=========================\nAtomic Simulation Recipes\n=========================\n\n\n.. image:: https://img.shields.io/pypi/v/asr.svg\n        :target: https://pypi.python.org/pypi/asr\n\n.. image:: https://img.shields.io/travis/mortengjerding/asr.svg\n        :target: https://travis-ci.org/mortengjerding/asr\n\n.. image:: https://readthedocs.org/projects/asr/badge/?version=latest\n        :target: https://asr.readthedocs.io/en/latest/?badge=latest\n        :alt: Documentation Status\n\n\n.. image:: https://pyup.io/repos/gitlab/mortengjerding/asr/shield.svg\n     :target: https://pyup.io/repos/gitlab/mortengjerding/asr/\n     :alt: Updates\n\n\n\nASE recipes for calculating material properties\n\n\n* Free software: GNU General Public License v3\n* Documentation: https://asr.readthedocs.io.\n* Code: https://gitlab.com/mortengjerding/asr.git\n\nFeatures\n--------\n\n* TODO\n\nCredits\n-------\n\nThis package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.\n\n.. _Cookiecutter: https://gitlab.com/audreyr/cookiecutter\n.. _`audreyr/cookiecutter-pypackage`: https://gitlab.com/audreyr/cookiecutter-pypackage\n\n\n=======\nHistory\n=======\n\n0.1.0 (2020-02-03)\n------------------\n\n* First release on PyPI.\n\n\n",
-            "description_content_type": "",
-            "docs_url": "https://pythonhosted.org/asr/",
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://gitlab.com/mortengjerding/asr",
-            "keywords": "asr",
-            "license": "GNU General Public License v3",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "asr",
-            "package_url": "https://pypi.org/project/asr/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/asr/",
-            "project_urls": {
-               "Homepage": "https://gitlab.com/mortengjerding/asr"
-            },
-            "release_url": "https://pypi.org/project/asr/0.3.2/",
-            "requires_dist": [
-               "Click (>=7.0)",
-               "ase",
-               "matplotlib",
-               "spglib",
-               "plotly",
-               "flask"
-            ],
-            "requires_python": ">=3.5",
-            "summary": "ASE recipes for calculating material properties",
-            "version": "0.3.2",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Ramses",
-            "author_email": "hello@ramses.tech",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Framework :: Pyramid",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.7",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.4",
-               "Programming Language :: Python :: 3.5",
-               "Topic :: Internet :: WWW/HTTP",
-               "Topic :: Internet :: WWW/HTTP :: WSGI :: Application"
-            ],
-            "description": "# `Ra`\n[![Build Status](https://travis-ci.org/ramses-tech/ra.svg?branch=master)](https://travis-ci.org/ramses-tech/ra)\n[![Documentation](https://readthedocs.org/projects/ra/badge/?version=stable)](http://ra.readthedocs.org)\n\nRa is a test suite generator and helper library for testing APIs described\nin [RAML](http://raml.org/).\n\nOut of the box, Ra provides a basic, automated test suite to test the routes\ndeclared in the RAML document. It provides test helpers for augmenting these\nwith custom tests to test application-specific logic, side effects, etc.\n\nRa is primarily designed to provide testing support for\n[ramses](http://github.com/ramses-tech/ramses) and\n[nefertari](http://github.com/ramses-tech/nefertari) applications, but can\nbe used with any WSGI-conformant, RAML-described API.\n\nIt currently depends on pytest but may be adapted for other test frameworks\nin the future. It works best using WebTest but doesn't require it.\n\n## Name\n\nRa was the god of the sun, the most important god in ancient Egypt.\n\n\n## Try it (dev)\n\nRun the test suite:\n\n```bash\n    $ pip install -r requirements.txt\n    $ py.test\n```\n\nCheck out the example:\n\n```bash\n    $ cd examples/ramses-test\n    $ pip install -r requirements.txt\n    $ py.test\n```\n\nThe example RAML at `examples/ramses-test/api.raml` and the test file\n`examples/ramses-test/tests/test_api.py` should be helpful to reference.\n\nSee the docs in `docs/`, and the `api.raml` and `tests/test_api.py` in\n`tests/apps/ramses_test`",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/ramses-tech/ra",
-            "keywords": "web raml",
-            "license": "UNKNOWN",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "ra",
-            "package_url": "https://pypi.org/project/ra/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/ra/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/ramses-tech/ra"
-            },
-            "release_url": "https://pypi.org/project/ra/0.2.0/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Test RAML API definition",
-            "version": "0.2.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Rasa Technologies GmbH",
-            "author_email": "hi@rasa.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 4 - Beta",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: Apache Software License",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.6",
-               "Programming Language :: Python :: 3.7",
-               "Topic :: Software Development :: Libraries"
-            ],
-            "description": "# Rasa Open Source\n\n[![Join the chat on Rasa Community Forum](https://img.shields.io/badge/forum-join%20discussions-brightgreen.svg)](https://forum.rasa.com/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n[![PyPI version](https://badge.fury.io/py/rasa.svg)](https://badge.fury.io/py/rasa)\n[![Supported Python Versions](https://img.shields.io/pypi/pyversions/rasa.svg)](https://pypi.python.org/pypi/rasa)\n[![Build Status](https://github.com/RasaHQ/rasa/workflows/Continuous%20Integration/badge.svg)](https://github.com/RasaHQ/rasa/actions)\n[![Coverage Status](https://coveralls.io/repos/github/RasaHQ/rasa/badge.svg?branch=master)](https://coveralls.io/github/RasaHQ/rasa?branch=master)\n[![Documentation Status](https://img.shields.io/badge/docs-stable-brightgreen.svg)](https://rasa.com/docs)\n[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B8141%2Fgit%40github.com%3ARasaHQ%2Frasa.git.svg?type=shield)](https://app.fossa.com/projects/custom%2B8141%2Fgit%40github.com%3ARasaHQ%2Frasa.git?ref=badge_shield)\n[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/orgs/RasaHQ/projects/23)\n\n<img align=\"right\" height=\"244\" src=\"https://www.rasa.com/assets/img/sara/sara-open-source-2.0.png\">\n\nRasa is an open source machine learning framework to automate text-and voice-based conversations. With Rasa, you can build contexual assistants on:\n- Facebook Messenger\n- Slack\n- Google Hangouts\n- Webex Teams\n- Microsoft Bot Framework\n- Rocket.Chat\n- Mattermost\n- Telegram\n- Twilio\n- Your own custom conversational channels\n\nor voice assistants as:\n- Alexa Skills\n- Google Home Actions\n\nRasa helps you build contextual assistants capable of having layered conversations with \nlots of back-and-forth. In order for a human to have a meaningful exchange with a contextual \nassistant, the assistant needs to be able to use context to build on things that were previously \ndiscussed – Rasa enables you to build assistants that can do this in a scalable way.\n\nThere's a lot more background information in this\n[blog post](https://medium.com/rasa-blog/a-new-approach-to-conversational-software-2e64a5d05f2a).\n\n---\n- **What does Rasa do? 🤔**\n  [Check out our Website](https://rasa.com/)\n\n- **I'm new to Rasa 😄**\n  [Get Started with Rasa](https://rasa.com/docs/getting-started/)\n\n- **I'd like to read the detailed docs 🤓**\n  [Read The Docs](https://rasa.com/docs/)\n\n- **I'm ready to install Rasa 🚀**\n  [Installation](https://rasa.com/docs/rasa/user-guide/installation/)\n\n- **I want to learn how to use Rasa 🚀**\n  [Tutorial](https://rasa.com/docs/rasa/user-guide/rasa-tutorial/)\n\n- **I have a question ❓**\n  [Rasa Community Forum](https://forum.rasa.com/)\n\n- **I would like to contribute 🤗**\n  [How to Contribute](#how-to-contribute)\n\n---  \n## Where to get help\n\nThere is extensive documentation in the [Rasa Docs](https://rasa.com/docs/rasa).\nMake sure to select the correct version so you are looking at\nthe docs for the version you installed.\n\nPlease use [Rasa Community Forum](https://forum.rasa.com) for quick answers to\nquestions.\n\n### README Contents:\n- [How to contribute](#how-to-contribute)\n- [Development Internals](#development-internals)\n- [License](#license)\n\n### How to contribute\nWe are very happy to receive and merge your contributions into this repository! \n\nTo contribute via pull request, follow these steps:\n\n1. Create an issue describing the feature you want to work on (or\n   have a look at the [contributor board](https://github.com/orgs/RasaHQ/projects/23))\n2. Write your code, tests and documentation, and format them with ``black``\n3. Create a pull request describing your changes\n\nFor more detailed instructions on how to contribute code, check out these [code contributor guidelines](CONTRIBUTING.md).\n\nYou can find more information about how to contribute to Rasa (in lots of\ndifferent ways!) [on our website.](http://rasa.com/community/contribute).\n\nYour pull request will be reviewed by a maintainer, who will get\nback to you about any necessary changes or questions. You will\nalso be asked to sign a\n[Contributor License Agreement](https://cla-assistant.io/RasaHQ/rasa).\n\n\n## Development Internals\n\n### Installing Poetry\n\nRasa uses Poetry for packaging and dependency management. If you want to build it from source,\nyou have to install Poetry first. This is how it can be done:\n\n```bash\ncurl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python\n```\n\nThere are several other ways to install Poetry. Please, follow \n[the official guide](https://python-poetry.org/docs/#installation) to see all possible options.\n\n### Managing environments\n\nThe official [Poetry guide](https://python-poetry.org/docs/managing-environments/) suggests to use\n[pyenv](https://github.com/pyenv/pyenv) or any other similar tool to easily switch between Python versions. \nThis is how it can be done:\n\n```bash\npyenv install 3.7.6\npyenv local 3.7.6  # Activate Python 3.7.6 for the current project\n```\n\nBy default, Poetry will try to use the currently activated Python version to create the virtual environment \nfor the current project automatically. You can also create and activate a virtual environment manually — in this\ncase, Poetry should pick it up and use it to install the dependencies. For example:\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate\n```\n\nYou can make sure that the environment is picked up by executing \n\n```bash\npoetry env info\n```\n\n### Building from source\n\nTo install dependencies and `rasa` itself in editable mode execute\n\n```bash\nmake install\n```\n\n### Running and changing the documentation\n\nFirst of all, install all the required dependencies:\n\n```bash\nmake install\n```\n\nAfter the installation has finished, you can run and view the documentation\nlocally using:\n\n```bash\nmake livedocs\n```\n\nVisit the local version of the docs at http://localhost:8000 in your browser.\nYou can now change the docs locally and the web page will automatically reload\nand apply your changes.\n\n### Running the Tests\n\nIn order to run the tests, make sure that you have the development requirements installed:\n\n```bash\nexport PIP_USE_PEP517=false\nmake prepare-tests-ubuntu # Only on Ubuntu and Debian based systems\nmake prepare-tests-macos  # Only on macOS\n```\n\nThen, run the tests:\n\n```bash\nmake test\n```\n\nThey can also be run at multiple jobs to save some time:\n\n```bash\nJOBS=[n] make test\n```\n\nWhere `[n]` is the number of jobs desired. If omitted, `[n]` will be automatically chosen by pytest.\n\n### Resolving merge conflicts\n\nPoetry doesn't include any solution that can help to resolve merge conflicts in\nthe lock file `poetry.lock` by default.\nHowever, there is a great tool called [poetry-merge-lock](https://poetry-merge-lock.readthedocs.io/en/latest/).\nHere is how use can install it:\n\n```bash\npip install poetry-merge-lock\n```\n\nJust execute this command to resolve merge conflicts in `poetry.lock` automatically:\n\n```bash\npoetry-merge-lock\n```\n\n### Steps to release a new version\nReleasing a new version is quite simple, as the packages are build and distributed by GitHub Actions.\n\n*Terminology*:\n* patch release (third version part increases): 1.1.2 -> 1.1.3\n* minor release (second version part increases): 1.1.3 -> 1.2.0\n* major release (first version part increases): 1.2.0 -> 2.0.0\n\n*Release steps*:\n1. Make sure all dependencies are up to date (**especially Rasa SDK**)\n    - For Rasa SDK that means first creating a [new Rasa SDK release](https://github.com/RasaHQ/rasa-sdk#steps-to-release-a-new-version) (make sure the version numbers between the new Rasa and Rasa SDK releases match)\n    - Once the tag with the new Rasa SDK release is pushed and the package appears on [pypi](https://pypi.org/project/rasa-sdk/), the dependency in the rasa repository can be resolved (see below).\n2. Switch to the branch you want to cut the release from (`master` in case of a major / minor, the current feature branch for patch releases) \n    - Update the `rasa-sdk` entry in `pyproject.toml` with the new release version and run `poetry update`. This creates a new `poetry.lock` file with all dependencies resolved.\n    - Commit the changes with `git commit -am \"bump rasa-sdk dependency\"` but do not push them. They will be automatically picked up by the following step.\n3. Run `make release`\n4. Create a PR against master or the release branch (e.g. `1.2.x`)\n5. Once your PR is merged, tag a new release (this SHOULD always happen on master or release branches), e.g. using\n    ```bash\n    git tag 1.2.0 -m \"next release\"\n    git push origin 1.2.0\n    ```\n    GitHub will build this tag and push a package to [pypi](https://pypi.python.org/pypi/rasa)\n6. **If this is a minor release**, a new release branch should be created pointing to the same commit as the tag to allow for future patch releases, e.g.\n    ```bash\n    git checkout -b 1.2.x\n    git push origin 1.2.x\n    ```\n\n### Code Style\n\nTo ensure a standardized code style we use the formatter [black](https://github.com/ambv/black).\nTo ensure our type annotations are correct we use the type checker [pytype](https://github.com/google/pytype). \nIf your code is not formatted properly or doesn't type check, GitHub will fail to build.\n\n#### Formatting\n\nIf you want to automatically format your code on every commit, you can use [pre-commit](https://pre-commit.com/).\nJust install it via `pip install pre-commit` and execute `pre-commit install` in the root folder.\nThis will add a hook to the repository, which reformats files on every commit.\n\nIf you want to set it up manually, install black via `poetry install`.\nTo reformat files execute\n```\nmake formatter\n```\n\n#### Type Checking\n\nIf you want to check types on the codebase, install `pytype` using `poetry install`.\nTo check the types execute\n```\nmake types\n```\n\n### Deploying documentation updates\n\nWe use `sphinx-versioning` to build docs for tagged versions and for the master branch.\nThe static site that gets built is pushed to the `docs` branch of this repo, which doesn't contain\nany code, only the site.\n\nWe host the site on netlify. On master branch builds (see `.github/workflows/documentation.yml`), we push the built docs to the `docs`\nbranch. Netlify automatically re-deploys the docs pages whenever there is a change to that branch.\n\n\n## License\nLicensed under the Apache License, Version 2.0.\nCopyright 2020 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt).\n\nA list of the Licenses of the dependencies of the project can be found at\nthe bottom of the\n[Libraries Summary](https://libraries.io/github/RasaHQ/rasa).\n\n",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://rasa.com",
-            "keywords": "nlp,machine-learning,machine-learning-library,bot,bots,botkit,rasa conversational-agents,conversational-ai,chatbot,chatbot-framework,bot-framework",
-            "license": "Apache-2.0",
-            "maintainer": "Tom Bocklisch",
-            "maintainer_email": "tom@rasa.com",
-            "name": "rasa",
-            "package_url": "https://pypi.org/project/rasa/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/rasa/",
-            "project_urls": {
-               "Documentation": "https://rasa.com/docs",
-               "Homepage": "https://rasa.com",
-               "Repository": "https://github.com/rasahq/rasa"
-            },
-            "release_url": "https://pypi.org/project/rasa/1.10.12/",
-            "requires_dist": [
-               "PyJWT (>=1.7,<1.8)",
-               "SQLAlchemy (>=1.3.3,<1.4.0)",
-               "absl-py (>=0.9,<0.10)",
-               "aiohttp (>=3.6,<3.7)",
-               "apscheduler (>=3.6,<3.7)",
-               "async_generator (>=1.10,<1.11)",
-               "attrs (>=19.3,<19.4)",
-               "boto3 (>=1.12,<2.0)",
-               "cloudpickle (>=1.2,<1.4)",
-               "colorclass (>=2.2,<2.3)",
-               "coloredlogs (>=10.0,<11.0)",
-               "colorhash (>=1.0.2,<1.1.0)",
-               "fbmessenger (>=6.0.0,<6.1.0)",
-               "gevent (>=1.4,<1.6)",
-               "github3.py (>=1.3.0,<1.4.0); extra == \"gh-release-notes\"",
-               "jieba (==0.39); extra == \"full\"",
-               "jsonpickle (>=1.3,<1.5)",
-               "jsonschema (>=3.2,<3.3)",
-               "kafka-python (>=1.4,<2.0)",
-               "matplotlib (>=3.1,<3.3)",
-               "mattermostwrapper (>=2.2,<2.3)",
-               "multidict (>=4.6,<5.0)",
-               "networkx (>=2.4.0,<2.5.0)",
-               "numpy (>=1.16,<2.0)",
-               "oauth2client (==4.1.3)",
-               "packaging (>=20.0,<21.0)",
-               "pika (>=1.1.0,<1.2.0)",
-               "prompt-toolkit (>=2.0,<3.0)",
-               "psycopg2-binary (>=2.8.2,<2.9.0)",
-               "pydot (>=1.4,<1.5)",
-               "pykwalify (>=1.7.0,<1.8.0)",
-               "pymongo[tls,srv] (>=3.8.0,<3.9.0)",
-               "pypandoc (>=1.4,<1.5); extra == \"gh-release-notes\"",
-               "python-dateutil (>=2.8,<2.9)",
-               "python-engineio (>=3.11,<3.13)",
-               "python-socketio (>=4.4,<4.6)",
-               "python-telegram-bot (>=11.1,<13.0)",
-               "pytz (>=2019.1,<2020.0)",
-               "questionary (>=1.5.1,<1.6.0)",
-               "rasa-sdk (>=1.10.0,<2.0.0)",
-               "redis (>=3.4,<4.0)",
-               "regex (>=2020.6,<2020.7)",
-               "requests (>=2.23,<3.0)",
-               "rocketchat_API (>=0.6.31,<1.4.0)",
-               "ruamel.yaml (>=0.16,<0.17)",
-               "sanic (>=19.12.2,<20.0.0)",
-               "sanic-cors (>=0.10.0b1,<0.11.0)",
-               "sanic-jwt (>=1.3.2,<1.5.0)",
-               "scikit-learn (>=0.22,<0.23)",
-               "scipy (>=1.4.1,<2.0.0)",
-               "setuptools (>=41.0.0)",
-               "sklearn-crfsuite (>=0.3,<0.4)",
-               "slackclient (>=2.0.0,<3.0.0)",
-               "spacy (>=2.1,<2.2); extra == \"spacy\" or extra == \"full\"",
-               "tensorflow (>=2.1,<2.2)",
-               "tensorflow-addons (>=0.7.1,<0.8.0)",
-               "tensorflow-estimator (==2.1.0)",
-               "tensorflow-probability (>=0.7,<0.10)",
-               "tensorflow_hub (>=0.7,<0.9)",
-               "tensorflow_text (==2.1.0rc0); extra == \"convert\" or extra == \"full\"",
-               "terminaltables (>=3.1.0,<3.2.0)",
-               "tqdm (>=4.31,<4.46)",
-               "transformers (>=2.4,<2.5); extra == \"transformers\" or extra == \"full\"",
-               "twilio (>=6.26,<6.27)",
-               "ujson (>=1.35,<3.0)",
-               "webexteamssdk (>=1.1.1,<1.4.0)"
-            ],
-            "requires_python": ">=3.6,<3.8",
-            "summary": "Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants",
-            "version": "1.10.12",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Techa Gal",
-            "author_email": "Techa.G@mail.com",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Developers",
-               "License :: OSI Approved :: MIT License",
                "Programming Language :: Python :: 3.8",
-               "Topic :: Software Development :: Build Tools"
+               "Programming Language :: Python :: Implementation :: CPython",
+               "Programming Language :: Python :: Implementation :: PyPy",
+               "Topic :: Security :: Cryptography"
             ],
-            "description": "",
-            "description_content_type": "",
+            "description": "Pure Python RSA implementation\n==============================\n\n[![PyPI](https://img.shields.io/pypi/v/rsa.svg)](https://pypi.org/project/rsa/)\n[![Build Status](https://travis-ci.org/sybrenstuvel/python-rsa.svg?branch=master)](https://travis-ci.org/sybrenstuvel/python-rsa)\n[![Coverage Status](https://coveralls.io/repos/github/sybrenstuvel/python-rsa/badge.svg?branch=master)](https://coveralls.io/github/sybrenstuvel/python-rsa?branch=master)\n[![Code Climate](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)\n\n[Python-RSA](https://stuvel.eu/rsa) is a pure-Python RSA implementation. It supports\nencryption and decryption, signing and verifying signatures, and key\ngeneration according to PKCS#1 version 1.5. It can be used as a Python\nlibrary as well as on the commandline. The code was mostly written by\nSybren A.  Stüvel.\n\nDocumentation can be found at the [Python-RSA homepage](https://stuvel.eu/rsa). For all changes, check [the changelog](https://github.com/sybrenstuvel/python-rsa/blob/master/CHANGELOG.md).\n\nDownload and install using:\n\n    pip install rsa\n\nor download it from the [Python Package Index](https://pypi.org/project/rsa/).\n\nThe source code is maintained at [GitHub](https://github.com/sybrenstuvel/python-rsa/) and is\nlicensed under the [Apache License, version 2.0](https://www.apache.org/licenses/LICENSE-2.0)\n\nMajor changes in 4.1\n--------------------\n\nVersion 4.0 was the last version to support Python 2 and 3.4. Version 4.1 is compatible with Python 3.5+ only.\n\n\nMajor changes in 4.0\n--------------------\n\nVersion 3.4 was the last version in the 3.x range. Version 4.0 drops the following modules,\nas they are insecure:\n\n- `rsa._version133`\n- `rsa._version200`\n- `rsa.bigfile`\n- `rsa.varblock`\n\nThose modules were marked as deprecated in version 3.4.\n\nFurthermore, in 4.0 the I/O functions is streamlined to always work with bytes on all\nsupported versions of Python.\n\nVersion 4.0 drops support for Python 2.6 and 3.3.\n\n\n",
+            "description_content_type": "text/markdown",
             "docs_url": null,
-            "download_url": "https://github.com/techagal/rdb-sample/archive/v_01.tar.gz",
+            "download_url": "",
             "downloads": {
                "last_day": -1,
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "https://github.com/techagal/rdb-sample",
-            "keywords": "Algo,SS&C Algo,Algo RethinkDB,Algo RAS,RethinkDB",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "ras",
-            "package_url": "https://pypi.org/project/ras/",
+            "home_page": "https://stuvel.eu/rsa",
+            "keywords": "",
+            "license": "ASL 2",
+            "maintainer": "Sybren A. Stuvel",
+            "maintainer_email": "sybren@stuvel.eu",
+            "name": "rsa",
+            "package_url": "https://pypi.org/project/rsa/",
             "platform": "",
-            "project_url": "https://pypi.org/project/ras/",
+            "project_url": "https://pypi.org/project/rsa/",
             "project_urls": {
-               "Download": "https://github.com/techagal/rdb-sample/archive/v_01.tar.gz",
-               "Homepage": "https://github.com/techagal/rdb-sample"
+               "Homepage": "https://stuvel.eu/rsa"
             },
-            "release_url": "https://pypi.org/project/ras/0.1/",
-            "requires_dist": null,
-            "requires_python": "",
-            "summary": "Algo standard rethinkdb api wrapper",
-            "version": "0.1",
+            "release_url": "https://pypi.org/project/rsa/4.6/",
+            "requires_dist": [
+               "pyasn1 (>=0.1.3)"
+            ],
+            "requires_python": ">=3.5, <4",
+            "summary": "Pure-Python RSA implementation",
+            "version": "4.6",
             "yanked": false,
             "yanked_reason": null
          },
@@ -1059,14 +329,16 @@
             "version": "0.0.4",
             "yanked": false,
             "yanked_reason": null
-         },
+         }
+      ],
+      "requests-oauthlib": [
          {
-            "author": "Michael Foord",
-            "author_email": "",
+            "author": "The Guardians",
+            "author_email": "william.bengtson@gmail.com",
             "bugtrack_url": null,
             "classifiers": [],
             "description": "",
-            "description_content_type": null,
+            "description_content_type": "",
             "docs_url": null,
             "download_url": "",
             "downloads": {
@@ -1075,139 +347,32 @@
                "last_week": -1
             },
             "home_page": "",
-            "keywords": "",
+            "keywords": "testing,logging,example",
             "license": "",
             "maintainer": "",
             "maintainer_email": "",
-            "name": "rs",
-            "package_url": "https://pypi.org/project/rs/",
+            "name": "requestsoauthlib",
+            "package_url": "https://pypi.org/project/requestsoauthlib/",
             "platform": "",
-            "project_url": "https://pypi.org/project/rs/",
+            "project_url": "https://pypi.org/project/requestsoauthlib/",
             "project_urls": null,
-            "release_url": "https://pypi.org/project/rs/0.0/",
+            "release_url": "https://pypi.org/project/requestsoauthlib/0.1.1/",
             "requires_dist": null,
-            "requires_python": null,
-            "summary": "",
-            "version": "0.0",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {
-      "six": [
-         {
-            "author": "chrysn",
-            "author_email": "chrysn@fsfe.org",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Education",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: GNU General Public License (GPL)"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "GPL",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "si",
-            "package_url": "https://pypi.org/project/si/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/si/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/si/0.1.1-1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Module to represent SI units",
-            "version": "0.1.1-1",
+            "requires_python": "",
+            "summary": "A package to prevent exploit",
+            "version": "0.1.1",
             "yanked": false,
             "yanked_reason": null
          },
          {
-            "author": "Gabriel Alves",
-            "author_email": "gabriel.alves@pickcells.bio",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "# sx\n#### Framework to manage gRPC-based microservices application",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/itsmealves/sx",
-            "keywords": "sx microservices rpc grpc Framework",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sx",
-            "package_url": "https://pypi.org/project/sx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sx/",
-            "project_urls": {
-               "Download": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-               "Homepage": "https://github.com/itsmealves/sx"
-            },
-            "release_url": "https://pypi.org/project/sx/0.6.0/",
-            "requires_dist": null,
-            "requires_python": ">=3.5",
-            "summary": "Framework to manage gRPC-based microservices application",
-            "version": "0.6.0",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ],
-      "rsa": [
-         {
-            "author": "ATATC",
-            "author_email": "futerry@outlook.com",
+            "author": "Kenneth Reitz",
+            "author_email": "me@kennethreitz.com",
             "bugtrack_url": null,
             "classifiers": [
+               "Development Status :: 5 - Production/Stable",
                "Intended Audience :: Developers",
-               "License :: OSI Approved :: MIT License",
-               "Operating System :: OS Independent",
+               "License :: OSI Approved :: BSD License",
+               "Natural Language :: English",
                "Programming Language :: Python",
                "Programming Language :: Python :: 2",
                "Programming Language :: Python :: 2.7",
@@ -1216,10 +381,10 @@
                "Programming Language :: Python :: 3.5",
                "Programming Language :: Python :: 3.6",
                "Programming Language :: Python :: 3.7",
-               "Programming Language :: Python :: Implementation",
-               "Topic :: Software Development :: Libraries"
+               "Programming Language :: Python :: Implementation :: CPython",
+               "Programming Language :: Python :: Implementation :: PyPy"
             ],
-            "description": "A multilingual RSA library with segmented encryption and decryption and unified format. All the names of the methods and classes are the same in all languages. \n\n\n",
+            "description": "Requests-OAuthlib |build-status| |coverage-status| |docs|\n=========================================================\n\nThis project provides first-class OAuth library support for `Requests <http://python-requests.org>`_.\n\nThe OAuth 1 workflow\n--------------------\n\nOAuth 1 can seem overly complicated and it sure has its quirks. Luckily,\nrequests_oauthlib hides most of these and let you focus at the task at hand.\n\nAccessing protected resources using requests_oauthlib is as simple as:\n\n.. code-block:: pycon\n\n    >>> from requests_oauthlib import OAuth1Session\n    >>> twitter = OAuth1Session('client_key',\n                                client_secret='client_secret',\n                                resource_owner_key='resource_owner_key',\n                                resource_owner_secret='resource_owner_secret')\n    >>> url = 'https://api.twitter.com/1/account/settings.json'\n    >>> r = twitter.get(url)\n\nBefore accessing resources you will need to obtain a few credentials from your\nprovider (e.g. Twitter) and authorization from the user for whom you wish to\nretrieve resources for. You can read all about this in the full\n`OAuth 1 workflow guide on RTD <https://requests-oauthlib.readthedocs.io/en/latest/oauth1_workflow.html>`_.\n\nThe OAuth 2 workflow\n--------------------\n\nOAuth 2 is generally simpler than OAuth 1 but comes in more flavours. The most\ncommon being the Authorization Code Grant, also known as the WebApplication\nflow.\n\nFetching a protected resource after obtaining an access token can be extremely\nsimple. However, before accessing resources you will need to obtain a few\ncredentials from your provider (e.g. Google) and authorization from the user\nfor whom you wish to retrieve resources for. You can read all about this in the\nfull `OAuth 2 workflow guide on RTD <https://requests-oauthlib.readthedocs.io/en/latest/oauth2_workflow.html>`_.\n\nInstallation\n-------------\n\nTo install requests and requests_oauthlib you can use pip:\n\n.. code-block:: bash\n\n    $ pip install requests requests_oauthlib\n\n.. |build-status| image:: https://travis-ci.org/requests/requests-oauthlib.svg?branch=master\n   :target: https://travis-ci.org/requests/requests-oauthlib\n.. |coverage-status| image:: https://img.shields.io/coveralls/requests/requests-oauthlib.svg\n   :target: https://coveralls.io/r/requests/requests-oauthlib\n.. |docs| image:: https://readthedocs.org/projects/requests-oauthlib/badge/\n   :alt: Documentation Status\n   :scale: 100%\n   :target: https://requests-oauthlib.readthedocs.io/\n\n\nHistory\n-------\n\nUNRELEASED\n++++++++++\n\nnothing yet\n\nv1.3.0 (6 November 2019)\n++++++++++++++++++++++++\n\n- Instagram compliance fix\n- Added ``force_querystring`` argument to fetch_token() method on OAuth2Session\n\nv1.2.0 (14 January 2019)\n++++++++++++++++++++++++\n\n- This project now depends on OAuthlib 3.0.0 and above. It does **not** support\n  versions of OAuthlib before 3.0.0.\n- Updated oauth2 tests to use 'sess' for an OAuth2Session instance instead of `auth`\n  because OAuth2Session objects and methods acceept an `auth` paramether which is\n  typically an instance of `requests.auth.HTTPBasicAuth`\n- `OAuth2Session.fetch_token` previously tried to guess how and where to provide\n  \"client\" and \"user\" credentials incorrectly. This was incompatible with some\n  OAuth servers and incompatible with breaking changes in oauthlib that seek to\n  correctly provide the `client_id`. The older implementation also did not raise\n  the correct exceptions when username and password are not present on Legacy\n  clients.\n- Avoid automatic netrc authentication for OAuth2Session.\n\nv1.1.0 (9 January 2019)\n+++++++++++++++++++++++\n\n- Adjusted version specifier for ``oauthlib`` dependency: this project is\n  not yet compatible with ``oauthlib`` 3.0.0.\n- Dropped dependency on ``nose``.\n- Minor changes to clean up the code and make it more readable/maintainable.\n\nv1.0.0 (4 June 2018)\n++++++++++++++++++++\n\n- **Removed support for Python 2.6 and Python 3.3.**\n  This project now supports Python 2.7, and Python 3.4 and above.\n- Added several examples to the documentation.\n- Added plentymarkets compliance fix.\n- Added a ``token`` property to OAuth1Session, to match the corresponding\n  ``token`` property on OAuth2Session.\n\nv0.8.0 (14 February 2017)\n+++++++++++++++++++++++++\n\n- Added Fitbit compliance fix.\n- Fixed an issue where newlines in the response body for the access token\n  request would cause errors when trying to extract the token.\n- Fixed an issue introduced in v0.7.0 where users passing ``auth`` to several\n  methods would encounter conflicts with the ``client_id`` and\n  ``client_secret``-derived auth. The user-supplied ``auth`` argument is now\n  used in preference to those options.\n\nv0.7.0 (22 September 2016)\n++++++++++++++++++++++++++\n\n- Allowed ``OAuth2Session.request`` to take the ``client_id`` and\n  ``client_secret`` parameters for the purposes of automatic token refresh,\n  which may need them.\n\nv0.6.2 (12 July 2016)\n+++++++++++++++++++++\n\n- Use ``client_id`` and ``client_secret`` for the Authorization header if\n  provided.\n- Allow explicit bypass of the Authorization header by setting ``auth=False``.\n- Pass through the ``proxies`` kwarg when refreshing tokens.\n- Miscellaneous cleanups.\n\nv0.6.1 (19 February 2016)\n+++++++++++++++++++++++++\n\n- Fixed a bug when sending authorization in headers with no username and\n  password present.\n- Make sure we clear the session token before obtaining a new one.\n- Some improvements to the Slack compliance fix.\n- Avoid timing problems around token refresh.\n- Allow passing arbitrary arguments to requests when calling\n  ``fetch_request_token`` and ``fetch_access_token``.\n\nv0.6.0 (14 December 2015)\n+++++++++++++++++++++++++\n\n- Add compliance fix for Slack.\n- Add compliance fix for Mailchimp.\n- ``TokenRequestDenied`` exceptions now carry the entire response, not just the\n  status code.\n- Pass through keyword arguments when refreshing tokens automatically.\n- Send authorization in headers, not just body, to maximize compatibility.\n- More getters/setters available for OAuth2 session client values.\n- Allow sending custom headers when refreshing tokens, and set some defaults.\n\n\nv0.5.0 (4 May 2015)\n+++++++++++++++++++\n- Fix ``TypeError`` being raised instead of ``TokenMissing`` error.\n- Raise requests exceptions on 4XX and 5XX responses in the OAuth2 flow.\n- Avoid ``AttributeError`` when initializing the ``OAuth2Session`` class\n  without complete client information.\n\nv0.4.2 (16 October 2014)\n++++++++++++++++++++++++\n- New ``authorized`` property on OAuth1Session and OAuth2Session, which allows\n  you to easily determine if the session is already authorized with OAuth tokens\n  or not.\n- New ``TokenMissing`` and ``VerifierMissing`` exception classes for OAuth1Session:\n  this will make it easier to catch and identify these exceptions.\n\nv0.4.1 (6 June 2014)\n++++++++++++++++++++\n- New install target ``[rsa]`` for people using OAuth1 RSA-SHA1 signature\n  method.\n- Fixed bug in OAuth2 where supplied state param was not used in auth url.\n- OAuth2 HTTPS checking can be disabled by setting environment variable\n  ``OAUTHLIB_INSECURE_TRANSPORT``.\n- OAuth1 now re-authorize upon redirects.\n- OAuth1 token fetching now raise a detailed error message when the\n  response body is incorrectly encoded or the request was denied.\n- Added support for custom OAuth1 clients.\n- OAuth2 compliance fix for Sina Weibo.\n- Multiple fixes to facebook compliance fix.\n- Compliance fixes now re-encode body properly as bytes in Python 3.\n- Logging now properly done under ``requests_oauthlib`` namespace instead\n  of piggybacking on oauthlib namespace.\n- Logging introduced for OAuth1 auth and session.\n\nv0.4.0 (29 September 2013)\n++++++++++++++++++++++++++\n- OAuth1Session methods only return unicode strings. #55.\n- Renamed requests_oauthlib.core to requests_oauthlib.oauth1_auth for consistency. #79.\n- Added Facebook compliance fix and access_token_response hook to OAuth2Session. #63.\n- Added LinkedIn compliance fix.\n- Added refresh_token_response compliance hook, invoked before parsing the refresh token.\n- Correctly limit compliance hooks to running only once!\n- Content type guessing should only be done when no content type is given\n- OAuth1 now updates r.headers instead of replacing it with non case insensitive dict\n- Remove last use of Response.content (in OAuth1Session). #44.\n- State param can now be supplied in OAuth2Session.authorize_url\n",
             "description_content_type": "",
             "docs_url": null,
             "download_url": "",
@@ -1228,360 +393,35 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "https://github.com/ATATC/ARSA",
+            "home_page": "https://github.com/requests/requests-oauthlib",
             "keywords": "",
-            "license": "MIT Liscense",
-            "maintainer": "ATATC",
-            "maintainer_email": "atatc_official@aliyun.com",
-            "name": "arsa",
-            "package_url": "https://pypi.org/project/arsa/",
-            "platform": "all",
-            "project_url": "https://pypi.org/project/arsa/",
+            "license": "ISC",
+            "maintainer": "",
+            "maintainer_email": "",
+            "name": "requests-oauthlib",
+            "package_url": "https://pypi.org/project/requests-oauthlib/",
+            "platform": "",
+            "project_url": "https://pypi.org/project/requests-oauthlib/",
             "project_urls": {
-               "Homepage": "https://github.com/ATATC/ARSA"
+               "Homepage": "https://github.com/requests/requests-oauthlib"
             },
-            "release_url": "https://pypi.org/project/arsa/1.1.4/",
-            "requires_dist": [
-               "Crypto (>=1.4.1)",
-               "pycryptodome (>=3.9.7)",
-               "setuptools (>=46.4.0)"
-            ],
+            "release_url": "https://pypi.org/project/requests-oauthlib/1.3.0/",
+            "requires_dist": null,
             "requires_python": "",
-            "summary": "('A multilingual RSA library with segmented encryption and decryption and unified format. ', 'Re-unified the methods and classes. ')",
-            "version": "1.1.4",
+            "summary": "OAuthlib authentication support for Requests.",
+            "version": "1.3.0",
             "yanked": false,
             "yanked_reason": null
          },
          {
-            "author": "Michael Foord",
-            "author_email": "",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "rs",
-            "package_url": "https://pypi.org/project/rs/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/rs/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/rs/0.0/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "",
-            "version": "0.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Ramses",
-            "author_email": "hello@ramses.tech",
+            "author": "Kenneth Reitz",
+            "author_email": "me@kennethreitz.com",
             "bugtrack_url": null,
             "classifiers": [
-               "Framework :: Pyramid",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.7",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.4",
-               "Programming Language :: Python :: 3.5",
-               "Topic :: Internet :: WWW/HTTP",
-               "Topic :: Internet :: WWW/HTTP :: WSGI :: Application"
-            ],
-            "description": "# `Ra`\n[![Build Status](https://travis-ci.org/ramses-tech/ra.svg?branch=master)](https://travis-ci.org/ramses-tech/ra)\n[![Documentation](https://readthedocs.org/projects/ra/badge/?version=stable)](http://ra.readthedocs.org)\n\nRa is a test suite generator and helper library for testing APIs described\nin [RAML](http://raml.org/).\n\nOut of the box, Ra provides a basic, automated test suite to test the routes\ndeclared in the RAML document. It provides test helpers for augmenting these\nwith custom tests to test application-specific logic, side effects, etc.\n\nRa is primarily designed to provide testing support for\n[ramses](http://github.com/ramses-tech/ramses) and\n[nefertari](http://github.com/ramses-tech/nefertari) applications, but can\nbe used with any WSGI-conformant, RAML-described API.\n\nIt currently depends on pytest but may be adapted for other test frameworks\nin the future. It works best using WebTest but doesn't require it.\n\n## Name\n\nRa was the god of the sun, the most important god in ancient Egypt.\n\n\n## Try it (dev)\n\nRun the test suite:\n\n```bash\n    $ pip install -r requirements.txt\n    $ py.test\n```\n\nCheck out the example:\n\n```bash\n    $ cd examples/ramses-test\n    $ pip install -r requirements.txt\n    $ py.test\n```\n\nThe example RAML at `examples/ramses-test/api.raml` and the test file\n`examples/ramses-test/tests/test_api.py` should be helpful to reference.\n\nSee the docs in `docs/`, and the `api.raml` and `tests/test_api.py` in\n`tests/apps/ramses_test`",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/ramses-tech/ra",
-            "keywords": "web raml",
-            "license": "UNKNOWN",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "ra",
-            "package_url": "https://pypi.org/project/ra/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/ra/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/ramses-tech/ra"
-            },
-            "release_url": "https://pypi.org/project/ra/0.2.0/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Test RAML API definition",
-            "version": "0.2.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Shoumik Palkar",
-            "author_email": "shoumik@cs.stanford.edu",
-            "bugtrack_url": null,
-            "classifiers": [
-               "License :: OSI Approved :: BSD License",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python :: 3"
-            ],
-            "description": "## split annotations\n\nThis package contains the Python implementation of [split annotations](), a system for optimizing applications\nthat combine many data-intensive library functions. See some useful links below.\n\n* [Documentation for this package](https://www.weld.rs/split-annotations/docs/)\n* [GitHub repository](https://www.github.com/weld-project/split-annotations)\n* [SOSP 2019 Paper describing the system](https://shoumik.xyz/static/papers/mozart-sosp19final.pdf)\n\n\n",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://www.github.com/weld-project/split-annotations",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sa",
-            "package_url": "https://pypi.org/project/sa/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sa/",
-            "project_urls": {
-               "Homepage": "https://www.github.com/weld-project/split-annotations"
-            },
-            "release_url": "https://pypi.org/project/sa/0.0.4/",
-            "requires_dist": [
-               "numpy",
-               "pandas",
-               "scipy",
-               "sharedmem"
-            ],
-            "requires_python": ">=3.6",
-            "summary": "Python split annotations package",
-            "version": "0.0.4",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
-}{
-   "rows": {
-      "six": [
-         {
-            "author": "Gabriel Alves",
-            "author_email": "gabriel.alves@pickcells.bio",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "# sx\n#### Framework to manage gRPC-based microservices application",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/itsmealves/sx",
-            "keywords": "sx microservices rpc grpc Framework",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sx",
-            "package_url": "https://pypi.org/project/sx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sx/",
-            "project_urls": {
-               "Download": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-               "Homepage": "https://github.com/itsmealves/sx"
-            },
-            "release_url": "https://pypi.org/project/sx/0.6.0/",
-            "requires_dist": null,
-            "requires_python": ">=3.5",
-            "summary": "Framework to manage gRPC-based microservices application",
-            "version": "0.6.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "chrysn",
-            "author_email": "chrysn@fsfe.org",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Education",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: GNU General Public License (GPL)"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "GPL",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "si",
-            "package_url": "https://pypi.org/project/si/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/si/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/si/0.1.1-1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Module to represent SI units",
-            "version": "0.1.1-1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ],
-      "rsa": [
-         {
-            "author": "Shoumik Palkar",
-            "author_email": "shoumik@cs.stanford.edu",
-            "bugtrack_url": null,
-            "classifiers": [
-               "License :: OSI Approved :: BSD License",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python :: 3"
-            ],
-            "description": "## split annotations\n\nThis package contains the Python implementation of [split annotations](), a system for optimizing applications\nthat combine many data-intensive library functions. See some useful links below.\n\n* [Documentation for this package](https://www.weld.rs/split-annotations/docs/)\n* [GitHub repository](https://www.github.com/weld-project/split-annotations)\n* [SOSP 2019 Paper describing the system](https://shoumik.xyz/static/papers/mozart-sosp19final.pdf)\n\n\n",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://www.github.com/weld-project/split-annotations",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sa",
-            "package_url": "https://pypi.org/project/sa/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sa/",
-            "project_urls": {
-               "Homepage": "https://www.github.com/weld-project/split-annotations"
-            },
-            "release_url": "https://pypi.org/project/sa/0.0.4/",
-            "requires_dist": [
-               "numpy",
-               "pandas",
-               "scipy",
-               "sharedmem"
-            ],
-            "requires_python": ">=3.6",
-            "summary": "Python split annotations package",
-            "version": "0.0.4",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Michael Foord",
-            "author_email": "",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "rs",
-            "package_url": "https://pypi.org/project/rs/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/rs/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/rs/0.0/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "",
-            "version": "0.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Ramses",
-            "author_email": "hello@ramses.tech",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Framework :: Pyramid",
-               "Programming Language :: Python",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.7",
-               "Programming Language :: Python :: 3",
-               "Programming Language :: Python :: 3.4",
-               "Programming Language :: Python :: 3.5",
-               "Topic :: Internet :: WWW/HTTP",
-               "Topic :: Internet :: WWW/HTTP :: WSGI :: Application"
-            ],
-            "description": "# `Ra`\n[![Build Status](https://travis-ci.org/ramses-tech/ra.svg?branch=master)](https://travis-ci.org/ramses-tech/ra)\n[![Documentation](https://readthedocs.org/projects/ra/badge/?version=stable)](http://ra.readthedocs.org)\n\nRa is a test suite generator and helper library for testing APIs described\nin [RAML](http://raml.org/).\n\nOut of the box, Ra provides a basic, automated test suite to test the routes\ndeclared in the RAML document. It provides test helpers for augmenting these\nwith custom tests to test application-specific logic, side effects, etc.\n\nRa is primarily designed to provide testing support for\n[ramses](http://github.com/ramses-tech/ramses) and\n[nefertari](http://github.com/ramses-tech/nefertari) applications, but can\nbe used with any WSGI-conformant, RAML-described API.\n\nIt currently depends on pytest but may be adapted for other test frameworks\nin the future. It works best using WebTest but doesn't require it.\n\n## Name\n\nRa was the god of the sun, the most important god in ancient Egypt.\n\n\n## Try it (dev)\n\nRun the test suite:\n\n```bash\n    $ pip install -r requirements.txt\n    $ py.test\n```\n\nCheck out the example:\n\n```bash\n    $ cd examples/ramses-test\n    $ pip install -r requirements.txt\n    $ py.test\n```\n\nThe example RAML at `examples/ramses-test/api.raml` and the test file\n`examples/ramses-test/tests/test_api.py` should be helpful to reference.\n\nSee the docs in `docs/`, and the `api.raml` and `tests/test_api.py` in\n`tests/apps/ramses_test`",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/ramses-tech/ra",
-            "keywords": "web raml",
-            "license": "UNKNOWN",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "ra",
-            "package_url": "https://pypi.org/project/ra/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/ra/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "https://github.com/ramses-tech/ra"
-            },
-            "release_url": "https://pypi.org/project/ra/0.2.0/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Test RAML API definition",
-            "version": "0.2.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "ATATC",
-            "author_email": "futerry@outlook.com",
-            "bugtrack_url": null,
-            "classifiers": [
+               "Development Status :: 5 - Production/Stable",
                "Intended Audience :: Developers",
-               "License :: OSI Approved :: MIT License",
-               "Operating System :: OS Independent",
+               "License :: OSI Approved :: BSD License",
+               "Natural Language :: English",
                "Programming Language :: Python",
                "Programming Language :: Python :: 2",
                "Programming Language :: Python :: 2.7",
@@ -1590,10 +430,10 @@
                "Programming Language :: Python :: 3.5",
                "Programming Language :: Python :: 3.6",
                "Programming Language :: Python :: 3.7",
-               "Programming Language :: Python :: Implementation",
-               "Topic :: Software Development :: Libraries"
+               "Programming Language :: Python :: Implementation :: CPython",
+               "Programming Language :: Python :: Implementation :: PyPy"
             ],
-            "description": "A multilingual RSA library with segmented encryption and decryption and unified format. All the names of the methods and classes are the same in all languages. \n\n\n",
+            "description": "Requests-OAuthlib |build-status| |coverage-status| |docs|\n=========================================================\n\nThis project provides first-class OAuth library support for `Requests <http://python-requests.org>`_.\n\nThe OAuth 1 workflow\n--------------------\n\nOAuth 1 can seem overly complicated and it sure has its quirks. Luckily,\nrequests_oauthlib hides most of these and let you focus at the task at hand.\n\nAccessing protected resources using requests_oauthlib is as simple as:\n\n.. code-block:: pycon\n\n    >>> from requests_oauthlib import OAuth1Session\n    >>> twitter = OAuth1Session('client_key',\n                                client_secret='client_secret',\n                                resource_owner_key='resource_owner_key',\n                                resource_owner_secret='resource_owner_secret')\n    >>> url = 'https://api.twitter.com/1/account/settings.json'\n    >>> r = twitter.get(url)\n\nBefore accessing resources you will need to obtain a few credentials from your\nprovider (e.g. Twitter) and authorization from the user for whom you wish to\nretrieve resources for. You can read all about this in the full\n`OAuth 1 workflow guide on RTD <https://requests-oauthlib.readthedocs.io/en/latest/oauth1_workflow.html>`_.\n\nThe OAuth 2 workflow\n--------------------\n\nOAuth 2 is generally simpler than OAuth 1 but comes in more flavours. The most\ncommon being the Authorization Code Grant, also known as the WebApplication\nflow.\n\nFetching a protected resource after obtaining an access token can be extremely\nsimple. However, before accessing resources you will need to obtain a few\ncredentials from your provider (e.g. Google) and authorization from the user\nfor whom you wish to retrieve resources for. You can read all about this in the\nfull `OAuth 2 workflow guide on RTD <https://requests-oauthlib.readthedocs.io/en/latest/oauth2_workflow.html>`_.\n\nInstallation\n-------------\n\nTo install requests and requests_oauthlib you can use pip:\n\n.. code-block:: bash\n\n    $ pip install requests requests_oauthlib\n\n.. |build-status| image:: https://travis-ci.org/requests/requests-oauthlib.svg?branch=master\n   :target: https://travis-ci.org/requests/requests-oauthlib\n.. |coverage-status| image:: https://img.shields.io/coveralls/requests/requests-oauthlib.svg\n   :target: https://coveralls.io/r/requests/requests-oauthlib\n.. |docs| image:: https://readthedocs.org/projects/requests-oauthlib/badge/\n   :alt: Documentation Status\n   :scale: 100%\n   :target: https://requests-oauthlib.readthedocs.io/\n\n\nHistory\n-------\n\nUNRELEASED\n++++++++++\n\nnothing yet\n\nv1.3.0 (6 November 2019)\n++++++++++++++++++++++++\n\n- Instagram compliance fix\n- Added ``force_querystring`` argument to fetch_token() method on OAuth2Session\n\nv1.2.0 (14 January 2019)\n++++++++++++++++++++++++\n\n- This project now depends on OAuthlib 3.0.0 and above. It does **not** support\n  versions of OAuthlib before 3.0.0.\n- Updated oauth2 tests to use 'sess' for an OAuth2Session instance instead of `auth`\n  because OAuth2Session objects and methods acceept an `auth` paramether which is\n  typically an instance of `requests.auth.HTTPBasicAuth`\n- `OAuth2Session.fetch_token` previously tried to guess how and where to provide\n  \"client\" and \"user\" credentials incorrectly. This was incompatible with some\n  OAuth servers and incompatible with breaking changes in oauthlib that seek to\n  correctly provide the `client_id`. The older implementation also did not raise\n  the correct exceptions when username and password are not present on Legacy\n  clients.\n- Avoid automatic netrc authentication for OAuth2Session.\n\nv1.1.0 (9 January 2019)\n+++++++++++++++++++++++\n\n- Adjusted version specifier for ``oauthlib`` dependency: this project is\n  not yet compatible with ``oauthlib`` 3.0.0.\n- Dropped dependency on ``nose``.\n- Minor changes to clean up the code and make it more readable/maintainable.\n\nv1.0.0 (4 June 2018)\n++++++++++++++++++++\n\n- **Removed support for Python 2.6 and Python 3.3.**\n  This project now supports Python 2.7, and Python 3.4 and above.\n- Added several examples to the documentation.\n- Added plentymarkets compliance fix.\n- Added a ``token`` property to OAuth1Session, to match the corresponding\n  ``token`` property on OAuth2Session.\n\nv0.8.0 (14 February 2017)\n+++++++++++++++++++++++++\n\n- Added Fitbit compliance fix.\n- Fixed an issue where newlines in the response body for the access token\n  request would cause errors when trying to extract the token.\n- Fixed an issue introduced in v0.7.0 where users passing ``auth`` to several\n  methods would encounter conflicts with the ``client_id`` and\n  ``client_secret``-derived auth. The user-supplied ``auth`` argument is now\n  used in preference to those options.\n\nv0.7.0 (22 September 2016)\n++++++++++++++++++++++++++\n\n- Allowed ``OAuth2Session.request`` to take the ``client_id`` and\n  ``client_secret`` parameters for the purposes of automatic token refresh,\n  which may need them.\n\nv0.6.2 (12 July 2016)\n+++++++++++++++++++++\n\n- Use ``client_id`` and ``client_secret`` for the Authorization header if\n  provided.\n- Allow explicit bypass of the Authorization header by setting ``auth=False``.\n- Pass through the ``proxies`` kwarg when refreshing tokens.\n- Miscellaneous cleanups.\n\nv0.6.1 (19 February 2016)\n+++++++++++++++++++++++++\n\n- Fixed a bug when sending authorization in headers with no username and\n  password present.\n- Make sure we clear the session token before obtaining a new one.\n- Some improvements to the Slack compliance fix.\n- Avoid timing problems around token refresh.\n- Allow passing arbitrary arguments to requests when calling\n  ``fetch_request_token`` and ``fetch_access_token``.\n\nv0.6.0 (14 December 2015)\n+++++++++++++++++++++++++\n\n- Add compliance fix for Slack.\n- Add compliance fix for Mailchimp.\n- ``TokenRequestDenied`` exceptions now carry the entire response, not just the\n  status code.\n- Pass through keyword arguments when refreshing tokens automatically.\n- Send authorization in headers, not just body, to maximize compatibility.\n- More getters/setters available for OAuth2 session client values.\n- Allow sending custom headers when refreshing tokens, and set some defaults.\n\n\nv0.5.0 (4 May 2015)\n+++++++++++++++++++\n- Fix ``TypeError`` being raised instead of ``TokenMissing`` error.\n- Raise requests exceptions on 4XX and 5XX responses in the OAuth2 flow.\n- Avoid ``AttributeError`` when initializing the ``OAuth2Session`` class\n  without complete client information.\n\nv0.4.2 (16 October 2014)\n++++++++++++++++++++++++\n- New ``authorized`` property on OAuth1Session and OAuth2Session, which allows\n  you to easily determine if the session is already authorized with OAuth tokens\n  or not.\n- New ``TokenMissing`` and ``VerifierMissing`` exception classes for OAuth1Session:\n  this will make it easier to catch and identify these exceptions.\n\nv0.4.1 (6 June 2014)\n++++++++++++++++++++\n- New install target ``[rsa]`` for people using OAuth1 RSA-SHA1 signature\n  method.\n- Fixed bug in OAuth2 where supplied state param was not used in auth url.\n- OAuth2 HTTPS checking can be disabled by setting environment variable\n  ``OAUTHLIB_INSECURE_TRANSPORT``.\n- OAuth1 now re-authorize upon redirects.\n- OAuth1 token fetching now raise a detailed error message when the\n  response body is incorrectly encoded or the request was denied.\n- Added support for custom OAuth1 clients.\n- OAuth2 compliance fix for Sina Weibo.\n- Multiple fixes to facebook compliance fix.\n- Compliance fixes now re-encode body properly as bytes in Python 3.\n- Logging now properly done under ``requests_oauthlib`` namespace instead\n  of piggybacking on oauthlib namespace.\n- Logging introduced for OAuth1 auth and session.\n\nv0.4.0 (29 September 2013)\n++++++++++++++++++++++++++\n- OAuth1Session methods only return unicode strings. #55.\n- Renamed requests_oauthlib.core to requests_oauthlib.oauth1_auth for consistency. #79.\n- Added Facebook compliance fix and access_token_response hook to OAuth2Session. #63.\n- Added LinkedIn compliance fix.\n- Added refresh_token_response compliance hook, invoked before parsing the refresh token.\n- Correctly limit compliance hooks to running only once!\n- Content type guessing should only be done when no content type is given\n- OAuth1 now updates r.headers instead of replacing it with non case insensitive dict\n- Remove last use of Response.content (in OAuth1Session). #44.\n- State param can now be supplied in OAuth2Session.authorize_url\n",
             "description_content_type": "",
             "docs_url": null,
             "download_url": "",
@@ -1602,237 +442,26 @@
                "last_month": -1,
                "last_week": -1
             },
-            "home_page": "https://github.com/ATATC/ARSA",
+            "home_page": "https://github.com/requests/requests-oauthlib",
             "keywords": "",
-            "license": "MIT Liscense",
-            "maintainer": "ATATC",
-            "maintainer_email": "atatc_official@aliyun.com",
-            "name": "arsa",
-            "package_url": "https://pypi.org/project/arsa/",
-            "platform": "all",
-            "project_url": "https://pypi.org/project/arsa/",
+            "license": "ISC",
+            "maintainer": "",
+            "maintainer_email": "",
+            "name": "requests-oauthlib",
+            "package_url": "https://pypi.org/project/requests-oauthlib/",
+            "platform": "",
+            "project_url": "https://pypi.org/project/requests-oauthlib/",
             "project_urls": {
-               "Homepage": "https://github.com/ATATC/ARSA"
+               "Homepage": "https://github.com/requests/requests-oauthlib"
             },
-            "release_url": "https://pypi.org/project/arsa/1.1.4/",
-            "requires_dist": [
-               "Crypto (>=1.4.1)",
-               "pycryptodome (>=3.9.7)",
-               "setuptools (>=46.4.0)"
-            ],
+            "release_url": "https://pypi.org/project/requests-oauthlib/1.3.0/",
+            "requires_dist": null,
             "requires_python": "",
-            "summary": "('A multilingual RSA library with segmented encryption and decryption and unified format. ', 'Re-unified the methods and classes. ')",
-            "version": "1.1.4",
+            "summary": "OAuthlib authentication support for Requests.",
+            "version": "1.3.0",
             "yanked": false,
             "yanked_reason": null
          }
       ]
    }
-}{
-   "rows": {
-      "six": [
-         {
-            "author": "Gabriel Alves",
-            "author_email": "gabriel.alves@pickcells.bio",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "# sx\n#### Framework to manage gRPC-based microservices application",
-            "description_content_type": "text/markdown",
-            "docs_url": null,
-            "download_url": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "https://github.com/itsmealves/sx",
-            "keywords": "sx microservices rpc grpc Framework",
-            "license": "MIT",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "sx",
-            "package_url": "https://pypi.org/project/sx/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/sx/",
-            "project_urls": {
-               "Download": "https://github.com/itsmealves/sx/releases/download/0.6.0/sx-0.6.0.tar.gz",
-               "Homepage": "https://github.com/itsmealves/sx"
-            },
-            "release_url": "https://pypi.org/project/sx/0.6.0/",
-            "requires_dist": null,
-            "requires_python": ">=3.5",
-            "summary": "Framework to manage gRPC-based microservices application",
-            "version": "0.6.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "chrysn",
-            "author_email": "chrysn@fsfe.org",
-            "bugtrack_url": null,
-            "classifiers": [
-               "Development Status :: 3 - Alpha",
-               "Intended Audience :: Education",
-               "Intended Audience :: Science/Research",
-               "License :: OSI Approved :: GNU General Public License (GPL)"
-            ],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "GPL",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "si",
-            "package_url": "https://pypi.org/project/si/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/si/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/si/0.1.1-1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "Module to represent SI units",
-            "version": "0.1.1-1",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
-}{
-   "rows": {}
-}{
-   "rows": {
-      "six": [
-         {
-            "author": "UNKNOWN",
-            "author_email": "UNKNOWN",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": null,
-            "license": "UNKNOWN",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "x",
-            "package_url": "https://pypi.org/project/x/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/x/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/x/0.0.0/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "UNKNOWN",
-            "version": "0.0.0",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Frieder Griesshammer",
-            "author_email": "frieder.griesshammer@der-beweis.de",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "UNKNOWN",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "UNKNOWN",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "UNKNOWN",
-            "keywords": "s",
-            "license": "UNKNOWN",
-            "maintainer": null,
-            "maintainer_email": null,
-            "name": "s",
-            "package_url": "https://pypi.org/project/s/",
-            "platform": "UNKNOWN",
-            "project_url": "https://pypi.org/project/s/",
-            "project_urls": {
-               "Download": "UNKNOWN",
-               "Homepage": "UNKNOWN"
-            },
-            "release_url": "https://pypi.org/project/s/0.0.0.1/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "The almighty S-package",
-            "version": "0.0.0.1",
-            "yanked": false,
-            "yanked_reason": null
-         },
-         {
-            "author": "Michael Foord",
-            "author_email": "michael@voidspace.org.uk",
-            "bugtrack_url": null,
-            "classifiers": [],
-            "description": "",
-            "description_content_type": null,
-            "docs_url": null,
-            "download_url": "",
-            "downloads": {
-               "last_day": -1,
-               "last_month": -1,
-               "last_week": -1
-            },
-            "home_page": "",
-            "keywords": "",
-            "license": "",
-            "maintainer": "",
-            "maintainer_email": "",
-            "name": "i",
-            "package_url": "https://pypi.org/project/i/",
-            "platform": "",
-            "project_url": "https://pypi.org/project/i/",
-            "project_urls": null,
-            "release_url": "https://pypi.org/project/i/0.0/",
-            "requires_dist": null,
-            "requires_python": null,
-            "summary": "",
-            "version": "0.0",
-            "yanked": false,
-            "yanked_reason": null
-         }
-      ]
-   }
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
-}{
-   "rows": {}
 }

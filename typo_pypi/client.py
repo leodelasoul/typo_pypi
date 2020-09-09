@@ -45,14 +45,15 @@ class Client(threading.Thread):
 
         idx = 0
         for i, p in enumerate(Analizer.package_list):
-            if i == 1:  # for dev purpose only
-                break
+          #  if i == 2:  # for dev purpose only, adjust exactly as the amount of test packages
+          #      break
             for t in p.typos:
                 x = requests.get("https://pypi.org/pypi/" + t + "/json")
                 if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors']:
                     self.condition.acquire()
                     p.set_check(True)
                     print(("https://pypi.org/project/" + t))
+
                     data = to_json_file(p.project, x, idx)
                     os.mkdir(self.tmp_dir + "/" + t)
                     tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"

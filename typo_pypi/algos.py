@@ -2,9 +2,7 @@ import pprint
 import random
 
 class Algos:
-    all_inserts = set()
-    all_replace = set()
-    all_removes = set()
+
 
     THRESHOLD = 1
     @staticmethod
@@ -53,16 +51,18 @@ class Algos:
 
     @staticmethod
     def insert(s, c, i):
+        all_inserts = set()
         assert len(s) > 0 and len(c) == 1 \
                and i in range(0, len(s) + 1)
 
-        result0 = Algos.fat_finger(c) + s[i:] # fatfinger
-        result1 = c + s[i:] # simple charrepetition
-        if Algos.levenshtein(result0,s) < Algos.THRESHOLD and result1 != s:
-            Algos.all_inserts.add(result0)
-        if Algos.levenshtein(result1,s) < Algos.THRESHOLD and result1 != s: #avoid false positives
-            Algos.all_inserts.add(result1)
-        return Algos.all_inserts
+        result0 = s[:i] + Algos.fat_finger(c) + s[i:] # fatfinger
+        result1 = s[:i] + c + s[i:] # simple charrepetition
+        if Algos.levenshtein(result0,s) <= Algos.THRESHOLD:
+            all_inserts.add(result0)
+        if Algos.levenshtein(result1,s) <= Algos.THRESHOLD: #avoid false positives
+            all_inserts.add(result1)
+
+        return all_inserts
 
     @staticmethod
     def fat_finger(c):
@@ -73,7 +73,7 @@ class Algos:
             'i': '9okju8', 'o': '0plki9', 'p': 'lo0',
             'a': 'qwsy', 's': 'edxyaw', 'd': 'rfcxse', 'f': 'tgvcdr', 'g': 'zhbvft', 'h': 'ujnbgz', 'j': 'ikmnhu',
             'k': 'olmji', 'l': 'kop',
-            'y': 'asx', 'x': 'ysdc', 'c': 'xdfv', 'v': 'cfgb', 'b': 'vghn', 'n': 'bhjm', 'm': 'njk'
+            'y': 'asx', 'x': 'ysdc', 'c': 'xdfv', 'v': 'cfgb', 'b': 'vghn', 'n': 'bhjm', 'm': 'njk',
         }
         qwerty = {  # TODO insert qwerty layout
 
@@ -82,9 +82,12 @@ class Algos:
             one_char = qwertz[c]
             one_char = list(one_char)
             return one_char[random.randrange(0, len(one_char) - 1)]
+        else:
+            return ""
 
     @staticmethod
     def replace(s, i, j):
+        all_replace = set()
         assert (len(s) > 0 and j in range(0, len(s))
                 and i in range(0, len(s)))
         l = list(s)
@@ -93,30 +96,29 @@ class Algos:
         l[j] = tmp
         result0 = ''.join(l)
         if Algos.levenshtein(result0,s) < Algos.THRESHOLD:
-            Algos.all_replace.add(result0)
-        return Algos.all_replace
+            all_replace.add(result0)
+        return all_replace
 
     @staticmethod
-    def delete(s,c, i):
+    def delete(s, i):
+        all_removes = set()
         assert (len(s) > 0 and i in range(0, len(s)))
         result0 = s[:i] + s[i + 1:] #remove one char from string for each i
-        if Algos.levenshtein(result0,s) < Algos.THRESHOLD:
-            Algos.all_removes.add(result0)
-        return Algos.all_removes
+        all_removes.add(result0)
+        return all_removes
 
     @staticmethod
     def remove_hyphen(s,i):
-        return s[:i] + s[i:]
+        return Algos.delete(s,i)
 
     @staticmethod
     def generate_typo(s):
         results = set()
         for i, char in enumerate(s):
-            #results.update(Algos.delete(s, char, i))
-            if char == "-" or "/":
+            results.update(Algos.delete(s,i))
+            if char == "-" or char == "/":
                 results.update(Algos.remove_hyphen(s,i)) #should resolve in levdistance 1
             for j, _ in enumerate(s):
-                results.update(Algos.insert(s, char, j))
-                #results.update(Algos.replace(s, i, j))
-
+                results.update(Algos.insert(s, _, j))
+                results.update(Algos.replace(s, i, j))
         return results
