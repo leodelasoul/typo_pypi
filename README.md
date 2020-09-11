@@ -1,13 +1,12 @@
 ### typo_pypi, experimental methods 
 ![UML](typo_pypi.png)  
 
-analizer: forms list from  package managers  
-validater: checks typos for any squats or malicious code
-server: handles http stuff  
-algos: mostly levenshtein delete-insert typo generation
+analizer: distributes a typolist for package managers, as of yet: only pypi  
+validater: checks each squatted package for malicious code  
+client: uses the typolist and scrapes a package index, handles http stuff and misc. operations  
+algos: uses various strategies for typo creation, within levenshtein <= 1
 
-* should back theoretical claims in thesis work
-* could be used for a possible API used by a standalone security pypi module 
-* a yet pretty slow and naive implementation
-
-
+* should back theoretical claims in thesis work 
+* creates a json with all typo packages found in pypi
+* can be used as a blacklist for a standalone prevention software or to be intigrated in pypi's warehouse
+* scraping takes a long time, either use results.json or run main.py
