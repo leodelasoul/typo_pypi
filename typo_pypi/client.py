@@ -26,7 +26,9 @@ class Client(threading.Thread):
         blacklist = json.load(f)
 
     def run(self):
-        self.query_pypi_index()
+        #self.query_pypi_index()
+
+
         pass
 
     def query_pypi_index(self):

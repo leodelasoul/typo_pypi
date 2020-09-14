@@ -2,10 +2,10 @@ class Package:
     checked = False
     validated = False
 
-    def __init__(self, project, downloads, typos):
+    def __init__(self, project, downloads ):
         self.project = project
         self.downloads = downloads
-        self.typos = typos
+        self.typos = []
 
     '''
     def __iter__(self):
