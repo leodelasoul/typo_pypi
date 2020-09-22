@@ -4,20 +4,24 @@ import requests
 from collections import defaultdict
 from typo_pypi.analizer import Analizer
 import json
-#from typo_pypi.validater import Validater
+# from typo_pypi.validater import Validater
 import os
 from typo_pypi import config
 import tarfile
 import re
+
 '''
 manages all http requests that are needed for  this project
 
 '''
 
+
 class Client(threading.Thread):
+    idx = 0
+    data = defaultdict(list)
+    typos = list()
 
-
-    def __init__(self, name, tmp_dir,condition):
+    def __init__(self, name, tmp_dir, condition):
         super().__init__(name=name)
         self.tmp_dir = tmp_dir  # store tmp data
         self.condition = condition
@@ -26,57 +30,52 @@ class Client(threading.Thread):
         blacklist = json.load(f)
 
     def run(self):
-        #self.query_pypi_index()
+        # self.query_pypi_index()
+        while config.run:
+            self.query_list()
 
-
-        pass
-
-    def query_pypi_index(self):
-        data = defaultdict(list)
-        typos = list()
-
-        # validater = Validater(condition)
+    def query_list(self):
 
         def to_json_file(package, typo, idx):
-            nonlocal data
-            nonlocal typos
             info = typo.json()["info"]
-            typos.append(info)
-            data[package].append(typos[idx])
-            return data
+            self.typos.append(info)
+            self.data[package].append(self.typos[idx])
+            return self.data
 
-        idx = 0
-        for i, p in enumerate(Analizer.package_list):
-            if i == 20:  # for dev purpose only
-                break
-            for t in p.typos:
-                x = requests.get("https://pypi.org/pypi/" + t + "/json")
+        with open("results2.txt", "r") as f:
+            try:
+                lines = f.readlines()
+                line = json.loads(lines[self.idx])  # aka next line
+            except Exception:
+                pass
+            else:
+                line = json.loads(lines[self.idx])  # aka next line
+                x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json")
                 if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors']:
                     self.condition.acquire()
-                    p.set_check(True)
-                    print(("https://pypi.org/project/" + t))
-
-                    data = to_json_file(p.project, x, idx)
+                    print(("https://pypi.org/project/" + line['p_typo']))
+                    t = line["p_typo"]
+                    data = to_json_file(line["real_project"], x, self.idx)
                     os.mkdir(self.tmp_dir + "/" + t)
                     tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
                     config.tmp_file = tmp_file
                     self.condition.notify_all()
                     with open(tmp_file, "w+", encoding="utf-8") as f:
                         json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
-                    self.condition.wait() # validater needs to check sig first
+                    self.condition.wait()  # validater needs to check sig first
                     if config.current_package_valid:
                         self.condition.wait()
                         tar_file = self.download_package(x, t)
                         config.setup_file = self.extract_setup_file(tar_file)
                         self.condition.notify_all()
-                    idx = idx + 1
                     self.condition.release()
+                    self.idx = self.idx + 1
                 else:
-                    p.set_check(False)
-                    print(t)
-        config.run = False
-        with open("results1.json", "a", encoding='utf-8') as f:
-            json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
+                    pass
+                if self.idx == len(lines):    #exit condition
+                    config.run = False
+                    with open("results1.json", "a", encoding='utf-8') as f:
+                        json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
 
     def download_package(self, x, typo_name):
         try:
@@ -118,9 +117,7 @@ class Client(threading.Thread):
                         t.extract(member, dest[0])
                         return dest[0]
 
-
-
-    # y = requests.get("https://pypi.org/pypi/trafaretconfig/json")
-    # x = list(y.json()["releases"][x][0]["url"]n()["releases"].keys())[0]
-    # print(type(x))
-    # print()
+# y = requests.get("https://pypi.org/pypi/trafaretconfig/json")
+# x = list(y.json()["releases"][x][0]["url"]n()["releases"].keys())[0]
+# print(type(x))
+# print()

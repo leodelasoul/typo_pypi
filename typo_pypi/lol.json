@@ -9,15 +9,15 @@
   "rows": [
     {
       "download_count": 110838096,
-      "project": "six"
+      "project": "atlas"
     },
     {
       "download_count": 110838096,
-      "project": "rsa"
+      "project": "hearthstone_data"
     },
     {
       "download_count": 110838096,
-      "project": "requests-oauthlib"
+      "project": "redbaron"
     }
   ]
 }

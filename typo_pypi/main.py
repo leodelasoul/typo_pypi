@@ -21,17 +21,17 @@ def main():
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
         analizer = Analizer("analizerthread")
-#        client = Client("serverthread", tmp_dir, c)
-        #validater = Validater("validaterthread", c)
+        client = Client("serverthread", tmp_dir, c)
+        validater = Validater("validaterthread", c)
 
         analizer.start()
-        time.sleep(2)
+        #time.sleep(2)
         threads.append(analizer)
-        #threads.append(client)
-        #validater.start()
-        #threads.append(validater)
-        time.sleep(2)
-        #client.start()
+        threads.append(client)
+        validater.start()
+        threads.append(validater)
+        #time.sleep(2)
+        client.start()
 
         print("threads started")
         # class methods should execute
