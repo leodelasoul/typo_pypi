@@ -26,6 +26,10 @@ class Client(threading.Thread):
         self.tmp_dir = tmp_dir  # store tmp data
         self.condition = condition
 
+    def __next__(self):
+        return self.typos[-1]
+
+
     with open(os.path.dirname(__file__) + "/blacklist.json") as f:
         blacklist = json.load(f)
 
@@ -39,7 +43,7 @@ class Client(threading.Thread):
         def to_json_file(package, typo, idx):
             info = typo.json()["info"]
             self.typos.append(info)
-            self.data[package].append(self.typos[idx])
+            self.data[package].append(self.__next__())
             return self.data
 
         with open("results2.txt", "r") as f:
@@ -95,7 +99,7 @@ class Client(threading.Thread):
             return out_file
 
     def extract_setup_file(self, downloaded_file):
-        print(downloaded_file)
+        print(downloaded_file + " extract method")
         try:
             dest = re.match(r".*\\([^\\]+)/", downloaded_file)
             dest1 = re.match(r".*/([^//]+)/", downloaded_file)

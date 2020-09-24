@@ -29,26 +29,26 @@ class Algos:
         return n
 
     @staticmethod
-    def levenshtein(s1, s2):
-        if len(s1) < len(s2):
-            return Algos.levenshtein(s2, s1)
+    def levenshtein(a, b):
+        if not (len(a) > 0 and len(b) > 0):
+            msg = "|a| > |b| > 0"
+            raise ValueError(msg)
+        D = []
+        for i in range(len(a)):
+            D.append([])
+            for j in range(len(b)):
+                D[i].append(0)
+        for i in range(len(a)):
+            D[i][0] = i
+        for j in range(len(b)):
+            D[0][j] = j
 
-        # len(s1) >= len(s2)
-        if len(s2) == 0:
-            return len(s1)
+        for i in range(len(a)):
+            for j in range(len(b)):
+                cost = [1, 0][a[i] == b[j]]
+                D[i][j] = min(D[i - 1][j] + 1, D[i][j - 1] + 1, D[i - 1][j - 1] + cost)
 
-        previous_row = range(len(s2) + 1)
-        for i, c1 in enumerate(s1):
-            current_row = [i + 1]
-            for j, c2 in enumerate(s2):
-                insertions = previous_row[
-                                 j + 1] + 1  # j+1 instead of j since previous_row and current_row are one character longer
-                deletions = current_row[j] + 1  # than s2
-                substitutions = previous_row[j] + (c1 != c2)
-                current_row.append(min(insertions, deletions, substitutions))
-            previous_row = current_row
-
-        return previous_row[-1]
+        return D[-1][-1]
 
     @staticmethod
     def insert(s, c, i):

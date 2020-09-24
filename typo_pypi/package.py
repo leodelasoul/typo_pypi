@@ -2,7 +2,7 @@ class Package:
     checked = False
     validated = False
 
-    def __init__(self, project, downloads ):
+    def __init__(self, project, downloads):
         self.project = project
         self.downloads = downloads
         self.typos = []
