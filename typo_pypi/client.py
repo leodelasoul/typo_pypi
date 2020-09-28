@@ -25,8 +25,9 @@ class Client(threading.Thread):
         super().__init__(name=name)
         self.tmp_dir = tmp_dir  # store tmp data
         self.condition = condition
+        self.iter = iter(list())
 
-    def __next__(self):
+    def get_last_element(self):
         return self.typos[-1]
 
 
@@ -34,16 +35,16 @@ class Client(threading.Thread):
         blacklist = json.load(f)
 
     def run(self):
-        # self.query_pypi_index()
+
         while config.run:
             self.query_list()
 
     def query_list(self):
 
-        def to_json_file(package, typo, idx):
+        def to_json_file(package, typo):
             info = typo.json()["info"]
             self.typos.append(info)
-            self.data[package].append(self.__next__())
+            self.data[package].append(self.get_last_element())
             return self.data
 
         with open("results2.txt", "r") as f:
@@ -59,8 +60,13 @@ class Client(threading.Thread):
                     self.condition.acquire()
                     print(("https://pypi.org/project/" + line['p_typo']))
                     t = line["p_typo"]
-                    data = to_json_file(line["real_project"], x, self.idx)
-                    os.mkdir(self.tmp_dir + "/" + t)
+                    data = to_json_file(line["real_project"], x)
+                    try:
+                        os.mkdir(self.tmp_dir + "/" + t)
+                    except FileExistsError as e:
+                        print(e)
+                        self.condition.notify_all()
+                        pass
                     tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
                     config.tmp_file = tmp_file
                     self.condition.notify_all()
@@ -73,14 +79,13 @@ class Client(threading.Thread):
                         config.setup_file = self.extract_setup_file(tar_file)
                         self.condition.notify_all()
                     self.condition.release()
-                    self.idx = self.idx + 1
                 else:
                     pass
-                if self.idx == len(lines):    #exit condition
+                if self.idx == len(lines)-1:    #exit condition
                     config.run = False
                     with open("results1.json", "a", encoding='utf-8') as f:
                         json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
-
+                self.idx = self.idx + 1
     def download_package(self, x, typo_name):
         try:
             key = list(x.json()["releases"].keys())[0]
@@ -99,7 +104,7 @@ class Client(threading.Thread):
             return out_file
 
     def extract_setup_file(self, downloaded_file):
-        print(downloaded_file + " extract method")
+        print(downloaded_file)
         try:
             dest = re.match(r".*\\([^\\]+)/", downloaded_file)
             dest1 = re.match(r".*/([^//]+)/", downloaded_file)

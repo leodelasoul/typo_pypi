@@ -60,7 +60,7 @@ class Analizer(threading.Thread):
                 intersection = typos & set(arr)
                 count = count +1
                 if len(intersection) != 0:
-                    with open("results2.txt", "a") as f:
+                    with open("results2.txt", "a") as f:  #existent_typos
                         for i in intersection:
                             data = json.dumps({"real_project": obj.project, "p_typo": i})
                             f.write(data + " \n")
