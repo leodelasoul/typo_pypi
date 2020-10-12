@@ -25,21 +25,26 @@ class Client(threading.Thread):
         super().__init__(name=name)
         self.tmp_dir = tmp_dir  # store tmp data
         self.condition = condition
+        self.iter = iter(list())
+
+    def get_last_element(self):
+        return self.typos[-1]
+
 
     with open(os.path.dirname(__file__) + "/blacklist.json") as f:
         blacklist = json.load(f)
 
     def run(self):
-        # self.query_pypi_index()
+
         while config.run:
             self.query_list()
 
     def query_list(self):
 
-        def to_json_file(package, typo, idx):
+        def to_json_file(package, typo):
             info = typo.json()["info"]
             self.typos.append(info)
-            self.data[package].append(self.typos[idx])
+            self.data[package].append(self.get_last_element())
             return self.data
 
         with open("results2.txt", "r") as f:
@@ -51,31 +56,38 @@ class Client(threading.Thread):
             else:
                 line = json.loads(lines[self.idx])  # aka next line
                 x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json")
-                if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors']:
+                if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors'] and line["p_typo"] not in Client.blacklist['packages']:
                     self.condition.acquire()
                     print(("https://pypi.org/project/" + line['p_typo']))
                     t = line["p_typo"]
-                    data = to_json_file(line["real_project"], x, self.idx)
-                    os.mkdir(self.tmp_dir + "/" + t)
+                    data = to_json_file(line["real_project"], x)
+                    try:
+                        os.mkdir(self.tmp_dir + "/" + t)
+                    except FileExistsError as e:
+                        print(e)
+                        self.condition.notify_all()
+                        pass
                     tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
                     config.tmp_file = tmp_file
                     self.condition.notify_all()
                     with open(tmp_file, "w+", encoding="utf-8") as f:
                         json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
                     self.condition.wait()  # validater needs to check sig first
-                    if config.current_package_valid:
+                    if config.suspicious_package:
                         self.condition.wait()
                         tar_file = self.download_package(x, t)
                         config.setup_file = self.extract_setup_file(tar_file)
                         self.condition.notify_all()
                     self.condition.release()
-                    self.idx = self.idx + 1
                 else:
                     pass
-                if self.idx == len(lines):    #exit condition
+                if self.idx == len(lines)-1 and len(lines) > 100:    #exit condition with a 100 offset
                     config.run = False
                     with open("results1.json", "a", encoding='utf-8') as f:
-                        json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
+                        pass
+                        #json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
+                self.idx = self.idx + 1
+
 
     def download_package(self, x, typo_name):
         try:

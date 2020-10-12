@@ -30,7 +30,7 @@ def main():
         threads.append(client)
         validater.start()
         threads.append(validater)
-        #time.sleep(2)
+        time.sleep(2)
         client.start()
 
         print("threads started")

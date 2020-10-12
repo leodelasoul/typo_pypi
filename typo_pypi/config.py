@@ -1,5 +1,5 @@
 tmp_file = ""
 setup_file = ""
-current_package_valid = False
+suspicious_package = False
 run = True
 package_list = list()

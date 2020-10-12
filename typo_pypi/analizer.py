@@ -56,7 +56,7 @@ class Analizer(threading.Thread):
         with open(self.current_dir + "/top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
             for p in data["rows"]:
-                if count == 3:
+                if count == 1:  #change to 999
                     break
                 obj = Package(p["project"], p["download_count"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")

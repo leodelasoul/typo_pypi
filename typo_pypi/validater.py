@@ -23,14 +23,15 @@ class Validater(threading.Thread):
         while config.run:
             self.condition.acquire()
             if config.tmp_file != "":
-                config.current_package_valid = self.check_sig_discription(config.tmp_file)
+                config.suspicious_package = self.check_sig_discription(config.tmp_file)
                 self.condition.notify_all()
-            elif config.setup_file != "":
+            elif config.setup_file != "" or config.setup_file != None:
                 self.validate_package(config.setup_file)
                 self.condition.notify_all()
             else:
                 self.condition.wait()
             self.condition.release()
+
 
     def check_sig_discription(self, data):
         rules = yara.compile(self.current_dir + "/yara/pypi.yara")
@@ -44,17 +45,16 @@ class Validater(threading.Thread):
     def validate_package(self, setup_file):
         # check content of file
         rules = yara.compile(filepaths={
-            'Big_Numbers0': './yara/crypto.yara',
-            'fragus_htm': './yara/fragus.yara'
+            "setup": "./yara/setup.yara"
+            # 'Big_Numbers0': './yara/crypto.yara',
+            # 'fragus_htm': './yara/fragus.yara'
         })
         try:
-            package_source = open(setup_file)
+            match = rules.match(setup_file)
         except Exception:
             return
         else:
-            match = rules.match(package_source)
             if match:
                 print("hit")
             else:
                 print("nothing")
-

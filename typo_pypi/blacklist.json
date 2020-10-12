@@ -6,5 +6,11 @@
   ],
   "ignore" : [
     "william.bengtson@gmail.com"
+  ],
+  "packages" : [
+    "urllib3c",
+    "stix",
+    "silx",
+    "simx"
   ]
 }
