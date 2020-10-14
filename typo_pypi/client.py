@@ -48,6 +48,9 @@ class Client(threading.Thread):
             return self.data
 
         with open("results2.txt", "r") as f:
+            #if self.idx == 30 :
+            #    config.run = False
+            #    return
             try:
                 lines = f.readlines()
                 line = json.loads(lines[self.idx])  # aka next line
@@ -60,7 +63,7 @@ class Client(threading.Thread):
                     self.condition.acquire()
                     print(("https://pypi.org/project/" + line['p_typo']))
                     t = line["p_typo"]
-                    data = to_json_file(line["real_project"], x)
+                    #data = to_json_file(line["real_project"], x)
                     try:
                         os.mkdir(self.tmp_dir + "/" + t)
                     except FileExistsError as e:
@@ -71,7 +74,7 @@ class Client(threading.Thread):
                     config.tmp_file = tmp_file
                     self.condition.notify_all()
                     with open(tmp_file, "w+", encoding="utf-8") as f:
-                        json.dump({"rows": data}, f, ensure_ascii=False, indent=3)
+                        json.dump({"rows": x.json()}, f, ensure_ascii=False, indent=3)
                     self.condition.wait()  # validater needs to check sig first
                     if config.suspicious_package:
                         self.condition.wait()
