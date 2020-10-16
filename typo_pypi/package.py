@@ -1,12 +1,14 @@
 class Package:
     checked = False
     validated = False
-
-    def __init__(self, project, downloads ):
+    harmful = False
+    namesquat = False
+    def __init__(self, project ):
         self.project = project
-        self.downloads = downloads
         self.typos = []
-
+    def __setitem__(self, key, value):
+        self.typos = [1]
+        self.typos[key] = value
     '''
     def __iter__(self):
         return self

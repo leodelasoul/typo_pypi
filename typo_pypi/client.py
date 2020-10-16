@@ -17,9 +17,10 @@ manages all http requests that are needed for  this project
 
 
 class Client(threading.Thread):
-    idx = 0
+    idx = 52
     data = defaultdict(list)
     typos = list()
+    url = ""
 
     def __init__(self, name, tmp_dir, condition):
         super().__init__(name=name)
@@ -45,12 +46,12 @@ class Client(threading.Thread):
             info = typo.json()["info"]
             self.typos.append(info)
             self.data[package].append(self.get_last_element())
-            return self.data
+            #return self.data
 
         with open("results2.txt", "r") as f:
-            #if self.idx == 30 :
-            #    config.run = False
-            #    return
+            if self.idx == 60 :
+                config.run = False
+                return
             try:
                 lines = f.readlines()
                 line = json.loads(lines[self.idx])  # aka next line
@@ -63,7 +64,7 @@ class Client(threading.Thread):
                     self.condition.acquire()
                     print(("https://pypi.org/project/" + line['p_typo']))
                     t = line["p_typo"]
-                    #data = to_json_file(line["real_project"], x)
+                    to_json_file(line["real_project"], x)
                     try:
                         os.mkdir(self.tmp_dir + "/" + t)
                     except FileExistsError as e:
@@ -72,6 +73,8 @@ class Client(threading.Thread):
                         pass
                     tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
                     config.tmp_file = tmp_file
+                    config.real_package = line["real_project"]
+                    config.typo_package = t
                     self.condition.notify_all()
                     with open(tmp_file, "w+", encoding="utf-8") as f:
                         json.dump({"rows": x.json()}, f, ensure_ascii=False, indent=3)
@@ -94,13 +97,18 @@ class Client(threading.Thread):
 
     def download_package(self, x, typo_name):
         try:
-            key = list(x.json()["releases"].keys())[0]
-            url = x.json()["releases"][key][0]["url"]
+            key = list(x.json()["releases"].keys())[-1]
         except IndexError as e:
             print(e)
-            return None
+            return
         else:
-            data = requests.get(url, stream=True)
+
+            for i in range(len(x.json()["releases"][key])):
+                if x.json()["releases"][key][i]["packagetype"] == "sdist":
+                    self.url = x.json()["releases"][key][i]["url"]
+                else:
+                    return
+            data = requests.get(self.url, stream=True)
             out_file = self.tmp_dir + "/" + typo_name + "/" + typo_name + '.tar.gz'
             with open(out_file, 'wb') as fp:
                 for chunk in data.iter_content():

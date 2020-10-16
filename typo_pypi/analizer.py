@@ -58,7 +58,7 @@ class Analizer(threading.Thread):
             for p in data["rows"]:
                 if count == 1:  #change to 999
                     break
-                obj = Package(p["project"], p["download_count"])
+                obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
                 for i in range(len(arr) - 1):
                     lev_distance = Algos.levenshtein(obj.project, wrapper(i))
@@ -73,7 +73,7 @@ class Analizer(threading.Thread):
                             data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
                             #f.write(data + " \n")
                         f.close()
-                    config.package_list.append(obj)
+                    #config.package_list.append(obj)
                 #print(wrapper.cache_info())
                 count = count + 1
 
