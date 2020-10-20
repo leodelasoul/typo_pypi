@@ -9,6 +9,7 @@ import os
 from typo_pypi import config
 import tarfile
 import re
+import logging
 
 '''
 manages all http requests that are needed for  this project
@@ -90,9 +91,10 @@ class Client(threading.Thread):
                     pass
                 if self.idx == len(lines) - 1 and len(lines) > 100:  # exit condition with a 100 offset
                     config.run = False
-                    with open("results1.json", "a", encoding='utf-8') as f:
-                        pass
-                        # json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
+                    with open("results1.json", "w", encoding='utf-8') as f:
+                        json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
+
+                        ### append all harm ful data here
                 self.idx = self.idx + 1
 
     def download_package(self, x, typo_name):
@@ -123,7 +125,7 @@ class Client(threading.Thread):
 
     def extract_setup_file(self, downloaded_file):
         destination = ""
-        print("extracted : " + str(config.typo_package))
+        logging.info("extracted : " + str(config.typo_package))
         try:
             dest = re.match(r".*\\([^\\]+)/", downloaded_file)
             dest1 = re.match(r".*/([^//]+)/", downloaded_file)
@@ -138,25 +140,19 @@ class Client(threading.Thread):
             for member in t.getmembers():
                 if os.path.splitext(member.name)[1] == ".py":
                     if os.name == "posix":
-                        t.extract(member, dest1[0])
+                        t.extractall(path=dest1[0],members=self.members(member))
                         destination = dest1[0]
 
                     elif os.name == "nt":
-                        # t.extract(member, dest[0])
-                        #t.extract(self.members,path=dest[0])
-                        t.extractall(path=dest[0],members=self.members(member, dest[0]))
+                        t.extractall(path=dest[0],members=self.members(member))
                         destination = dest[0]
 
             return destination
 
-    def members(self, member,dest):
+    def members(self, member):
         match = re.match(r"^(.*[\\\/])",member.path)
         l = len(match[0])
         if member.path.startswith(config.typo_package):
             member.path = member.path[l:]
             yield member
 
-    def py_files(self, members):
-        for tarinfo in members:
-            if os.path.splitext(tarinfo.name)[1] == ".py":
-                yield tarinfo

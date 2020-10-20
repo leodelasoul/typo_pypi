@@ -11,7 +11,7 @@ from os.path import isfile, join
 from typo_pypi.package import Package
 import re
 from typo_pypi import config
-
+import logging
 
 class Validater(threading.Thread):
     current_dir = os.path.dirname(__file__)
@@ -47,31 +47,35 @@ class Validater(threading.Thread):
 
     def classify_package(self, suspicious_dir):
         # check content of file
-        config.file_isready = False #for next iteration
-        rules = yara.compile(filepaths={
-            "setup": "./yara/setup.yara"
-            # 'Big_Numbers0': './yara/crypto.yara',
-            # 'fragus_htm': './yara/fragus.yara'
-        })
+        config.file_isready = False  # for next iteration
+        '''rules = yara.compile(filepaths={
+    "setup": "./yara/setup.yara",
+    "MD5_Constants": "./yara/crypto.yara",
+    "Big_Numbers0': './yara/crypto.yara",
+    "Big_Numbers0': './yara/crypto.yara"
+
+}) '''
+        rules = yara.compile(filepath="./yara/crypto.yara")
+
+
         package_obj = Package(config.real_package)
         package_obj[0] = config.typo_package
         try:
 
-            for file in [f for f in os.listdir(suspicious_dir) if isfile(join(suspicious_dir, f))]:
+            for file in [f for f in os.listdir(suspicious_dir) if isfile(join(suspicious_dir, f)) and f.endswith("py")]: #and not f.endswith("json")
                 match = rules.match(suspicious_dir + file)
                 # true positive : harmful = true , false positive: should be excluded, , true negative: squatt = true, false negative: not considered further as typo
                 if match:
                     package_obj.harmful = True
-                    print("hit on : " + package_obj.typos[0])
+                    package_obj.namesquat = False
+                    logging.warning("harmful code for namespace: " + package_obj.typos[0] + " \n" + "in source file: " + file)
                     break
 
                 else:
                     package_obj.namesquat = True
-                    print("nothing on : " + package_obj.typos[0])
+                    package_obj.harmful = False
+
                     continue
-
-
-
-        except Exception:
-            print("ooof")
+        except Exception as e:
+            print(e)
             return

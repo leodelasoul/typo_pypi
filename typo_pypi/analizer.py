@@ -39,7 +39,7 @@ class Analizer(threading.Thread):
 
     def create_arr(self, array):
         i = 0
-        with open(Analizer.current_dir + "/../bq-results-20200913-185937-p7wc4g8anuwo.json", "rb") as file1:
+        with open(Analizer.current_dir + "./../bq-results-20200913-185937-p7wc4g8anuwo.json", "rb") as file1:
             for line in file1:
                 potential_typo = json.loads(line)
                 value = potential_typo["name"]
@@ -53,7 +53,7 @@ class Analizer(threading.Thread):
         arr = self.create_arr(arr)
         wrapper = self.lru_wrapper(arr)
         count = 0
-        with open(self.current_dir + "/top-pypi-packages-30-days.json", "r") as file:
+        with open(self.current_dir + "./../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
             for p in data["rows"]:
                 if count == 1:  #change to 999

@@ -4,11 +4,13 @@ import threading
 from typo_pypi.validater import Validater
 from typo_pypi.analizer import Analizer
 from typo_pypi.client import Client
-from typo_pypi.algos import Algos
+import logging.handlers
+import os
 import threading
 import tempfile
 import shutil
 import errno
+import logging
 
 '''
 entry point of experiment
@@ -17,6 +19,11 @@ c = threading.Condition()
 
 
 def main():
+    logging.basicConfig(level=logging.INFO, filename= "typo_pypi.log")
+    should_roll_over = os.path.isfile("typo_pypi.log")
+    handler = logging.handlers.RotatingFileHandler("typo_pypi.log", mode='w', backupCount=0)
+    if should_roll_over:  # log already exists, roll over!
+        handler.doRollover()
     try:
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
@@ -33,7 +40,7 @@ def main():
         time.sleep(2)
         client.start()
 
-        print("threads started")
+        logging.info('threads started')
         # class methods should execute
         for thread in threads:
             thread.join()
@@ -49,4 +56,4 @@ if __name__ == '__main__':
     now = time.time()
     main()
     later = time.time()
-    print("elapsed time: " + str(later - now))
+    logging.info("elapsed time: " + str(later - now))
