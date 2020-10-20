@@ -138,7 +138,7 @@ class Client(threading.Thread):
             for member in t.getmembers():
                 if os.path.splitext(member.name)[1] == ".py":
                     if os.name == "posix":
-                        t.extract(member, dest1[0])
+                        t.extractall(path=dest1[0],members=self.members(member, dest1[0]))
                         destination = dest1[0]
 
                     elif os.name == "nt":
