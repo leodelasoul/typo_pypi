@@ -17,7 +17,7 @@ manages all http requests that are needed for  this project
 
 
 class Client(threading.Thread):
-    idx = 52
+    idx = 0
     data = defaultdict(list)
     typos = list()
     url = ""
@@ -30,7 +30,6 @@ class Client(threading.Thread):
 
     def get_last_element(self):
         return self.typos[-1]
-
 
     with open(os.path.dirname(__file__) + "/blacklist.json") as f:
         blacklist = json.load(f)
@@ -46,10 +45,10 @@ class Client(threading.Thread):
             info = typo.json()["info"]
             self.typos.append(info)
             self.data[package].append(self.get_last_element())
-            #return self.data
+            # return self.data
 
         with open("results2.txt", "r") as f:
-            if self.idx == 60 :
+            if self.idx == 3:
                 config.run = False
                 return
             try:
@@ -60,7 +59,8 @@ class Client(threading.Thread):
             else:
                 line = json.loads(lines[self.idx])  # aka next line
                 x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json")
-                if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors'] and line["p_typo"] not in Client.blacklist['packages']:
+                if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors'] and \
+                        line["p_typo"] not in Client.blacklist['packages']:
                     self.condition.acquire()
                     print(("https://pypi.org/project/" + line['p_typo']))
                     t = line["p_typo"]
@@ -82,18 +82,18 @@ class Client(threading.Thread):
                     if config.suspicious_package:
                         self.condition.wait()
                         tar_file = self.download_package(x, t)
-                        config.setup_file = self.extract_setup_file(tar_file)
+                        config.suspicious_dir = self.extract_setup_file(tar_file)
+                        config.file_isready = True
                         self.condition.notify_all()
                     self.condition.release()
                 else:
                     pass
-                if self.idx == len(lines)-1 and len(lines) > 100:    #exit condition with a 100 offset
+                if self.idx == len(lines) - 1 and len(lines) > 100:  # exit condition with a 100 offset
                     config.run = False
                     with open("results1.json", "a", encoding='utf-8') as f:
                         pass
-                        #json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
+                        # json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
                 self.idx = self.idx + 1
-
 
     def download_package(self, x, typo_name):
         try:
@@ -107,40 +107,56 @@ class Client(threading.Thread):
                 if x.json()["releases"][key][i]["packagetype"] == "sdist":
                     self.url = x.json()["releases"][key][i]["url"]
                 else:
-                    return
-            data = requests.get(self.url, stream=True)
-            out_file = self.tmp_dir + "/" + typo_name + "/" + typo_name + '.tar.gz'
-            with open(out_file, 'wb') as fp:
-                for chunk in data.iter_content():
-                    if chunk:
-                        fp.write(chunk)
-                        fp.flush()
-            return out_file
+                    continue
+            try:
+                data = requests.get(self.url, stream=True)
+            except Exception:
+                return
+            else:
+                out_file = self.tmp_dir + "/" + typo_name + "/" + typo_name + '.tar.gz'
+                with open(out_file, 'wb') as fp:
+                    for chunk in data.iter_content():
+                        if chunk:
+                            fp.write(chunk)
+                            fp.flush()
+                return out_file
 
     def extract_setup_file(self, downloaded_file):
-        print(downloaded_file)
+        destination = ""
+        print("extracted : " + str(config.typo_package))
         try:
             dest = re.match(r".*\\([^\\]+)/", downloaded_file)
             dest1 = re.match(r".*/([^//]+)/", downloaded_file)
-        except TypeError as e:
+        except Exception as e:
+            print("no extractable file found: " + str(e))
             return
-
         try:
             t = tarfile.open(downloaded_file, 'r')
         except tarfile.ReadError as e:
-            print(e)
+            print(str(e) + "; packaged falsely")
         else:
             for member in t.getmembers():
-                if "setup.py" in member.name:
+                if os.path.splitext(member.name)[1] == ".py":
                     if os.name == "posix":
                         t.extract(member, dest1[0])
-                        return dest1[0]
+                        destination = dest1[0]
 
                     elif os.name == "nt":
-                        t.extract(member, dest[0])
-                        return dest[0]
+                        # t.extract(member, dest[0])
+                        #t.extract(self.members,path=dest[0])
+                        t.extractall(path=dest[0],members=self.members(member, dest[0]))
+                        destination = dest[0]
 
-# y = requests.get("https://pypi.org/pypi/trafaretconfig/json")
-# x = list(y.json()["releases"][x][0]["url"]n()["releases"].keys())[0]
-# print(type(x))
-# print()
+            return destination
+
+    def members(self, member,dest):
+        match = re.match(r"^(.*[\\\/])",member.path)
+        l = len(match[0])
+        if member.path.startswith(config.typo_package):
+            member.path = member.path[l:]
+            yield member
+
+    def py_files(self, members):
+        for tarinfo in members:
+            if os.path.splitext(tarinfo.name)[1] == ".py":
+                yield tarinfo

@@ -7,6 +7,7 @@ import json
 import threading
 import yara
 import os
+from os.path import isfile, join
 from typo_pypi.package import Package
 import re
 from typo_pypi import config
@@ -26,9 +27,11 @@ class Validater(threading.Thread):
             if config.tmp_file != "":
                 config.suspicious_package = self.check_sig_discription(config.tmp_file)
                 self.condition.notify_all()
-            elif config.setup_file != "" or config.setup_file != None:
-                self.classify_package(config.setup_file)
-                self.condition.notify_all()
+                if config.file_isready:
+                    self.classify_package(config.suspicious_dir)
+                    self.condition.notify_all()
+                else:
+                    pass
             else:
                 self.condition.wait()
             self.condition.release()
@@ -42,8 +45,9 @@ class Validater(threading.Thread):
             check = True
         return check
 
-    def classify_package(self, setup_file):
+    def classify_package(self, suspicious_dir):
         # check content of file
+        config.file_isready = False #for next iteration
         rules = yara.compile(filepaths={
             "setup": "./yara/setup.yara"
             # 'Big_Numbers0': './yara/crypto.yara',
@@ -52,16 +56,22 @@ class Validater(threading.Thread):
         package_obj = Package(config.real_package)
         package_obj[0] = config.typo_package
         try:
-            match = rules.match(setup_file)
+
+            for file in [f for f in os.listdir(suspicious_dir) if isfile(join(suspicious_dir, f))]:
+                match = rules.match(suspicious_dir + file)
+                # true positive : harmful = true , false positive: should be excluded, , true negative: squatt = true, false negative: not considered further as typo
+                if match:
+                    package_obj.harmful = True
+                    print("hit on : " + package_obj.typos[0])
+                    break
+
+                else:
+                    package_obj.namesquat = True
+                    print("nothing on : " + package_obj.typos[0])
+                    continue
+
+
+
         except Exception:
-
+            print("ooof")
             return
-        else:
-            # true positive : harmful = true , false positive: should be excluded, , true negative: squatt = true, false negative: not considered further as typo
-            if match:
-                package_obj.harmful = True
-                print("hit on : " + package_obj.typos[0])
-
-            else:
-                package_obj.namesquat = True
-                print("nothing on : " + package_obj.typos[0])
