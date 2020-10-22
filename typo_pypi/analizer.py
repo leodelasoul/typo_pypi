@@ -69,11 +69,10 @@ class Analizer(threading.Thread):
                     if (lev_distance <= THRESHOLD and wrapper(i) != obj.project):
                         obj.typos.append(wrapper(i))
                         with open("results2.txt", "a") as f:
-                            # f.write({"real_project" : obj.project, "p_typo" : wrapper(i) + " \n"})
+                            #f.write({"real_project" : obj.project, "p_typo" : wrapper(i) + " \n"})
                             data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
-                            #f.write(data + " \n")
+                            f.write(data + " \n")
                         f.close()
-                    #config.package_list.append(obj)
                 #print(wrapper.cache_info())
                 count = count + 1
 

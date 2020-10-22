@@ -47,6 +47,8 @@ class Validater(threading.Thread):
 
     def classify_package(self, suspicious_dir):
         # check content of file
+
+
         config.file_isready = False  # for next iteration
         '''rules = yara.compile(filepaths={
     "setup": "./yara/setup.yara",
@@ -74,8 +76,9 @@ class Validater(threading.Thread):
                 else:
                     package_obj.namesquat = True
                     package_obj.harmful = False
-
                     continue
+
+            config.current_package_obj = package_obj
         except Exception as e:
             print(e)
             return

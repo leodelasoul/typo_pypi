@@ -48,12 +48,12 @@ class Client(threading.Thread):
             self.data[package].append(self.get_last_element())
             # return self.data
 
-        with open("results2.txt", "r") as f:
-            if self.idx == 3:
-                config.run = False
-                return
+        with open("results2.txt", "r+") as file:
+            #if self.idx == 3:
+            #    config.run = False
+            #    return
             try:
-                lines = f.readlines()
+                lines = file.readlines()
                 line = json.loads(lines[self.idx])  # aka next line
             except Exception:
                 pass
@@ -89,12 +89,15 @@ class Client(threading.Thread):
                     self.condition.release()
                 else:
                     pass
-                if self.idx == len(lines) - 1 and len(lines) > 100:  # exit condition with a 100 offset
+                if self.idx == len(lines) - 1 and len(lines) > 1:  # exit condition with a 100 offset
                     config.run = False
-                    with open("results1.json", "w", encoding='utf-8') as f:
-                        json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
-
+#                    with open("results1.json", "w", encoding='utf-8') as f:
+#                        json.dump({"rows": self.data}, f, ensure_ascii=False, indent=3)
                         ### append all harm ful data here
+                line["namesquat"] = config.current_package_obj.namesquat
+                line["harmful"] = config.current_package_obj.harmful
+                lines[self.idx] = line
+                file.writelines(lines)
                 self.idx = self.idx + 1
 
     def download_package(self, x, typo_name):
