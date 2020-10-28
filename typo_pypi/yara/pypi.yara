@@ -6,5 +6,5 @@ rule pypi
         $re3 = /"description": "UNKNOWN"/
 
     condition:
-        #re1 > 2 and ($re2 or $re3)
+        #re1 > 2 or ($re2 or $re3)
 }

@@ -5,6 +5,7 @@ __pycache__/
 
 .idea/
 
+# typo_pypi/*.txt
 
 typo_pypi/results1.json
 

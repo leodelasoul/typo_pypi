@@ -39,7 +39,7 @@ class Analizer(threading.Thread):
 
     def create_arr(self, array):
         i = 0
-        with open(Analizer.current_dir + "./../bq-results-20200913-185937-p7wc4g8anuwo.json", "rb") as file1:
+        with open(Analizer.current_dir + "/../bq-results-20200913-185937-p7wc4g8anuwo.json", "rb") as file1:
             for line in file1:
                 potential_typo = json.loads(line)
                 value = potential_typo["name"]
@@ -53,10 +53,10 @@ class Analizer(threading.Thread):
         arr = self.create_arr(arr)
         wrapper = self.lru_wrapper(arr)
         count = 0
-        with open(self.current_dir + "./../top-pypi-packages-30-days.json", "r") as file:
+        with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
             for p in data["rows"]:
-                if count == 1:  #change to 999
+                if count == 99:  #change to 999
                     break
                 obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
@@ -68,15 +68,26 @@ class Analizer(threading.Thread):
                         THRESHOLD = 2
                     if (lev_distance <= THRESHOLD and wrapper(i) != obj.project):
                         obj.typos.append(wrapper(i))
-                        with open("results2.txt", "a") as f:
-                            #f.write({"real_project" : obj.project, "p_typo" : wrapper(i) + " \n"})
-                            data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
-                            f.write(data + " \n")
-                        f.close()
+                        data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
+                        config.package_list.append(data)
+
+                        #with open("results2.txt", "a") as f:
+                        #    #f.write({"real_project" : obj.project, "p_typo" : wrapper(i) + " \n"})
+                        #    data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
+                        #    f.write(data + " \n")
+                        #f.close()
                 #print(wrapper.cache_info())
                 count = count + 1
 
         file.close()
+
+
+
+    def evalutate_for_typosquat(self):
+        pass
+
+
+
 
 
 # USED FOR Prevention purposes to look through

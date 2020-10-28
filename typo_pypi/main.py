@@ -22,8 +22,11 @@ def main():
     logging.basicConfig(level=logging.INFO, filename= "typo_pypi.log")
     should_roll_over = os.path.isfile("typo_pypi.log")
     handler = logging.handlers.RotatingFileHandler("typo_pypi.log", mode='w', backupCount=0)
+    results = logging.handlers.RotatingFileHandler("results2.txt", mode='w', backupCount=0)
+
     if should_roll_over:  # log already exists, roll over!
         handler.doRollover()
+        results.doRollover()
     try:
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")

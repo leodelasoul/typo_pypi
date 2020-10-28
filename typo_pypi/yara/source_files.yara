@@ -1,12 +1,11 @@
-rule setup {
+
+rule look_for_ips {
 
     strings:
-        $re1 = "LOC"
-        $re2 = "IP"
         $re3 =  /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/
-        $re4 = "POST"
         $re5 = /https?:\/\/(\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b/
+        $re6 = /^(127\.[\d.]+|[0:]+1|localhost)$/
     condition:
-        $re1 or $re2 or $re3 or ($re4 and $re5 )
+       ($re3 and not $re6 ) or ($re5)
 
 }

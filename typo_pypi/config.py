@@ -8,3 +8,5 @@ real_package = ""
 typo_package = ""
 file_isready = False
 current_package_obj = Package("")
+package_list = list()
+predicate_flag = False

@@ -1,8 +1,3 @@
-'''
-TODO I need to find out there patterns, how one steals either keys, mines bitcoins or uses us as a bot for their net
-
-'''
-
 import json
 import threading
 import yara
@@ -12,14 +7,27 @@ from typo_pypi.package import Package
 import re
 from typo_pypi import config
 import logging
+'''
+gets passed data from client about packages, such as their discription,metadata and extracted file path to then look for suspicious
+patterns
+
+1. check json discription + metadata 
+2. pass to client if suspiscious
+3. client downloads scource files
+4. validator checks these files for yara patterns , same as for 2.
+'''
 
 class Validater(threading.Thread):
     current_dir = os.path.dirname(__file__)
+    conf_file_checked = False
+    check = False
 
     def __init__(self, name, condition):
 
         super().__init__(name=name)
         self.condition = condition
+    def __init_(self):
+        pass
 
     def run(self):
         while config.run:
@@ -28,26 +36,35 @@ class Validater(threading.Thread):
                 config.suspicious_package = self.check_sig_discription(config.tmp_file)
                 self.condition.notify_all()
                 if config.file_isready:
+
                     self.classify_package(config.suspicious_dir)
                     self.condition.notify_all()
+                    self.conf_file_checked = False #set for next iteration pf
+
                 else:
+                    self.conf_file_checked = False #set for next iteration pf
+
                     pass
             else:
                 self.condition.wait()
             self.condition.release()
 
     def check_sig_discription(self, data):
-        rules = yara.compile(self.current_dir + "/yara/pypi.yara")
-        match = rules.match(data)
-        if match:
-            check = True
+        if not self.conf_file_checked:
+            rules = yara.compile(self.current_dir + "/yara/pypi.yara")
+            match = rules.match(data)
+            if match:
+                self.check = True
+                self.conf_file_checked = True
+            else:
+                self.check = False
+                self.conf_file_checked = True
         else:
-            check = True
-        return check
+            return self.check
+        return self.check
 
     def classify_package(self, suspicious_dir):
         # check content of file
-
 
         config.file_isready = False  # for next iteration
         '''rules = yara.compile(filepaths={
@@ -57,20 +74,21 @@ class Validater(threading.Thread):
     "Big_Numbers0': './yara/crypto.yara"
 
 }) '''
-        rules = yara.compile(filepath="./yara/crypto.yara")
-
+        rules = yara.compile(filepath="./yara/source_files.yara")
 
         package_obj = Package(config.real_package)
         package_obj[0] = config.typo_package
         try:
 
-            for file in [f for f in os.listdir(suspicious_dir) if isfile(join(suspicious_dir, f)) and f.endswith("py")]: #and not f.endswith("json")
+            for file in [f for f in os.listdir(suspicious_dir) if
+                         isfile(join(suspicious_dir, f)) and f.endswith("py")]:  # and not f.endswith("json")
                 match = rules.match(suspicious_dir + file)
                 # true positive : harmful = true , false positive: should be excluded, , true negative: squatt = true, false negative: not considered further as typo
                 if match:
                     package_obj.harmful = True
                     package_obj.namesquat = False
-                    logging.warning("harmful code for namespace: " + package_obj.typos[0] + " \n" + "in source file: " + file)
+                    logging.warning(
+                        "harmful code for namespace: " + package_obj.typos[0] + " \n" + "in source file: " + file)
                     break
 
                 else:
@@ -79,6 +97,7 @@ class Validater(threading.Thread):
                     continue
 
             config.current_package_obj = package_obj
+            config.predicate_flag = True
         except Exception as e:
+            config.predicate_flag = True
             print(e)
-            return
