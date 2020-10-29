@@ -1,6 +1,4 @@
 class Package:
-    checked = False
-    validated = False
     harmful = False
     namesquat = False
     def __init__(self, project ):
@@ -18,15 +16,3 @@ class Package:
         self.num += 1
         return num
 '''
-
-    def get_check(self):
-        return self.checked
-
-    def get_validate(self):
-        return self.validated
-
-    def set_check(self, checked):
-        self.checked = checked
-
-    def set_validate(self, validated):
-        self.validated = validated
