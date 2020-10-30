@@ -70,12 +70,6 @@ class Analizer(threading.Thread):
                         obj.typos.append(wrapper(i))
                         data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
                         config.package_list.append(data)
-
-                        #with open("results2.txt", "a") as f:
-                        #    #f.write({"real_project" : obj.project, "p_typo" : wrapper(i) + " \n"})
-                        #    data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
-                        #    f.write(data + " \n")
-                        #f.close()
                 #print(wrapper.cache_info())
                 count = count + 1
 
@@ -103,4 +97,3 @@ class Analizer(threading.Thread):
             i = i + 1
 '''
 
-# print(Algos.hamming_distance("abc", "yxz"))

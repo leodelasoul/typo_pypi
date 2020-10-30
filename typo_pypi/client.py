@@ -93,7 +93,7 @@ class Client(threading.Thread):
 
             else:
                 pass
-            if self.idx == len(lines) - 1 and len(lines) > 10:  # exit condition with a 10 offset
+            if self.idx == len(lines) - 1:  # exit condition with a 10 offset
                 config.run = False
 
             self.idx = self.idx + 1
