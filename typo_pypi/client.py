@@ -54,12 +54,13 @@ class Client(threading.Thread):
         except Exception:
             pass
         else:
-            config.predicate_flag = False
+            config.predicate_flag_validator = False
+            self.condition.acquire()
+            self.condition.wait_for(self.predicate_analizer)
             line = json.loads(lines[self.idx])  # aka next line
-            x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json")
+            x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json", timeout=1)
             if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors'] and \
                     line["p_typo"] not in Client.blacklist['packages']:
-                self.condition.acquire()
                 config.idx = self.idx
                 print(("https://pypi.org/project/" + line['p_typo']))
                 t = line["p_typo"]
@@ -85,7 +86,7 @@ class Client(threading.Thread):
                     config.suspicious_dir = self.extract_setup_file(tar_file)
                     config.file_isready = True
                     self.condition.notify_all()
-                    self.condition.wait_for(self.predicate)
+                    self.condition.wait_for(self.predicate_validator)
                     self.write_results(line)
                 else:
                     self.condition.notify_all()
@@ -96,6 +97,7 @@ class Client(threading.Thread):
                 pass
                 #config.run = False
             self.idx = self.idx + 1
+            config.predicate_flag_analizer = False
 
 
     def write_results(self,line):
@@ -105,8 +107,10 @@ class Client(threading.Thread):
             json.dump(line, file)
             file.write("\n")
 
-    def predicate(self):
-        return config.predicate_flag
+    def predicate_validator(self):
+        return config.predicate_flag_validator
+    def predicate_analizer(self):
+        return config.predicate_flag_analizer
 
     def download_package(self, x, typo_name):
         try:

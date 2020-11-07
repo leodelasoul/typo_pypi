@@ -38,11 +38,12 @@ class Validater(threading.Thread):
         while config.run:
             try:
                 current_package = config.json_data["info"]["name"]
-                current_list_package = json.loads(config.package_list[self.idx])["p_typo"]
+                current_list_package = json.loads(config.package_list[config.idx])["p_typo"]
             except (TypeError,IndexError):
                 pass
-            if config.tmp_file != "" and len(config.package_list) == self.idx+1:
-                self.condition.acquire()
+            self.condition.acquire()
+            if config.tmp_file != "" and current_package == current_list_package:
+                print(config.package_list)
                 config.suspicious_package = self.check_sig_discription(config.json_data)
                 self.condition.notify_all()
                 self.condition.wait()
@@ -50,11 +51,14 @@ class Validater(threading.Thread):
                     self.classify_package(config.suspicious_dir)
                     self.condition.notify_all()
                     self.conf_file_checked = False
-                self.condition.release()
-                #else:
-                #    self.condition.wait(timeout=2)
-                #    self.conf_file_checked = False
-#            else:
+                else:
+                    self.condition.wait()
+                    self.conf_file_checked = False
+            else:
+                self.condition.wait()
+            self.condition.release()
+
+    #            else:
                 #print(self.condition)
 #                self.condition.wait()
 
@@ -133,9 +137,9 @@ class Validater(threading.Thread):
                     continue
 
             config.current_package_obj = package_obj
-            config.predicate_flag = True
+            config.predicate_flag_validator = True
         except Exception as e:
-            config.predicate_flag = True
+            config.predicate_flag_validator = True
             print(e)
 
 

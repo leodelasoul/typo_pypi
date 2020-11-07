@@ -1,0 +1,9 @@
+{"real_project": "setuptools", "p_typo": "nbsetuptools", "namesquat": true, "harmful": false}
+{"real_project": "urllib3", "p_typo": "urllib5", "namesquat": true, "harmful": false}
+{"real_project": "botocore", "p_typo": "bob.core", "namesquat": true, "harmful": false}
+{"real_project": "botocore", "p_typo": "bonecore", "namesquat": true, "harmful": false}
+{"real_project": "requests", "p_typo": "rerequests", "namesquat": true, "harmful": false}
+{"real_project": "requests", "p_typo": "erequests", "namesquat": true, "harmful": false}
+{"real_project": "requests", "p_typo": "requestes", "namesquat": true, "harmful": false}
+{"real_project": "requests", "p_typo": "reqrest", "namesquat": true, "harmful": false}
+{"real_project": "requests", "p_typo": "curequests", "namesquat": false, "harmful": false}

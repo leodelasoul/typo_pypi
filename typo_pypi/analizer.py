@@ -20,9 +20,11 @@ class Analizer(threading.Thread):
     current_dir = os.path.dirname(__file__)
     package_tree = Tree()
 
-    def __init__(self, name):
+    def __init__(self, name, condition):
         super().__init__(name=name)
         self.package_tree.create_node("Packages", "packages")
+        self.condition = condition
+
 
     def hash(self, key):
         hash = 0
@@ -52,7 +54,7 @@ class Analizer(threading.Thread):
         arr = [None] * (250421)
         arr = self.create_arr(arr)
         wrapper = self.lru_wrapper(arr)
-        #config.package_list.append(({"real_project": "foo", "p_typo": "gumpy"}))
+        #config.package_list.append(({"real_project": "foo", "p_typo": "bob.core"}))
         with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
             for p in data["rows"][:999]:
@@ -65,9 +67,14 @@ class Analizer(threading.Thread):
                     if len(obj.project) > 7:
                         THRESHOLD = 2
                     if (lev_distance <= THRESHOLD and wrapper(i) != obj.project):
+                        self.condition.acquire()
                         obj.typos.append(wrapper(i))
                         data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
                         config.package_list.append(data)
+                        config.predicate_flag_analizer = True
+                        self.condition.notify(n=2)
+                        self.condition.release()
+
                 #print(wrapper.cache_info())
         file.close()
 
