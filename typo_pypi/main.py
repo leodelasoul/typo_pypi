@@ -38,15 +38,15 @@ def main():
         #time.sleep(2)
         threads.append(analizer)
         threads.append(client)
-        validater.start()
         threads.append(validater)
-        time.sleep(2)
         client.start()
+        validater.start()
 
         logging.info('threads started')
         # class methods should execute
         for thread in threads:
             thread.join()
+            time.sleep(1)
     finally:
         try:
             shutil.rmtree(tmp_dir)

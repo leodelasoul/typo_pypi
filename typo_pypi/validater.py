@@ -7,6 +7,7 @@ from typo_pypi.package import Package
 import re
 from typo_pypi import config
 import logging
+
 '''
 gets passed data from client about packages, such as their discription,metadata and extracted file path to then look for suspicious
 patterns
@@ -17,38 +18,52 @@ patterns
 4. validator checks these files for yara patterns , same as for 2.
 '''
 
+
 class Validater(threading.Thread):
     current_dir = os.path.dirname(__file__)
     conf_file_checked = False
     check = False
-
+    idx = 0
     def __init__(self, name, condition):
 
         super().__init__(name=name)
         self.condition = condition
+
     def __init_(self):
         pass
 
     def run(self):
+        current_package = ""
+        current_list_package = ""
         while config.run:
-            self.condition.acquire()
-            if config.tmp_file != "":
-                config.suspicious_package = self.check_sig_discription(config.tmp_file)
+            try:
+                current_package = config.json_data["info"]["name"]
+                current_list_package = json.loads(config.package_list[self.idx])["p_typo"]
+            except (TypeError,IndexError):
+                pass
+            if config.tmp_file != "" and len(config.package_list) == self.idx+1:
+                self.condition.acquire()
+                config.suspicious_package = self.check_sig_discription(config.json_data)
                 self.condition.notify_all()
+                self.condition.wait()
                 if config.file_isready:
-
                     self.classify_package(config.suspicious_dir)
                     self.condition.notify_all()
-                    self.conf_file_checked = False #set for next iteration pf
+                    self.conf_file_checked = False
+                self.condition.release()
+                #else:
+                #    self.condition.wait(timeout=2)
+                #    self.conf_file_checked = False
+#            else:
+                #print(self.condition)
+#                self.condition.wait()
 
-                else:
-                    self.conf_file_checked = False #set for next iteration pf
+            #self.condition.release()
 
-                    pass
-            else:
-                self.condition.wait()
-            self.condition.release()
 
+
+
+    '''
     def check_sig_discription(self, data):
         if not self.conf_file_checked:
             rules = yara.compile(self.current_dir + "/yara/pypi.yara")
@@ -62,10 +77,31 @@ class Validater(threading.Thread):
         else:
             return self.check
         return self.check
+'''
+
+    def check_sig_discription(self, data):
+        if not self.conf_file_checked:
+            self.idx = self.idx + 1
+            # rules = yara.compile(self.current_dir + "/yara/pypi.yara")
+            # match = rules.match(data)
+            match = re.findall(r"('UNKNOWN')|('description': '')", str(data))
+            if match:
+                if len(match[1:]) > 2 or match[0]:
+                    self.check = True
+                    self.conf_file_checked = True
+                else:
+                    self.check = False
+                    self.conf_file_checked = True
+            else:
+                self.check = False
+                self.conf_file_checked = True
+        else:
+            return self.check
+        return self.check
 
     def classify_package(self, suspicious_dir):
         # check content of file
-
+        print("yolo")
         config.file_isready = False  # for next iteration
         '''rules = yara.compile(filepaths={
     "setup": "./yara/setup.yara",
@@ -101,3 +137,21 @@ class Validater(threading.Thread):
         except Exception as e:
             config.predicate_flag = True
             print(e)
+
+
+
+'''
+    def check_sig_discription(self, data):
+        if not self.conf_file_checked:
+            rules = yara.compile(self.current_dir + "/yara/pypi.yara")
+            match = rules.match(data)
+            if match:
+                self.check = True
+                self.conf_file_checked = True
+            else:
+                self.check = False
+                self.conf_file_checked = True
+        else:
+            return self.check
+        return self.check
+'''

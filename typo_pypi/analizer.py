@@ -52,12 +52,10 @@ class Analizer(threading.Thread):
         arr = [None] * (250421)
         arr = self.create_arr(arr)
         wrapper = self.lru_wrapper(arr)
-        count = 0
+        #config.package_list.append(({"real_project": "foo", "p_typo": "gumpy"}))
         with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
-            for p in data["rows"]:
-                if count == 999:  #change to 999
-                    break
+            for p in data["rows"][:999]:
                 obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
                 for i in range(len(arr) - 1):
@@ -71,8 +69,6 @@ class Analizer(threading.Thread):
                         data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
                         config.package_list.append(data)
                 #print(wrapper.cache_info())
-                count = count + 1
-
         file.close()
 
 
