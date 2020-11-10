@@ -55,9 +55,10 @@ class Analizer(threading.Thread):
         arr = self.create_arr(arr)
         wrapper = self.lru_wrapper(arr)
         #config.package_list.append(({"real_project": "foo", "p_typo": "bob.core"}))
+        #config.package_list.append(json.dumps({"real_project": "foo", "p_typo": "mip"}))
         with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
-            for p in data["rows"][:999]:
+            for p in data["rows"][17:999]:
                 obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
                 for i in range(len(arr) - 1):

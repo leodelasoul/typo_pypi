@@ -90,9 +90,13 @@ class Client(threading.Thread):
                     self.write_results(line)
                 else:
                     self.condition.notify_all()
+                    logging.info("nothing suspicious here:" + t)
                 self.condition.release()
             else:
-                pass
+                config.package_list.pop(self.idx)
+                self.idx = self.idx -1
+                self.condition.notify_all()
+                self.condition.release()
             if self.idx == len(lines) - 1:  # exit condition with a 10 offset lol
                 pass
                 #config.run = False
@@ -126,7 +130,7 @@ class Client(threading.Thread):
                 else:
                     continue
             try:
-                data = requests.get(self.url, stream=True)
+                data = requests.get(self.url, stream=True, timeout=2)
             except Exception:
                 return
             else:

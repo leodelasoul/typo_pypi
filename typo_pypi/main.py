@@ -31,7 +31,7 @@ def main():
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
         analizer = Analizer("analizerthread",c)
-        client = Client("serverthread", tmp_dir, c)
+        client = Client("clientthread", tmp_dir, c)
         validater = Validater("validaterthread", c)
 
         analizer.start()

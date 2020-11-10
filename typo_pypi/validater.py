@@ -24,8 +24,8 @@ class Validater(threading.Thread):
     conf_file_checked = False
     check = False
     idx = 0
-    def __init__(self, name, condition):
 
+    def __init__(self, name, condition):
         super().__init__(name=name)
         self.condition = condition
 
@@ -38,34 +38,25 @@ class Validater(threading.Thread):
         while config.run:
             try:
                 current_package = config.json_data["info"]["name"]
-                current_list_package = json.loads(config.package_list[config.idx])["p_typo"]
-            except (TypeError,IndexError):
+                current_list_package = json.loads(config.package_list[self.idx])["p_typo"]
+            except (TypeError, IndexError):
                 pass
             self.condition.acquire()
+            print(current_package)
+            print(current_list_package)
             if config.tmp_file != "" and current_package == current_list_package:
-                print(config.package_list)
+                print("check passed")
                 config.suspicious_package = self.check_sig_discription(config.json_data)
                 self.condition.notify_all()
                 self.condition.wait()
                 if config.file_isready:
                     self.classify_package(config.suspicious_dir)
                     self.condition.notify_all()
-                    self.conf_file_checked = False
                 else:
                     self.condition.wait()
-                    self.conf_file_checked = False
             else:
                 self.condition.wait()
             self.condition.release()
-
-    #            else:
-                #print(self.condition)
-#                self.condition.wait()
-
-            #self.condition.release()
-
-
-
 
     '''
     def check_sig_discription(self, data):
@@ -84,23 +75,17 @@ class Validater(threading.Thread):
 '''
 
     def check_sig_discription(self, data):
-        if not self.conf_file_checked:
-            self.idx = self.idx + 1
-            # rules = yara.compile(self.current_dir + "/yara/pypi.yara")
-            # match = rules.match(data)
-            match = re.findall(r"('UNKNOWN')|('description': '')", str(data))
-            if match:
-                if len(match[1:]) > 2 or match[0]:
-                    self.check = True
-                    self.conf_file_checked = True
-                else:
-                    self.check = False
-                    self.conf_file_checked = True
+        self.idx = self.idx + 1
+        # rules = yara.compile(self.current_dir + "/yara/pypi.yara")
+        # match = rules.match(data)
+        match = re.findall(r"('UNKNOWN')|('description': '')", str(data))
+        if match:
+            if len(match[1:]) > 2 or match[0]:
+                self.check = True
             else:
                 self.check = False
-                self.conf_file_checked = True
         else:
-            return self.check
+            self.check = False
         return self.check
 
     def classify_package(self, suspicious_dir):
@@ -141,7 +126,6 @@ class Validater(threading.Thread):
         except Exception as e:
             config.predicate_flag_validator = True
             print(e)
-
 
 
 '''
