@@ -42,21 +42,26 @@ class Validater(threading.Thread):
             except (TypeError, IndexError):
                 pass
             self.condition.acquire()
-            print(current_package)
-            print(current_list_package)
+            print(current_package + " counter from client")
+            print(current_list_package + " counter from validater")
             if config.tmp_file != "" and current_package == current_list_package:
-                print("check passed")
+                print(config.idx - self.idx)
                 config.suspicious_package = self.check_sig_discription(config.json_data)
                 self.condition.notify_all()
                 self.condition.wait()
                 if config.file_isready:
                     self.classify_package(config.suspicious_dir)
                     self.condition.notify_all()
+                    self.condition.wait() #so that top if is used once
                 else:
-                    self.condition.wait()
+                    self.condition.wait() #make this wait_for(client)
+                    #self.idx = self.idx -1 #try again
+
             else:
                 self.condition.wait()
             self.condition.release()
+
+
 
     '''
     def check_sig_discription(self, data):

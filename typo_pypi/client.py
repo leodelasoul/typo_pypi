@@ -69,7 +69,6 @@ class Client(threading.Thread):
                     os.mkdir(self.tmp_dir + "/" + t)
                 except FileExistsError as e:
                     print(e)
-                    self.condition.notify_all()
                     pass
                 tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
                 config.tmp_file = tmp_file
