@@ -8,6 +8,7 @@ import re
 from typo_pypi import config
 import logging
 
+
 '''
 gets passed data from client about packages, such as their discription,metadata and extracted file path to then look for suspicious
 patterns
@@ -35,6 +36,7 @@ class Validater(threading.Thread):
     def run(self):
         current_package = ""
         current_list_package = ""
+        fall_back_count = 0
         while config.run:
             try:
                 current_package = config.json_data["info"]["name"]
@@ -44,6 +46,8 @@ class Validater(threading.Thread):
             self.condition.acquire()
             print(current_package + " counter from client")
             print(current_list_package + " counter from validater")
+            fall_back_count = fall_back_count + 1
+            print(fall_back_count)
             if config.tmp_file != "" and current_package == current_list_package:
                 print(config.idx - self.idx)
                 config.suspicious_package = self.check_sig_discription(config.json_data)
@@ -52,16 +56,18 @@ class Validater(threading.Thread):
                 if config.file_isready:
                     self.classify_package(config.suspicious_dir)
                     self.condition.notify_all()
-                    self.condition.wait() #so that top if is used once
+                    self.condition.wait()  # so that top if is used once
                 else:
-                    self.condition.wait() #make this wait_for(client)
-                    #self.idx = self.idx -1 #try again
-
+                    self.condition.wait()  # make this wait_for(client)
+                    ##self.idx = self.idx -1 #try again
+                fall_back_count = 0
+            elif fall_back_count > 7:  # Fallback for asyncronity
+                #self.idx - config.idx == 1 and len(config.client_waiters) > 0  and not config.predicate_flag_validator and
+                config.predicate_flag_validator = True
+                self.idx = self.idx - 1  # try again and Fallback
             else:
                 self.condition.wait()
             self.condition.release()
-
-
 
     '''
     def check_sig_discription(self, data):

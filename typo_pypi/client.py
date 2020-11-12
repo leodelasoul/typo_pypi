@@ -111,6 +111,7 @@ class Client(threading.Thread):
             file.write("\n")
 
     def predicate_validator(self):
+        config.client_waiters = self.condition._waiters
         return config.predicate_flag_validator
     def predicate_analizer(self):
         return config.predicate_flag_analizer
@@ -153,7 +154,7 @@ class Client(threading.Thread):
             return None
         try:
             t = tarfile.open(downloaded_file, 'r')
-        except tarfile.ReadError as e:
+        except (tarfile.ReadError, PermissionError) as e:
             print(str(e) + "; packaged falsely")
             return None
         else:

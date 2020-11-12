@@ -11,6 +11,7 @@
     "urllib3c",
     "stix",
     "silx",
-    "simx"
+    "simx",
+    "Blask"
   ]
 }
