@@ -107,6 +107,7 @@ class Client(threading.Thread):
         with open("results2.txt", "a") as file:
             line["namesquat"] = config.current_package_obj.namesquat
             line["harmful"] = config.current_package_obj.harmful
+            line["mal_code_file"] = config.current_package_obj.found_mal_code
             json.dump(line, file)
             file.write("\n")
 
@@ -154,20 +155,25 @@ class Client(threading.Thread):
             return None
         try:
             t = tarfile.open(downloaded_file, 'r')
-        except (tarfile.ReadError, PermissionError) as e:
+        except (tarfile.ReadError) as e:
             print(str(e) + "; packaged falsely")
             return None
         else:
             for member in t.getmembers():
                 if os.path.splitext(member.name)[1] == ".py":
                     if os.name == "posix":
-                        t.extractall(path=dest1[0], members=self.members(member))
+                        try:
+                            t.extractall(path=dest1[0], members=self.members(member))
+                        except PermissionError:
+                            pass
                         destination = dest1[0]
 
                     elif os.name == "nt":
-                        t.extractall(path=dest[0], members=self.members(member))
+                        try:
+                            t.extractall(path=dest[0], members=self.members(member))
+                        except PermissionError:
+                            pass
                         destination = dest[0]
-
             return destination
 
     def members(self, member):

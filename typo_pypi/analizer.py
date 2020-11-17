@@ -58,7 +58,7 @@ class Analizer(threading.Thread):
         #config.package_list.append(json.dumps({"real_project": "foo", "p_typo": "mip"}))
         with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
-            for p in data["rows"][200:999]:
+            for p in data["rows"][:999]:
                 obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
                 for i in range(len(arr) - 1):
@@ -71,20 +71,13 @@ class Analizer(threading.Thread):
                         self.condition.acquire()
                         obj.typos.append(wrapper(i))
                         data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
-                        config.package_list.append(data)
+                        config.package_list.append(data) #for lines
                         config.predicate_flag_analizer = True
                         self.condition.notify(n=1) #client and validator
                         self.condition.release()
 
                 #print(wrapper.cache_info())
         file.close()
-
-
-
-    def evalutate_for_typosquat(self):
-        pass
-
-
 
 
 

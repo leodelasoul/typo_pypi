@@ -7,7 +7,7 @@ from typo_pypi.package import Package
 import re
 from typo_pypi import config
 import logging
-
+from stdlib_list import stdlib_list
 
 '''
 gets passed data from client about packages, such as their discription,metadata and extracted file path to then look for suspicious
@@ -62,7 +62,7 @@ class Validater(threading.Thread):
                     ##self.idx = self.idx -1 #try again
                 fall_back_count = 0
             elif fall_back_count > 7:  # Fallback for asyncronity
-                #self.idx - config.idx == 1 and len(config.client_waiters) > 0  and not config.predicate_flag_validator and
+                # self.idx - config.idx == 1 and len(config.client_waiters) > 0  and not config.predicate_flag_validator and
                 config.predicate_flag_validator = True
                 self.idx = self.idx - 1  # try again and Fallback
             else:
@@ -111,9 +111,11 @@ class Validater(threading.Thread):
 
 }) '''
         rules = yara.compile(filepath="./yara/source_files.yara")
-
         package_obj = Package(config.real_package)
         package_obj[0] = config.typo_package
+        package_obj.namesquat = self.is_namesquat(config.typo_package)
+        # package_obj.typosquat = self.is_typosquat()
+
         try:
 
             for file in [f for f in os.listdir(suspicious_dir) if
@@ -122,13 +124,12 @@ class Validater(threading.Thread):
                 # true positive : harmful = true , false positive: should be excluded, , true negative: squatt = true, false negative: not considered further as typo
                 if match:
                     package_obj.harmful = True
-                    package_obj.namesquat = False
+                    package_obj.found_mal_code = file
                     logging.warning(
                         "harmful code for namespace: " + package_obj.typos[0] + " \n" + "in source file: " + file)
                     break
 
                 else:
-                    package_obj.namesquat = True
                     package_obj.harmful = False
                     continue
 
@@ -138,7 +139,15 @@ class Validater(threading.Thread):
             config.predicate_flag_validator = True
             print(e)
 
+    def is_typosquat(self):
+        pass
 
+    def is_namesquat(self,typo):
+        libs = stdlib_list("2.7") + stdlib_list("3.6")
+        if typo in libs:
+            return True
+        else:
+            return False
 '''
     def check_sig_discription(self, data):
         if not self.conf_file_checked:

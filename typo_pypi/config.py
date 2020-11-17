@@ -16,4 +16,3 @@ package_list = list()
 
 predicate_flag_validator = False
 predicate_flag_analizer = False
-client_waiters = {}

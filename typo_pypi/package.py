@@ -1,7 +1,11 @@
 class Package:
+
     harmful = False
+    found_mal_code = None
     namesquat = False
-    def __init__(self, project ):
+    typosquat = False
+
+    def __init__(self, project):
         self.project = project
         self.typos = []
     def __setitem__(self, key, value):
