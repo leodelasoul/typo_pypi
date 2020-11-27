@@ -33,8 +33,6 @@ class Client(threading.Thread):
     def get_last_element(self):
         return self.typos[-1]
 
-    with open(os.path.dirname(__file__) + "/blacklist.json") as f:
-        blacklist = json.load(f)
 
     def run(self):
 
@@ -50,7 +48,6 @@ class Client(threading.Thread):
 
         try:
             lines = config.package_list
-            line = json.loads(lines[self.idx])  # aka next line
         except Exception:
             pass
         else:
@@ -58,50 +55,53 @@ class Client(threading.Thread):
             self.condition.acquire()
             self.condition.wait_for(self.predicate_analizer)
             line = json.loads(lines[self.idx])  # aka next line
-            x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json", timeout=1)
-            if x.status_code == 200 and x.json()["info"]['author_email'] not in Client.blacklist['authors'] and \
-                    line["p_typo"] not in Client.blacklist['packages']:
-                config.idx = self.idx
-                print(("https://pypi.org/project/" + line['p_typo']))
-                t = line["p_typo"]
-                to_json_file(line["real_project"], x)
-                try:
-                    os.mkdir(self.tmp_dir + "/" + t)
-                except FileExistsError as e:
-                    print(e)
-                    pass
-                tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
-                config.tmp_file = tmp_file
-                config.json_data = x.json()
-                config.real_package = line["real_project"]
-                config.typo_package = t
-                self.condition.notify_all()
-                #with open(tmp_file, "w+", encoding="utf-8") as f:
-                #    json.dump({"rows": x.json()}, f, ensure_ascii=False, indent=3)
-                self.condition.wait()  # validater
-                # needs to check sig first
-                if config.suspicious_package:
-                    tar_file = self.download_package(x, t)
-                    config.suspicious_dir = self.extract_setup_file(tar_file)
-                    config.file_isready = True
-                    self.condition.notify_all()
-                    self.condition.wait_for(self.predicate_validator)
-                    self.write_results(line)
-                else:
-                    self.condition.notify_all()
-                    logging.info("nothing suspicious here:" + t)
-                self.condition.release()
+            try:
+                x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json", timeout=1)
+            except requests.exceptions.Timeout:
+                self.idx = self.idx + 1
+                config.predicate_flag_analizer = False
             else:
-                config.package_list.pop(self.idx)
-                self.idx = self.idx -1
-                self.condition.notify_all()
-                self.condition.release()
-            if self.idx == len(lines) - 1:  # exit condition with a 10 offset lol
-                pass
-                #config.run = False
-            self.idx = self.idx + 1
-            config.predicate_flag_analizer = False
-
+                if x.status_code == 200:
+                    config.idx = self.idx
+                    print(("https://pypi.org/project/" + line['p_typo']))
+                    t = line["p_typo"]
+                    to_json_file(line["real_project"], x)
+                    try:
+                        os.mkdir(self.tmp_dir + "/" + t)
+                    except FileExistsError as e:
+                        print(e)
+                        pass
+                    tmp_file = self.tmp_dir + "/" + t + "/" + t + ".json"
+                    config.tmp_file = tmp_file
+                    config.json_data = x.json()
+                    config.real_package = line["real_project"]
+                    config.typo_package = t
+                    self.condition.notify_all()
+                    # with open(tmp_file, "w+", encoding="utf-8") as f:
+                    #    json.dump({"rows": x.json()}, f, ensure_ascii=False, indent=3)
+                    self.condition.wait()  # validater
+                    # needs to check sig first
+                    if config.suspicious_package:
+                        tar_file = self.download_package(x, t)
+                        config.suspicious_dir = self.extract_setup_file(tar_file)
+                        config.file_isready = True
+                        self.condition.notify_all()
+                        self.condition.wait_for(self.predicate_validator)
+                        self.write_results(line)
+                    else:
+                        self.condition.notify_all()
+                        logging.info("nothing suspicious here:" + t)
+                    self.condition.release()
+                else:
+                    config.package_list.pop(self.idx)
+                    self.idx = self.idx - 1
+                    self.condition.notify_all()
+                    self.condition.release()
+                if self.idx == len(lines) - 1:  # exit condition with a 10 offset lol
+                    pass
+                    # config.run = False
+                self.idx = self.idx + 1
+                config.predicate_flag_analizer = False
 
     def write_results(self,line):
         with open("results2.txt", "a") as file:
@@ -131,14 +131,22 @@ class Client(threading.Thread):
                 else:
                     continue
             try:
-                data = requests.get(self.url, stream=True, timeout=2)
+                data = requests.get(self.url, stream=True, timeout=3)
+                data.raise_for_status()
             except Exception:
+                print("test")
                 return
             else:
                 out_file = self.tmp_dir + "/" + typo_name + "/" + typo_name + '.tar.gz'
+                start = time.time()
                 with open(out_file, 'wb') as fp:
                     for chunk in data.iter_content():
                         if chunk:
+                            if time.time() - start > 10:
+                                fp.flush()
+                                print('timeout reached')
+                                break
+
                             fp.write(chunk)
                             fp.flush()
                 print("download rdy")
@@ -155,7 +163,8 @@ class Client(threading.Thread):
             return None
         try:
             t = tarfile.open(downloaded_file, 'r')
-        except (tarfile.ReadError) as e:
+            t.getmembers()
+        except (tarfile.ReadError,EOFError) as e:
             print(str(e) + "; packaged falsely")
             return None
         else:

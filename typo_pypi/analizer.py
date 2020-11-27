@@ -54,11 +54,11 @@ class Analizer(threading.Thread):
         arr = [None] * (250421)
         arr = self.create_arr(arr)
         wrapper = self.lru_wrapper(arr)
-        #config.package_list.append(({"real_project": "foo", "p_typo": "bob.core"}))
-        #config.package_list.append(json.dumps({"real_project": "foo", "p_typo": "mip"}))
+
+        #config.package_list.append(json.dumps({"real_project": "foo", "p_typo": "botox"}))
         with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
-            for p in data["rows"][:999]:
+            for p in data["rows"][998:999]:
                 obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
                 for i in range(len(arr) - 1):
@@ -78,6 +78,21 @@ class Analizer(threading.Thread):
 
                 #print(wrapper.cache_info())
         file.close()
+
+    def namesquats(self):
+        namesquats = [{'name': 'configparser'}, {'name': 'asyncio'}, {'name': 'modulefinder'}, {'name': 'enum'},
+                      {'name': 'wsgiref'}, {'name': 'selectors'}, {'name': 'uuid'}, {'name': 'ipaddress'},
+                      {'name': 'antigravity'}, {'name': 'ssl'}, {'name': 'mailbox'}, {'name': 'multiprocessing'},
+                      {'name': 'HTMLParser'}, {'name': 'functools'}, {'name': 'http'}, {'name': 'sets'},
+                      {'name': 'dis'}, {'name': 'buildtools'}, {'name': 'statistics'}, {'name': 'typing'},
+                      {'name': 'dl'}, {'name': 'argparse'}, {'name': 'compiler'}, {'name': 'repr'}, {'name': 'turtle'},
+                      {'name': 'pathlib'}, {'name': 'readline'}, {'name': 'faulthandler'}, {'name': 'secrets'},
+                      {'name': 'logging'}, {'name': 'formatter'}, {'name': 'html'}, {'name': 'gl'}, {'name': 'hashlib'},
+                      {'name': 'email'}, {'name': 'chunk'}, {'name': 'importlib'}, {'name': 'hmac'}, {'name': 'pprint'},
+                      {'name': 'unittest'}]
+        for n in namesquats:
+            n = n["name"]
+            config.package_list.append(json.dumps({"real_project": "foo", "p_typo": n}))
 
 
 

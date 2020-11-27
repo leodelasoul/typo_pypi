@@ -8,6 +8,7 @@ import re
 from typo_pypi import config
 import logging
 from stdlib_list import stdlib_list
+import textwrap
 
 '''
 gets passed data from client about packages, such as their discription,metadata and extracted file path to then look for suspicious
@@ -49,8 +50,7 @@ class Validater(threading.Thread):
             fall_back_count = fall_back_count + 1
             print(fall_back_count)
             if config.tmp_file != "" and current_package == current_list_package:
-                print(config.idx - self.idx)
-                config.suspicious_package = self.check_sig_discription(config.json_data)
+                config.suspicious_package = self.check_sig_discription(config.json_data) # there might be some async here
                 self.condition.notify_all()
                 self.condition.wait()
                 if config.file_isready:
@@ -59,39 +59,27 @@ class Validater(threading.Thread):
                     self.condition.wait()  # so that top if is used once
                 else:
                     self.condition.wait()  # make this wait_for(client)
-                    ##self.idx = self.idx -1 #try again
                 fall_back_count = 0
             elif fall_back_count > 7:  # Fallback for asyncronity
                 # self.idx - config.idx == 1 and len(config.client_waiters) > 0  and not config.predicate_flag_validator and
                 config.predicate_flag_validator = True
-                self.idx = self.idx - 1  # try again and Fallback
+                self.idx = config.idx
+                #self.idx = self.idx + 1
+
             else:
                 self.condition.wait()
             self.condition.release()
 
-    '''
-    def check_sig_discription(self, data):
-        if not self.conf_file_checked:
-            rules = yara.compile(self.current_dir + "/yara/pypi.yara")
-            match = rules.match(data)
-            if match:
-                self.check = True
-                self.conf_file_checked = True
-            else:
-                self.check = False
-                self.conf_file_checked = True
-        else:
-            return self.check
-        return self.check
-'''
+
 
     def check_sig_discription(self, data):
         self.idx = self.idx + 1
         # rules = yara.compile(self.current_dir + "/yara/pypi.yara")
         # match = rules.match(data)
-        match = re.findall(r"('UNKNOWN')|('description': '')", str(data))
-        if match:
-            if len(match[1:]) > 2 or match[0]:
+        unknown = re.findall(r"('UNKNOWN')", str(data))
+        description = re.findall(r"('description': '')", str(data))
+        if unknown or description:
+            if len(unknown) > 2 or len(description) == 1:
                 self.check = True
             else:
                 self.check = False
@@ -101,27 +89,33 @@ class Validater(threading.Thread):
 
     def classify_package(self, suspicious_dir):
         # check content of file
-        print("yolo")
+        print("this dir was checked:" + str(suspicious_dir))
         config.file_isready = False  # for next iteration
-        '''rules = yara.compile(filepaths={
-    "setup": "./yara/setup.yara",
-    "MD5_Constants": "./yara/crypto.yara",
-    "Big_Numbers0': './yara/crypto.yara",
-    "Big_Numbers0': './yara/crypto.yara"
 
-}) '''
-        rules = yara.compile(filepath="./yara/source_files.yara")
+        extval = ""
+        #pattern = re.compile(r"setup\(([^\)]+)\)")
+        try:
+            setup_file = suspicious_dir + "/setup.py"
+            with open(setup_file, "r") as sfile:
+                for line in sfile:
+                    line = textwrap.dedent(line)
+                    if line.startswith("url"):
+                        extval = line
+
+                #matched = re.findall(pattern, str(lines))
+        except Exception:
+            extval = ""
+
+
+        rules = yara.compile(filepath="./yara/source_files.yara", externals={"external": extval})
         package_obj = Package(config.real_package)
         package_obj[0] = config.typo_package
         package_obj.namesquat = self.is_namesquat(config.typo_package)
-        # package_obj.typosquat = self.is_typosquat()
-
         try:
 
             for file in [f for f in os.listdir(suspicious_dir) if
                          isfile(join(suspicious_dir, f)) and f.endswith("py")]:  # and not f.endswith("json")
                 match = rules.match(suspicious_dir + file)
-                # true positive : harmful = true , false positive: should be excluded, , true negative: squatt = true, false negative: not considered further as typo
                 if match:
                     package_obj.harmful = True
                     package_obj.found_mal_code = file
@@ -142,24 +136,11 @@ class Validater(threading.Thread):
     def is_typosquat(self):
         pass
 
-    def is_namesquat(self,typo):
+    def is_namesquat(self, typo):
         libs = stdlib_list("2.7") + stdlib_list("3.6")
         if typo in libs:
             return True
         else:
             return False
-'''
-    def check_sig_discription(self, data):
-        if not self.conf_file_checked:
-            rules = yara.compile(self.current_dir + "/yara/pypi.yara")
-            match = rules.match(data)
-            if match:
-                self.check = True
-                self.conf_file_checked = True
-            else:
-                self.check = False
-                self.conf_file_checked = True
-        else:
-            return self.check
-        return self.check
-'''
+
+
