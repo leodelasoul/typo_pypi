@@ -4,6 +4,7 @@ import threading
 from typo_pypi.validater import Validater
 from typo_pypi.analizer import Analizer
 from typo_pypi.client import Client
+import typo_pypi.config as config
 import logging.handlers
 import os
 import threading
@@ -11,7 +12,8 @@ import tempfile
 import shutil
 import errno
 import logging
-
+from typo_pypi import config
+import sys
 '''
 entry point of experiment
 '''
@@ -23,6 +25,12 @@ def main():
     should_roll_over = os.path.isfile("typo_pypi.log")
     handler = logging.handlers.RotatingFileHandler("typo_pypi.log", mode='w', backupCount=0)
     results = logging.handlers.RotatingFileHandler("results2.txt", mode='w', backupCount=0)
+    try :
+        samplesize = sys.argv
+        config.samplesize = samplesize[1]
+    except IndexError:
+        print("specify a samplesize in range of 0-3999")
+        return
 
     if should_roll_over:  # log already exists, roll over!
         handler.doRollover()
@@ -32,10 +40,9 @@ def main():
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
         analizer = Analizer("analizerthread",c)
         client = Client("clientthread", tmp_dir, c)
-        validater = Validater("validaterthread", c)
+        validater = Validater("validaterhtread", c)
 
         analizer.start()
-        #time.sleep(2)
         threads.append(analizer)
         threads.append(client)
         threads.append(validater)

@@ -6,7 +6,7 @@ from treelib import Tree
 from typo_pypi.algos import Algos
 from functools import lru_cache, wraps
 from typo_pypi import config
-
+import logging
 '''
 use to generate lists/trees for different indices
 
@@ -54,13 +54,18 @@ class Analizer(threading.Thread):
         arr = [None] * (250421)
         arr = self.create_arr(arr)
         wrapper = self.lru_wrapper(arr)
-
+        idx = 0
         #config.package_list.append(json.dumps({"real_project": "foo", "p_typo": "botox"}))
         with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
-            for p in data["rows"][998:999]:
+            for p in data["rows"]:
                 obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
+                if str(idx) == config.samplesize:
+                    config.limit = True
+                    logging.warning("analizer is done with typo creation for given samplesize \n sum of typos: " + str(
+                        len(config.package_list)))
+                    break
                 for i in range(len(arr) - 1):
                     lev_distance = Algos.levenshtein(obj.project, wrapper(i))
                     if len(obj.project) <= 7:
@@ -68,44 +73,10 @@ class Analizer(threading.Thread):
                     if len(obj.project) > 7:
                         THRESHOLD = 2
                     if (lev_distance <= THRESHOLD and wrapper(i) != obj.project):
-                        self.condition.acquire()
                         obj.typos.append(wrapper(i))
                         data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
                         config.package_list.append(data) #for lines
-                        config.predicate_flag_analizer = True
-                        self.condition.notify(n=1) #client and validator
-                        self.condition.release()
+                idx = idx + 1
 
-                #print(wrapper.cache_info())
         file.close()
-
-    def namesquats(self):
-        namesquats = [{'name': 'configparser'}, {'name': 'asyncio'}, {'name': 'modulefinder'}, {'name': 'enum'},
-                      {'name': 'wsgiref'}, {'name': 'selectors'}, {'name': 'uuid'}, {'name': 'ipaddress'},
-                      {'name': 'antigravity'}, {'name': 'ssl'}, {'name': 'mailbox'}, {'name': 'multiprocessing'},
-                      {'name': 'HTMLParser'}, {'name': 'functools'}, {'name': 'http'}, {'name': 'sets'},
-                      {'name': 'dis'}, {'name': 'buildtools'}, {'name': 'statistics'}, {'name': 'typing'},
-                      {'name': 'dl'}, {'name': 'argparse'}, {'name': 'compiler'}, {'name': 'repr'}, {'name': 'turtle'},
-                      {'name': 'pathlib'}, {'name': 'readline'}, {'name': 'faulthandler'}, {'name': 'secrets'},
-                      {'name': 'logging'}, {'name': 'formatter'}, {'name': 'html'}, {'name': 'gl'}, {'name': 'hashlib'},
-                      {'name': 'email'}, {'name': 'chunk'}, {'name': 'importlib'}, {'name': 'hmac'}, {'name': 'pprint'},
-                      {'name': 'unittest'}]
-        for n in namesquats:
-            n = n["name"]
-            config.package_list.append(json.dumps({"real_project": "foo", "p_typo": n}))
-
-
-
-# USED FOR Prevention purposes to look through
-'''     i = 0
-        for p in self.package_list:
-            for t in self.package_list[i].__dict__["typos"]:
-                try:
-                    self.package_tree.create_node(t, t, parent=p.__dict__["project"])
-                except DuplicatedNodeIdError as e:
-                    pass
-                else:
-                    continue
-            i = i + 1
-'''
 
