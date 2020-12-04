@@ -4,12 +4,10 @@ import os
 from typo_pypi.package import Package
 from treelib import Tree
 from typo_pypi.algos import Algos
-from functools import lru_cache, wraps,reduce
-#from typo_pypi import config
-from collections import Counter
-from operator import and_
 
-
+from functools import lru_cache, wraps
+from typo_pypi import config
+import logging
 '''
 use to generate lists/trees for different indices
 
@@ -23,9 +21,11 @@ class Analizer(threading.Thread):
     current_dir = os.path.dirname(__file__)
     package_tree = Tree()
 
-    def __init__(self, name):
+    def __init__(self, name, condition):
         super().__init__(name=name)
         self.package_tree.create_node("Packages", "packages")
+        self.condition = condition
+
 
     def hash(self, key):
         hash = 0
@@ -47,55 +47,30 @@ class Analizer(threading.Thread):
     def run(self):
         arr = [None] * (250421)
         arr = self.create_arr(arr)
-        count = 0
-        with open(self.current_dir + "/top-pypi-packages-30-days.json", "r") as file:
+        wrapper = self.lru_wrapper(arr)
+        idx = 0
+        #config.package_list.append(json.dumps({"real_project": "foo", "p_typo": "botox"}))
+        with open(self.current_dir + "/../top-pypi-packages-30-days.json", "r") as file:
             data = json.load(file)
             for p in data["rows"]:
-                if count == 100:
-                    break
-                obj = Package(p["project"], p["download_count"])
+                obj = Package(p["project"])
                 # self.package_tree.create_node(p["project"], p["project"], parent="packages")
-                typos = Algos.generate_typo(p["project"])
-                obj.typos = typos
-                intersection = typos & set(arr)
-                count = count +1
-                if len(intersection) != 0:
-                    with open("results2.txt", "a") as f:  #existent_typos
-                        for i in intersection:
-                            data = json.dumps({"real_project": obj.project, "p_typo": i})
-                            f.write(data + " \n")
-                    f.close()
-                else:
-                    continue
-
-
-                '''
+                if str(idx) == config.samplesize:
+                    config.limit = True
+                    logging.warning("analizer is done with typo creation for given samplesize \n sum of typos: " + str(
+                        len(config.package_list)))
+                    break
                 for i in range(len(arr) - 1):
-                    if obj.typos in arr:
-                        with open("results2.txt", "a") as f:
-                            data = json.dumps({"real_project": obj.project, "p_typo": object.typos})
-                            f.write(data + " \n")
-                        f.close()
-                    else:
-                        continue
-                        
-            '''
-            # print(wrapper.cache_info())
+                    lev_distance = Algos.levenshtein(obj.project, wrapper(i))
+                    if len(obj.project) <= 7:
+                        THRESHOLD = 1
+                    if len(obj.project) > 7:
+                        THRESHOLD = 2
+                    if (lev_distance <= THRESHOLD and wrapper(i) != obj.project):
+                        obj.typos.append(wrapper(i))
+                        data = json.dumps({"real_project": obj.project, "p_typo": wrapper(i)})
+                        config.package_list.append(data) #for lines
+                idx = idx + 1
+
         file.close()
 
-
-
-# USED FOR Prevention purposes to look through
-'''     i = 0
-        for p in self.package_list:
-            for t in self.package_list[i].__dict__["typos"]:
-                try:
-                    self.package_tree.create_node(t, t, parent=p.__dict__["project"])
-                except DuplicatedNodeIdError as e:
-                    pass
-                else:
-                    continue
-            i = i + 1
-'''
-
-# print(Algos.hamming_distance("abc", "yxz"))

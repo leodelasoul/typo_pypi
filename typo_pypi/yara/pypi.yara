@@ -1,7 +1,10 @@
 rule pypi
 {
     strings:
-        $re3 = "UNKNOWN"
+        $re1 = "UNKNOWN"
+        $re2 = /"description": ""/
+        $re3 = /"description": "UNKNOWN"/
+
     condition:
-        #re3 > 2
+        #re1 > 2 or ($re2 or $re3)
 }

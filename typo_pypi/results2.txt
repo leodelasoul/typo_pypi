@@ -1,122 +1,568 @@
-{"real_project": "six", "p_typo": "sx"} 
-{"real_project": "six", "p_typo": "esix"} 
-{"real_project": "six", "p_typo": "si"} 
-{"real_project": "requests", "p_typo": "drequests"} 
-{"real_project": "requests", "p_typo": "requestes"} 
-{"real_project": "requests", "p_typo": "request"} 
-{"real_project": "python-dateutil", "p_typo": "python-dateutil"} 
-{"real_project": "python-dateutil", "p_typo": "pythondateutil"} 
-{"real_project": "idna", "p_typo": "ida"} 
-{"real_project": "idna", "p_typo": "dna"} 
-{"real_project": "pip", "p_typo": "ppi"} 
-{"real_project": "pip", "p_typo": "pp"} 
-{"real_project": "pip", "p_typo": "pi"} 
-{"real_project": "pip", "p_typo": "ipp"} 
-{"real_project": "pip", "p_typo": "pipp"} 
-{"real_project": "docutils", "p_typo": "dcutils"} 
-{"real_project": "docutils", "p_typo": "ocutils"} 
-{"real_project": "chardet", "p_typo": "cchardet"} 
-{"real_project": "pyyaml", "p_typo": "pyaml"} 
-{"real_project": "pyyaml", "p_typo": "pyyml"} 
-{"real_project": "wheel", "p_typo": "wl"} 
-{"real_project": "rsa", "p_typo": "sa"} 
-{"real_project": "rsa", "p_typo": "ras"} 
-{"real_project": "rsa", "p_typo": "rasa"} 
-{"real_project": "rsa", "p_typo": "ra"} 
-{"real_project": "rsa", "p_typo": "sra"} 
-{"real_project": "rsa", "p_typo": "asr"} 
-{"real_project": "boto3", "p_typo": "bt"} 
-{"real_project": "boto3", "p_typo": "boto"} 
-{"real_project": "pyasn1", "p_typo": "pyasn"} 
-{"real_project": "numpy", "p_typo": "umpy"} 
-{"real_project": "pytz", "p_typo": "pyz"} 
-{"real_project": "pytz", "p_typo": "pyt"} 
-{"real_project": "pytz", "p_typo": "pyzt"} 
-{"real_project": "jinja2", "p_typo": "jnj"} 
-{"real_project": "jinja2", "p_typo": "jinja"} 
-{"real_project": "oauthlib", "p_typo": "authlib"} 
-{"real_project": "requests-oauthlib", "p_typo": "requestsoauthlib"} 
-{"real_project": "requests-oauthlib", "p_typo": "requests-oauthlib"} 
-{"real_project": "importlib-metadata", "p_typo": "importlib-metadata"} 
-{"real_project": "importlib-metadata", "p_typo": "importlibmetadata"} 
-{"real_project": "cffi", "p_typo": "kf"} 
-{"real_project": "zipp", "p_typo": "zpp"} 
-{"real_project": "zipp", "p_typo": "ipp"} 
-{"real_project": "zipp", "p_typo": "sp"} 
-{"real_project": "zipp", "p_typo": "zip"} 
-{"real_project": "zipp", "p_typo": "pipz"} 
-{"real_project": "click", "p_typo": "dclick"} 
-{"real_project": "click", "p_typo": "clic"} 
-{"real_project": "click", "p_typo": "clik"} 
-{"real_project": "cryptography", "p_typo": "crytography"} 
-{"real_project": "cryptography", "p_typo": "cryptogaphy"} 
-{"real_project": "attrs", "p_typo": "attr"} 
-{"real_project": "future", "p_typo": "ftr"} 
-{"real_project": "pandas", "p_typo": "pandass"} 
-{"real_project": "pandas", "p_typo": "panddas"} 
-{"real_project": "pandas", "p_typo": "panda"} 
-{"real_project": "pycparser", "p_typo": "pyparser"} 
-{"real_project": "futures", "p_typo": "future"} 
-{"real_project": "google-auth", "p_typo": "googleauth"} 
-{"real_project": "google-auth", "p_typo": "google-auth"} 
-{"real_project": "scipy", "p_typo": "scilpy"} 
-{"real_project": "scipy", "p_typo": "scpy"} 
-{"real_project": "scipy", "p_typo": "spicy"} 
-{"real_project": "scipy", "p_typo": "sipy"} 
-{"real_project": "scipy", "p_typo": "cipy"} 
-{"real_project": "scipy", "p_typo": "ssp"} 
-{"real_project": "pyasn1-modules", "p_typo": "pyasn1modules"} 
-{"real_project": "pyasn1-modules", "p_typo": "pyasn1-modules"} 
-{"real_project": "py", "p_typo": "pyy"} 
-{"real_project": "py", "p_typo": "opy"} 
-{"real_project": "py", "p_typo": "pay"} 
-{"real_project": "py", "p_typo": "ppy"} 
-{"real_project": "py", "p_typo": "p"} 
-{"real_project": "py", "p_typo": "psy"} 
-{"real_project": "google-api-core", "p_typo": "google-api-core"} 
-{"real_project": "psutil", "p_typo": "sputil"} 
-{"real_project": "psutil", "p_typo": "putil"} 
-{"real_project": "joblib", "p_typo": "jblib"} 
-{"real_project": "joblib", "p_typo": "oblib"} 
-{"real_project": "pytest", "p_typo": "pyftest"} 
-{"real_project": "pytest", "p_typo": "ptest"} 
-{"real_project": "pytest", "p_typo": "pyttest"} 
-{"real_project": "pytest", "p_typo": "ytest"} 
-{"real_project": "pytest", "p_typo": "pysett"} 
-{"real_project": "google-api-python-client", "p_typo": "google-api-python-client"} 
-{"real_project": "more-itertools", "p_typo": "more-itertools"} 
-{"real_project": "more-itertools", "p_typo": "moreitertools"} 
-{"real_project": "websocket-client", "p_typo": "websocketclient"} 
-{"real_project": "google-cloud-storage", "p_typo": "google-cloud-storage"} 
-{"real_project": "googleapis-common-protos", "p_typo": "googleapis-common-protos"} 
-{"real_project": "wrapt", "p_typo": "rapt"} 
-{"real_project": "wrapt", "p_typo": "wrap"} 
-{"real_project": "wrapt", "p_typo": "rpt"} 
-{"real_project": "flask", "p_typo": "flasik"} 
-{"real_project": "google-resumable-media", "p_typo": "google-resumable-media"} 
-{"real_project": "entrypoints", "p_typo": "entrypoint"} 
-{"real_project": "redis", "p_typo": "dredis"} 
-{"real_project": "redis", "p_typo": "tredis"} 
-{"real_project": "redis", "p_typo": "rts"} 
-{"real_project": "redis", "p_typo": "redi"} 
-{"real_project": "tqdm", "p_typo": "tdqm"} 
-{"real_project": "tqdm", "p_typo": "tdm"} 
-{"real_project": "ptyprocess", "p_typo": "pyprocess"} 
-{"real_project": "prometheus-client", "p_typo": "prometheusclient"} 
-{"real_project": "prometheus-client", "p_typo": "prometheus-client"} 
-{"real_project": "boto", "p_typo": "boot"} 
-{"real_project": "boto", "p_typo": "oto"} 
-{"real_project": "boto", "p_typo": "bt"} 
-{"real_project": "boto", "p_typo": "boo"} 
-{"real_project": "boto", "p_typo": "doto"} 
-{"real_project": "prompt-toolkit", "p_typo": "prompttoolkit"} 
-{"real_project": "prompt-toolkit", "p_typo": "prompt-toolkit"} 
-{"real_project": "google-auth-oauthlib", "p_typo": "google-auth-oauthlib"} 
-{"real_project": "ipython", "p_typo": "iipython"} 
-{"real_project": "ipython", "p_typo": "jipython"} 
-{"real_project": "scikit-learn", "p_typo": "scikit-learn"} 
-{"real_project": "scikit-learn", "p_typo": "scikitlearn"} 
-{"real_project": "google-cloud-core", "p_typo": "google-cloud-core"} 
-{"real_project": "ipython-genutils", "p_typo": "ipythongenutils"} 
-{"real_project": "tensorflow-estimator", "p_typo": "tensorflow-estimator"} 
-{"real_project": "tensorflow-estimator", "p_typo": "tensorflowestimator"} 
+{"real_project": "setuptools", "p_typo": "nbsetuptools", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "urllib3", "p_typo": "urllib5", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "botocore", "p_typo": "kotocore", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "botocore", "p_typo": "bonecore", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "rerequests", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "requestx", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "requestz", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "session.py"}
+{"real_project": "requests", "p_typo": "arequests", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "curequests", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "requestQ", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "domysql.py"}
+{"real_project": "requests", "p_typo": "qrequest", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "main.py"}
+{"real_project": "requests", "p_typo": "drequests", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "trequests", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "fgrequests", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_headers.py"}
+{"real_project": "requests", "p_typo": "requestry", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "requests5", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests", "p_typo": "sgrequests", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "test.py"}
+{"real_project": "requests", "p_typo": "vrequest", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "python-dateutil", "p_typo": "pythondateutil", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "idna", "p_typo": "dna", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "p2p", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pin", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "ppp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pir", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pi3", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pyp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pipa", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "plip", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pimp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pipo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "zip", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "server.py"}
+{"real_project": "pip", "p_typo": "piep", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pbp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pup", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "context.py"}
+{"real_project": "pip", "p_typo": "pio", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "__init__.py"}
+{"real_project": "pip", "p_typo": "pfp", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "fields.py"}
+{"real_project": "pip", "p_typo": "pipx", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "common.py"}
+{"real_project": "pip", "p_typo": "kip", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "p4p", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "gw.py"}
+{"real_project": "pip", "p_typo": "pis", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "yip", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pif", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "tests.py"}
+{"real_project": "pip", "p_typo": "pi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pp", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "auto_diff.py"}
+{"real_project": "pip", "p_typo": "pipp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pxp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pig", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pit", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "lip", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "pvp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pip", "p_typo": "rip", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "test_api_request_builder.py"}
+{"real_project": "docutils", "p_typo": "danutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "decutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dautils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "robutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dpyutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "ccutils", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "BaseConfigLine.py"}
+{"real_project": "docutils", "p_typo": "oputils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dtutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dt-utils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "cwcutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dj-utils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "picutils", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "docutils", "p_typo": "dr-utils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "ncutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "ocutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "jobutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "rpcutils", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "brokerRPC.py"}
+{"real_project": "docutils", "p_typo": "dl_utils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dox-utils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "btcutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dfutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "gcutils", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "formal.py"}
+{"real_project": "docutils", "p_typo": "dsgutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dockutil", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "logutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docutils", "p_typo": "dz-utils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyyaml", "p_typo": "pyyaxml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "bsa", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "test_zone_parser.py"}
+{"real_project": "rsa", "p_typo": "rs4", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "dos.py"}
+{"real_project": "rsa", "p_typo": "msa", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "rsq", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "rasa", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "exceptions.py"}
+{"real_project": "rsa", "p_typo": "rsp", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "trust.py"}
+{"real_project": "rsa", "p_typo": "rse", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "api.py"}
+{"real_project": "rsa", "p_typo": "prsa", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "osa", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "rsl", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "rosa", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "rta", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "ra", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "rss", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "dsa", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "rsa", "p_typo": "rst", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto3", "p_typo": "boto", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "distribution.py"}
+{"real_project": "boto3", "p_typo": "botor", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "ec2.py"}
+{"real_project": "boto3", "p_typo": "botox", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyasn1", "p_typo": "pyasn", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "mrtx.py"}
+{"real_project": "numpy", "p_typo": "Lumpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "snumpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "gnumpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "nlmpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "bumpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "numpyx", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "dumpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "gumpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "numpy", "p_typo": "pumpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pytb", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pyth", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pitz", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pytg", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pyqz", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "pytz", "p_typo": "pytv", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pyta", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pytf", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "mytz", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pytd", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "spark.py"}
+{"real_project": "pytz", "p_typo": "pytp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pytm", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytz", "p_typo": "pyzz", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "colorama", "p_typo": "colorname", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "colorama", "p_typo": "logorama", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "colorama", "p_typo": "coloradd", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "jinja2", "p_typo": "ninja2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "protobuf", "p_typo": "protobluff", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "protobuf", "p_typo": "protobufp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "protobuf", "p_typo": "protodf", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "protobuf", "p_typo": "protobuf3", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "protobuf", "p_typo": "pyprotobuf", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "oauthlib", "p_typo": "athlib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "oauthlib", "p_typo": "Authlib", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "authenticate_client.py"}
+{"real_project": "oauthlib", "p_typo": "moauthlib", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "base.py"}
+{"real_project": "requests-oauthlib", "p_typo": "requestsoauthlib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "importlib-metadata", "p_typo": "importlibmetadata", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "zipp", "p_typo": "mipp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "zipp", "p_typo": "zip", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "server.py"}
+{"real_project": "zipp", "p_typo": "zippo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "zipp", "p_typo": "zippy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "zipp", "p_typo": "zipa", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "zipp", "p_typo": "pipp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "click", "p_typo": "flick", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "click", "p_typo": "nclick", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "cv.py"}
+{"real_project": "click", "p_typo": "clack", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "attrs", "p_typo": "attrz", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyparsing", "p_typo": "cPyparsing", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyparsing", "p_typo": "djparsing", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pandas", "p_typo": "panda", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pandas", "p_typo": "fpandas", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pandas", "p_typo": "panddas", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pycparser", "p_typo": "pyparser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pycparser", "p_typo": "popparser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pycparser", "p_typo": "pyjsparser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pycparser", "p_typo": "podparser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pycparser", "p_typo": "pssparser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "futures", "p_typo": "future", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "parser.py"}
+{"real_project": "decorator", "p_typo": "decorate", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "decorator", "p_typo": "decorated", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-auth", "p_typo": "googleoauth", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-auth", "p_typo": "googleauth", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-auth", "p_typo": "google-oauth", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-auth", "p_typo": "googlereauth", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "scipy", "p_typo": "shipy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "scipy", "p_typo": "scopy", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "scipy", "p_typo": "scapy", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "automaton.py"}
+{"real_project": "scipy", "p_typo": "cipy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "scipy", "p_typo": "sc4py", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "scipy", "p_typo": "scpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "scipy", "p_typo": "swipy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "scipy", "p_typo": "scipp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyasn1-modules", "p_typo": "pyasn1modules", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "werkzeug", "p_typo": "Werkzeug", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_datastructures.py"}
+{"real_project": "jsonschema", "p_typo": "json_schema", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "jsonschema", "p_typo": "jsonldschema", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pygments", "p_typo": "pymets", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pygments", "p_typo": "pyevents", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pygments", "p_typo": "pygenes", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pygments", "p_typo": "pyagents", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pygments", "p_typo": "Pigments", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "functional.py"}
+{"real_project": "pygments", "p_typo": "pygamentos", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pygments", "p_typo": "Pygments", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "lisp.py"}
+{"real_project": "py", "p_typo": "dy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "ry", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pyp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "sy", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "ip.py"}
+{"real_project": "py", "p_typo": "pd", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "ay", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pyg", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "pypi_cache_server.py"}
+{"real_project": "py", "p_typo": "pyi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pk", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pv", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "p1", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pyy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "p4", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "qpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pye", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "fy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pys", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "spy", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "py", "p_typo": "pc", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "ypy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "p", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "phy", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "visuals.py"}
+{"real_project": "py", "p_typo": "apy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "p3", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pyk", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pyj", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pp", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "auto_diff.py"}
+{"real_project": "py", "p_typo": "vpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "py2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "wpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pya", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "Jupyter.py"}
+{"real_project": "py", "p_typo": "vy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pyd", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "dcompiler.py"}
+{"real_project": "py", "p_typo": "pyf", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "py3", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pyr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "my", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "pg", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "px", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py", "p_typo": "ly", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-api-core", "p_typo": "googleapicore", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "psutil", "p_typo": "tsutil", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "psutil", "p_typo": "vsutil", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "psutil", "p_typo": "pvutil", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "psutil", "p_typo": "osutil", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "psutil", "p_typo": "pyutil", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_verlib.py"}
+{"real_project": "psutil", "p_typo": "dpsutil", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "producer.py"}
+{"real_project": "psutil", "p_typo": "gsutil", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "naming.py"}
+{"real_project": "joblib", "p_typo": "jobslib", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_config.py"}
+{"real_project": "pyjwt", "p_typo": "pypwt", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyjwt", "p_typo": "pyrwt", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "wavelets.py"}
+{"real_project": "pytest", "p_typo": "pyttest", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest", "p_typo": "p-test", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest", "p_typo": "py.test", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest", "p_typo": "spytest", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest", "p_typo": "pitest", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest", "p_typo": "pyFtest", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "check_redis.py"}
+{"real_project": "pillow", "p_typo": "Willow", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "more-itertools", "p_typo": "moreitertools", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "websocket-client", "p_typo": "websocketclient", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "websocket-client", "p_typo": "websocket-client2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pluggy", "p_typo": "plugpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-cloud-storage", "p_typo": "googlecloudstorage", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "googleapis-common-protos", "p_typo": "googleapiscommonprotos", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "wrapt", "p_typo": "wrap2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "wrapt", "p_typo": "rapt", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "sqlalchemy", "p_typo": "qtalchemy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "sqlalchemy", "p_typo": "etlalchemy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "sqlalchemy", "p_typo": "nosqlalchemy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "Glask", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "elask", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "flash", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "flast", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "app.py"}
+{"real_project": "flask", "p_typo": "flisk", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "slask", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "Mlask", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "flaskr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "jflask", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flask", "p_typo": "flapsk", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-resumable-media", "p_typo": "googleresumablemedia", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "entrypoints", "p_typo": "entrypoint", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "redis", "p_typo": "vredis", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "redis", "p_typo": "redish", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "feedentries.py"}
+{"real_project": "redis", "p_typo": "medis", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "redis", "p_typo": "iredis", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_base_token.py"}
+{"real_project": "redis", "p_typo": "ledis", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "redis", "p_typo": "vedis", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tqdm", "p_typo": "tsdm", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tqdm", "p_typo": "ptqdm", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "coverage", "p_typo": "coverart", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "__init__.py"}
+{"real_project": "pexpect", "p_typo": "aexpect", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pexpect", "p_typo": "fexpect", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tornado", "p_typo": "Qtornado", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "defusedxml", "p_typo": "defusedyaml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "defusedxml", "p_typo": "defusedyml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ptyprocess", "p_typo": "t_process", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "simplejson", "p_typo": "simplescn", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "simplejson", "p_typo": "simpleubjson", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "simplejson", "p_typo": "simplepso", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "prometheus-client", "p_typo": "prometheusclient", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto", "p_typo": "boko", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto", "p_typo": "oto", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto", "p_typo": "botf", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto", "p_typo": "botor", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "ec2.py"}
+{"real_project": "boto", "p_typo": "goto", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "useragents.py"}
+{"real_project": "boto", "p_typo": "iboto", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto", "p_typo": "moto", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "rds_mysql_with_db_parameter_group.py"}
+{"real_project": "boto", "p_typo": "koto", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto", "p_typo": "doto", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "domain.py"}
+{"real_project": "boto", "p_typo": "botox", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "boto", "p_typo": "both", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "prompt-toolkit", "p_typo": "prompt-tool-kit", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "prompt-toolkit", "p_typo": "prompttoolkit", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow", "p_typo": "sensorflow", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow", "p_typo": "tensornow", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow", "p_typo": "tensorflowio", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow", "p_typo": "tensorflowjs", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipaddress", "p_typo": "address", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipaddress", "p_typo": "jmaddress", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipaddress", "p_typo": "usaddress", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipaddress", "p_typo": "pyaddress", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "dstk.py"}
+{"real_project": "ipaddress", "p_typo": "ipaddresses", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipaddress", "p_typo": "bitaddress", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-auth-oauthlib", "p_typo": "googleauthoauthlib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipython", "p_typo": "vipython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipython", "p_typo": "rpython", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "rsocket.py"}
+{"real_project": "ipython", "p_typo": "fpython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipython", "p_typo": "gpython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipython", "p_typo": "upython", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "pyboard.py"}
+{"real_project": "ipython", "p_typo": "mpython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "scikit-learn", "p_typo": "scikits.learn", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "logistic.py"}
+{"real_project": "scikit-learn", "p_typo": "scikitlearn", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "uritemplate", "p_typo": "uritemplatepy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-cloud-core", "p_typo": "googlecloudcore", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "traitlets", "p_typo": "straitlets", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipython-genutils", "p_typo": "ipythongenutils", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "matplotlib", "p_typo": "yaplotlib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "matplotlib", "p_typo": "mapsplotlib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "matplotlib", "p_typo": "danplotlib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tabulate", "p_typo": "tablite", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "tabulate", "p_typo": "tabulapy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tabulate", "p_typo": "tabular", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tabulate", "p_typo": "tabula", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow-estimator", "p_typo": "tensorflowestimator", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "virtualenv", "p_typo": "ezvirtualenv", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "virtualenv", "p_typo": "virtualenv2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "lxml", "p_typo": "lxxl", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "lxml", "p_typo": "lsml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "lxml", "p_typo": "gxml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "lxml", "p_typo": "exml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "lxml", "p_typo": "ixml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyopenssl", "p_typo": "pyopencl", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_algorithm.py"}
+{"real_project": "pyzmq", "p_typo": "pyczmq", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyzmq", "p_typo": "pyzmp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "configparser", "p_typo": "configparserc", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "__init__.py"}
+{"real_project": "configparser", "p_typo": "config-pyrser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pycodestyle", "p_typo": "codestyle", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "toml", "p_typo": "tbml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "toml", "p_typo": "tomd", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "toml", "p_typo": "tml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "toml", "p_typo": "tool", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "toml", "p_typo": "toil", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "awsProvisioner.py"}
+{"real_project": "toml", "p_typo": "tome", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "toml", "p_typo": "tvml", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "dsworker.py"}
+{"real_project": "filelock", "p_typo": "livelock", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "shared.py"}
+{"real_project": "docker", "p_typo": "Locker", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docker", "p_typo": "dock-r", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docker", "p_typo": "djocker", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "docker", "p_typo": "docser", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "__main__.py"}
+{"real_project": "docker", "p_typo": "tocker", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "psycopg2-binary", "p_typo": "psycopg2binary", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-auth-httplib2", "p_typo": "googleauthhttplib2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbformat", "p_typo": "pformat", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbformat", "p_typo": "rformat", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbformat", "p_typo": "reformat", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbformat", "p_typo": "format", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbformat", "p_typo": "sdformat", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "browser_controller.py"}
+{"real_project": "nbformat", "p_typo": "dformat", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-cloud-bigquery", "p_typo": "googlecloudbigquery", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gunicorn", "p_typo": "unicorm", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gunicorn", "p_typo": "djgunicorn", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gunicorn", "p_typo": "tpunicorn", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "serve.py"}
+{"real_project": "gunicorn", "p_typo": "funicorn", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "http_api.py"}
+{"real_project": "regex", "p_typo": "regexf", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "regex", "p_typo": "regexp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "regex", "p_typo": "negex", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "main.py"}
+{"real_project": "bcrypt", "p_typo": "Jcrypt", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "bcrypt", "p_typo": "ncrypt", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "bcrypt", "p_typo": "vcrypt", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "bcrypt", "p_typo": "ccrypt", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "monk", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "rock", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "lock", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "mock", "p_typo": "moc", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "mocka", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "nock", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "vmock", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "mocs", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "muck", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mock", "p_typo": "qmock", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pynacl", "p_typo": "pynaco", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "azure-storage-blob", "p_typo": "azurestorageblob", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "azure-common", "p_typo": "azurecommon", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "typed-ast", "p_typo": "typedast", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "typed-ast", "p_typo": "typecast", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ipykernel", "p_typo": "ibpykernel", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_connect.py"}
+{"real_project": "jupyter-client", "p_typo": "jupyterclient", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbconvert", "p_typo": "ctconvert", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbconvert", "p_typo": "bgconvert", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbconvert", "p_typo": "mdconvert", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbconvert", "p_typo": "negconvert", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbconvert", "p_typo": "heconvert", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "nbconvert", "p_typo": "convert", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "testpath", "p_typo": "testpad", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "testpath", "p_typo": "testpack", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "testpath", "p_typo": "TestMath", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "testpath", "p_typo": "test-math", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "testpath", "p_typo": "astpath", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "testpath", "p_typo": "testMath2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "testpath", "p_typo": "testpay", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "notebook", "p_typo": "notework", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "notebook", "p_typo": "noteblog", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "ip_utils.py"}
+{"real_project": "notebook", "p_typo": "vpnotebook", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "notebook", "p_typo": "nosebook", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "notebook", "p_typo": "notetool", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "terminado", "p_typo": "terminator", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "terminado", "p_typo": "terminal", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "paramiko", "p_typo": "paramikope", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "absl-py", "p_typo": "abslpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyflakes", "p_typo": "pyflare", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyflakes", "p_typo": "pyfaker", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyflakes", "p_typo": "pylates", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyflakes", "p_typo": "pyflags", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pyflakes", "p_typo": "pyflakes3k", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flake8", "p_typo": "iflake8", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "flake8", "p_typo": "flaker", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "cycler", "p_typo": "cycle", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ujson", "p_typo": "bjson", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ujson", "p_typo": "ejson", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ujson", "p_typo": "ojson", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ujson", "p_typo": "rjson", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ujson", "p_typo": "pjson", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "ujson", "p_typo": "mjson", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pbd", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pir", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pur", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "pyparsing.py"}
+{"real_project": "pbr", "p_typo": "pbp", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pkr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pbs", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "cbr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pmr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pnr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pbl", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pwr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "pyr", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pbr", "p_typo": "br", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "markdown", "p_typo": "cMarkdown", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "markdown", "p_typo": "mgmarkdown", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "markdown", "p_typo": "pymarkdown", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "markdown", "p_typo": "mashdown", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gitpython", "p_typo": "vipython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gitpython", "p_typo": "gat-python", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gitpython", "p_typo": "libpython", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "github_api.py"}
+{"real_project": "gitpython", "p_typo": "gpython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gitpython", "p_typo": "geopython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gitpython", "p_typo": "mtpython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "azure-devops", "p_typo": "azuredevops", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow-metadata", "p_typo": "tensorflowmetadata", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "rparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "blargparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "dargparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "dsargparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "argparse2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "argunparse", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_setup.py"}
+{"real_project": "argparse", "p_typo": "jargparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "argparseui", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "gxargparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "sargeparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "apiparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "argparse", "p_typo": "mrtparse", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "base.py"}
+{"real_project": "argparse", "p_typo": "cvargparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "lazy-object-proxy", "p_typo": "lazyobjectproxy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "sqlparse", "p_typo": "zlparse", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "conf.py"}
+{"real_project": "sqlparse", "p_typo": "mqlparser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "sqlparse", "p_typo": "psqlparse", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "sqlparse", "p_typo": "splparser", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "smart-open", "p_typo": "smartopen", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "handlers.py"}
+{"real_project": "termcolor", "p_typo": "termcolor2", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "termcolor", "p_typo": "termcolors", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "termcolor", "p_typo": "xtermcolor", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "typing", "p_typo": "xtyping", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "qtconsole", "p_typo": "kpconsole", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "qtconsole", "p_typo": "fbconsole", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "qtconsole", "p_typo": "bzconsole", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "qtconsole", "p_typo": "chconsole", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "chc_python.py"}
+{"real_project": "jupyter-console", "p_typo": "jupyterconsole", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "typing-extensions", "p_typo": "typingextensions", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "smmap", "p_typo": "cmmap", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "qtpy", "p_typo": "qpy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "qtpy", "p_typo": "ttpy", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "eigb.py"}
+{"real_project": "isort", "p_typo": "tsort", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "isort", "p_typo": "isqrt", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "gensim", "p_typo": "gensvm", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "h5py", "p_typo": "hapy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "h5py", "p_typo": "hfpy", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "config.py"}
+{"real_project": "h5py", "p_typo": "c5py", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "h5py", "p_typo": "h3py", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "h5py", "p_typo": "hppy", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py4j", "p_typo": "py4js", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "py4js.py"}
+{"real_project": "py4j", "p_typo": "py4s", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py4j", "p_typo": "pyj", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "py4j", "p_typo": "pymj", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "__init__.py"}
+{"real_project": "multidict", "p_typo": "multidiff", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "multidict", "p_typo": "multidocs", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "app.py"}
+{"real_project": "multidict", "p_typo": "multidoc", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow-serving-api", "p_typo": "tensorflowservingapi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tensorflow-transform", "p_typo": "tensorflowtransform", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "google-cloud-logging", "p_typo": "googlecloudlogging", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "oauth2client", "p_typo": "oauthclient", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "gitdb", "p_typo": "gitnb", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "gitdb", "p_typo": "gitdh", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "azure-core", "p_typo": "azurecore", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "azure-core", "p_typo": "azuremlcore", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "tfx-bsl", "p_typo": "tfxbsl", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "adal", "p_typo": "mdal", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "adal", "p_typo": "Kadal", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "adal", "p_typo": "adao", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "version.py"}
+{"real_project": "adal", "p_typo": "dal", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "requests-toolbelt", "p_typo": "requeststoolbelt", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "cloudpickle", "p_typo": "yccloudpickle", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "dill", "p_typo": "jill", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "net_utils.py"}
+{"real_project": "dill", "p_typo": "will", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "main.py"}
+{"real_project": "dill", "p_typo": "dila", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "cli.py"}
+{"real_project": "psycopg2", "p_typo": "psycopg2da", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "types_extras.py"}
+{"real_project": "psycopg2", "p_typo": "psycopgda", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pymongo", "p_typo": "ppmongo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pymongo", "p_typo": "cymongo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pymongo", "p_typo": "pymono", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "mak", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "pako", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "maro", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "hmako", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "mayo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "kako", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "http.py"}
+{"real_project": "mako", "p_typo": "tako", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "marko", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "__init__.py"}
+{"real_project": "mako", "p_typo": "makuo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "mapo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "mako", "p_typo": "mano", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "__version__.py"}
+{"real_project": "jedi", "p_typo": "edi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "jedi", "p_typo": "tedi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "jedi", "p_typo": "nedi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "jedi", "p_typo": "jeni", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "jedi", "p_typo": "Gedi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "jedi", "p_typo": "jadi", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pathlib2", "p_typo": "patalib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pathlib2", "p_typo": "pathlab", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "iso.py"}
+{"real_project": "pathlib2", "p_typo": "pathlims", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pathlib2", "p_typo": "athlib", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "networkx", "p_typo": "network", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "network.py"}
+{"real_project": "networkx", "p_typo": "networkml", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "networkx", "p_typo": "networkqa", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "networkqa.py"}
+{"real_project": "networkx", "p_typo": "networks", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "networkx", "p_typo": "networkl", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "networkx", "p_typo": "tnetwork", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "distro", "p_typo": "distry", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "distro", "p_typo": "distri", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "parso", "p_typo": "parsl", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "addresses.py"}
+{"real_project": "parso", "p_typo": "marso", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_load_grammar.py"}
+{"real_project": "parso", "p_typo": "parst", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "msgpack", "p_typo": "umsgpack", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "importlib-resources", "p_typo": "importlibresources", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "xlrd", "p_typo": "xled", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "test_control.py"}
+{"real_project": "xlrd", "p_typo": "xlrd2", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "conf.py"}
+{"real_project": "pyspark", "p_typo": "pyshark", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "pytest-cov", "p_typo": "pytest-doc", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest-cov", "p_typo": "pytestcsv", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest-cov", "p_typo": "pytest-poo", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest-cov", "p_typo": "pytest-oot", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pytest-cov", "p_typo": "pytestcov", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "cython", "p_typo": "rython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "cython", "p_typo": "Cython", "typosquat": false, "namesquat": false, "harmful": true, "mal_code_file": "ExprNodes.py"}
+{"real_project": "cython", "p_typo": "cwthon", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "setup.py"}
+{"real_project": "cython", "p_typo": "qython", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pandas-gbq", "p_typo": "pandas-bj", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "pandas-gbq", "p_typo": "pandasgbq", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}

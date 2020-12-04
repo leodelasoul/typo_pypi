@@ -1,12 +1,15 @@
 class Package:
-    checked = False
-    validated = False
+    harmful = False
+    found_mal_code = None
+    namesquat = False
+    typosquat = False
 
-    def __init__(self, project, downloads):
+    def __init__(self, project):
         self.project = project
-        self.downloads = downloads
         self.typos = []
-
+    def __setitem__(self, key, value):
+        self.typos = [1]
+        self.typos[key] = value
     '''
     def __iter__(self):
         return self
@@ -16,15 +19,3 @@ class Package:
         self.num += 1
         return num
 '''
-
-    def get_check(self):
-        return self.checked
-
-    def get_validate(self):
-        return self.validated
-
-    def set_check(self, checked):
-        self.checked = checked
-
-    def set_validate(self, validated):
-        self.validated = validated

@@ -4,12 +4,16 @@ import threading
 from typo_pypi.validater import Validater
 from typo_pypi.analizer import Analizer
 from typo_pypi.client import Client
-from typo_pypi.algos import Algos
+import typo_pypi.config as config
+import logging.handlers
+import os
 import threading
 import tempfile
 import shutil
 import errno
-
+import logging
+from typo_pypi import config
+import sys
 '''
 entry point of experiment
 '''
@@ -17,26 +21,39 @@ c = threading.Condition()
 
 
 def main():
+    logging.basicConfig(level=logging.INFO, filename= "typo_pypi.log")
+    should_roll_over = os.path.isfile("typo_pypi.log")
+    handler = logging.handlers.RotatingFileHandler("typo_pypi.log", mode='w', backupCount=0)
+    results = logging.handlers.RotatingFileHandler("results2.txt", mode='w', backupCount=0)
+    try :
+        samplesize = sys.argv
+        config.samplesize = samplesize[1]
+    except IndexError:
+        print("specify a samplesize in range of 0-3999")
+        return
+
+    if should_roll_over:  # log already exists, roll over!
+        handler.doRollover()
+        results.doRollover()
     try:
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
-        analizer = Analizer("analizerthread")
-        client = Client("serverthread", tmp_dir, c)
-        validater = Validater("validaterthread", c)
+        analizer = Analizer("analizerthread",c)
+        client = Client("clientthread", tmp_dir, c)
+        validater = Validater("validaterhtread", c)
 
         analizer.start()
-        #time.sleep(2)
         threads.append(analizer)
         threads.append(client)
-        validater.start()
         threads.append(validater)
-        time.sleep(2)
         client.start()
+        validater.start()
 
-        print("threads started")
+        logging.info('threads started')
         # class methods should execute
         for thread in threads:
             thread.join()
+            time.sleep(1)
     finally:
         try:
             shutil.rmtree(tmp_dir)
@@ -49,4 +66,4 @@ if __name__ == '__main__':
     now = time.time()
     main()
     later = time.time()
-    print("elapsed time: " + str(later - now))
+    logging.info("elapsed time: " + str(later - now))
