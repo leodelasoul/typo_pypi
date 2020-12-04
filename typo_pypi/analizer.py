@@ -1,12 +1,12 @@
 import json
 import threading
 import os
-from typo_pypi.package import Package
+from package import Package
 from treelib import Tree
-from typo_pypi.algos import Algos
+from algos import Algos
 
-from functools import lru_cache, wraps
-from typo_pypi import config
+from functools import lru_cache
+import config
 import logging
 '''
 use to generate lists/trees for different indices

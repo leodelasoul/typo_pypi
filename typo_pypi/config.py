@@ -1,4 +1,4 @@
-from typo_pypi.package import Package
+from package import Package
 
 idx = 0
 json_data = None

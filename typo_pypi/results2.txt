@@ -1,2 +1,1 @@
-{"real_project": "setuptools", "p_typo": "rp", "typosquat": true, "namesquat": false, "harmful": true, "mal_code_file": "TestOSC.py"}
-{"real_project": "setuptools", "p_typo": "oz", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}
+{"real_project": "setuptools", "p_typo": "nbsetuptools", "typosquat": true, "namesquat": false, "harmful": false, "mal_code_file": null}

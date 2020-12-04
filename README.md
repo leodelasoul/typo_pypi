@@ -10,3 +10,10 @@ algos: uses various strategies for typo creation, within levenshtein <= 1
 * creates a json with all typo packages found in pypi
 * can be used as a blacklist for a standalone prevention software or to be intigrated in pypi's warehouse
 * scraping takes a long time, either use results.json or run main.py
+
+---
+## Usage
+* python 3.6
+* pip install -r req.txt (venv recommended)
+* switch to typo_pypi dir
+* python main.py 1-3999

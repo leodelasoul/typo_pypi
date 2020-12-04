@@ -3,9 +3,9 @@ import threading
 import yara
 import os
 from os.path import isfile, join
-from typo_pypi.package import Package
+from package import Package
 import re
-from typo_pypi import config
+import config
 import logging
 from stdlib_list import stdlib_list
 import textwrap

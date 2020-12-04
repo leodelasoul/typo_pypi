@@ -1,10 +1,11 @@
 import time
 import threading
 
-from typo_pypi.validater import Validater
-from typo_pypi.analizer import Analizer
-from typo_pypi.client import Client
-import typo_pypi.config as config
+from validater import Validater
+from analizer import Analizer
+from client import Client
+import config
+#---- dist packages
 import logging.handlers
 import os
 import threading
@@ -12,7 +13,6 @@ import tempfile
 import shutil
 import errno
 import logging
-from typo_pypi import config
 import sys
 '''
 entry point of experiment
@@ -28,6 +28,7 @@ def main():
     try :
         samplesize = sys.argv
         config.samplesize = samplesize[1]
+        print(config.samplesize)
     except IndexError:
         print("specify a samplesize in range of 0-3999")
         return

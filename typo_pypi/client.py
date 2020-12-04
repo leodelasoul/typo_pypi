@@ -2,19 +2,16 @@ import threading
 from clint.textui import progress
 import requests
 from collections import defaultdict
-from typo_pypi.analizer import Analizer
 import json
-# from typo_pypi.validater import Validater
 import os
-from typo_pypi import config
+import config
 import tarfile
 import re
 import logging
-import time
 
 '''
 gets packages by https, downloads and extracts it as a thread 
-
+ 
 '''
 
 
@@ -92,9 +89,6 @@ class Client(threading.Thread):
                 else:
                     config.package_list.pop(self.idx)
                     self.idx = self.idx - 1 #skip
-                if self.idx == len(lines):
-                    pass
-                    #config.run = False
                 self.idx = self.idx + 1
             if self.idx == len(lines) and config.limit == True:
                 config.run = False
