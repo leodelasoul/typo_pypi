@@ -33,6 +33,13 @@ class Analizer(threading.Thread):
             hash = (31 * hash + i) % 250421
         return hash
 
+    def lru_wrapper(self, array=None):
+        @lru_cache(maxsize=None)
+        def get(idx):
+            return array[idx]
+
+        return get
+
     def create_arr(self, array):
         i = 0
         with open(Analizer.current_dir + "/../bq-results-20200913-185937-p7wc4g8anuwo.json", "rb") as file1:
