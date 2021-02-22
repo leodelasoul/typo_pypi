@@ -41,7 +41,6 @@ class Client(threading.Thread):
             info = typo.json()["info"]
             self.typos.append(info)
             self.data[package].append(self.get_last_element())
-
         try:
             lines = config.package_list
         except Exception:
@@ -54,7 +53,7 @@ class Client(threading.Thread):
             try:
                 x = requests.get("https://pypi.org/pypi/" + line['p_typo'] + "/json", timeout=1)
             except requests.exceptions.Timeout:
-                self.idx = self.idx + 1
+                return
             else:
                 if x.status_code == 200:
                     self.condition.acquire()
@@ -77,9 +76,7 @@ class Client(threading.Thread):
                     tar_file = self.download_package(x, t)
                     config.suspicious_dirs.append(self.extract_setup_file(tar_file))
                     self.condition.wait()
-                    print(str(config.current_package_obj.project) + "<-- from client")
-
-                    if config.current_package_obj.typosquat or  config.current_package_obj.harmful:
+                    if config.current_package_obj.typosquat or config.current_package_obj.namesquat:
                         self.condition.wait_for(self.predicate_validator)
                         self.write_results(line)# here get the current line from vali
                     else:

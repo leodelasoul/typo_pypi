@@ -26,30 +26,27 @@ class Validater(threading.Thread):
     check = False
     idx = 0
 
+
     def __init__(self, name, condition):
         super().__init__(name=name)
         self.condition = condition
-
 
     def __init_(self):
         pass
 
     def run(self):
-        to_validate = ""
+
         while config.run:
             try:
-                to_validate = json.loads(config.package_list[self.idx])["p_typo"]
+                json.loads(config.package_list[self.idx])["p_typo"]
             except (TypeError, IndexError):
                 pass
-            print(to_validate)
             self.condition.acquire()
-
-            if config.tmp_file != "" and self.idx == config.idx: #aka client index
+            if config.tmp_file != "" and self.idx == config.idx:  # aka client index
                 package_obj = Package(config.real_package)
                 sus = self.check_sig_discription(config.json_data)
                 config.current_package_obj = package_obj
                 config.current_package_obj.typosquat = sus
-                print(str(config.current_package_obj.project) + "<-- from vali")
                 self.classify_package(config.suspicious_dirs)
                 self.condition.notify_all()
 
@@ -72,10 +69,9 @@ class Validater(threading.Thread):
 
     def classify_package(self, suspicious_dir):
         # check content of file
-        suspicious_dir = suspicious_dir[self.idx-1]
-        print("this dir was checked:" + str(suspicious_dir))
+        suspicious_dir = suspicious_dir[self.idx - 1]
         extval = ""
-        # pattern = re.compile(r"setup\(([^\)]+)\)")
+        extval1 = ""
         try:
             setup_file = suspicious_dir + "/setup.py"
             with open(setup_file, "r") as sfile:
@@ -83,31 +79,22 @@ class Validater(threading.Thread):
                     line = textwrap.dedent(line)
                     if line.startswith("url"):
                         extval = line
+                    elif line.startswith("version"):
+                        extval1 = line
 
-                # matched = re.findall(pattern, str(lines))
         except Exception:
             extval = ""
-
-        # rules = yara.compile(filepath="./yara/source_files.yara", externals={"external": extval})
-        '''
         rules = yara.compile(filepaths={
             'look_for_ips': './yara/source_files.yara',
-            'IP': './yara/ip.yara',
-            "Misc_Suspicious_Strings": './yara/strings.yara',
-        }, externals={"external": extval})
-        '''
-        rules = yara.compile(filepath="./yara/source_files.yara", externals={"external": extval})
-
-
+            'look_for_ips_and_not_whitelists': './yara/source_files.yara',
+            'IP': './yara/ip.yara'
+        }, externals={"external": extval, "external1" : extval1})
         config.current_package_obj.namesquat = self.is_namesquat(config.typo_package)
-
-
         try:
-
             for file in [f for f in os.listdir(suspicious_dir) if
                          isfile(join(suspicious_dir, f)) and f.endswith("py")]:  # and not f.endswith("json")
                 match = rules.match(suspicious_dir + file)
-                #print(match[0])
+                # print(match[0])
                 if match:
                     config.current_package_obj.harmful = True
                     config.current_package_obj.found_mal_code = file
@@ -124,10 +111,21 @@ class Validater(threading.Thread):
             config.predicate_flag_validator = True
             print(e)
 
-
     def is_namesquat(self, typo):
         libs = stdlib_list("2.7") + stdlib_list("3.6")
         if typo in libs:
             return True
         else:
             return False
+
+
+'''
+        self.rules = yara.compile(filepaths={
+            'Win32_Exploit_CVE20200601': './yara1/exploit/Win32.Exploit.CVE20200601.yara',
+            'Win32_Infostealer_MultigrainPOS': './yara1/infostealer/Win32.Infostealer.MultigrainPOS.yara',
+            'Win32_Infostealer_ProjectHookPOS': './yara1/infostealer/Win32.Infostealer.ProjectHookPOS.yara',
+            'Win32_Trojan_Emotet': './yara1/trojan/Win32.Trojan.Emotet.yara',
+            'Win32_Virus_Awfull': './yara1/virus/Win32.Virus.Awfull.yara'
+        })
+
+'''

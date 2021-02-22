@@ -301,3 +301,4 @@ class Algos:
                 results.update(Algos.insert(s, _, j))
                 results.update(Algos.replace(s, i, j,_))
         return results
+

@@ -28,7 +28,6 @@ def main():
     try :
         samplesize = sys.argv
         config.samplesize = samplesize[1]
-        print(config.samplesize)
     except IndexError:
         print("specify a samplesize in range of 0-3999")
         return
@@ -36,6 +35,7 @@ def main():
     if should_roll_over:  # log already exists, roll over!
         handler.doRollover()
         results.doRollover()
+        pass
     try:
         threads = []
         tmp_dir = tempfile.mkdtemp(prefix="typo_pypi")
